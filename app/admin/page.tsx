@@ -1,20 +1,32 @@
 "use client"
 
-import { ProtectedPage } from "@/components/protectedPage"
-import AdminUser from "@/components/AdminUser";
-import AdminPostNews from "@/components/AdminPostNews";
-import {CollapsibleSection} from "@/components/MenuDeroulant";
 
-export default function Page() {
+import {Deroulant} from "@/components/Deroulant";
+import IncidentEditor from "@/components/Admin/IncidentAdmin";
+import IotEditor from "@/components/Admin/IotAdmin";
+import ActuEditor from "@/components/Admin/ActuAdmin";
+import ServiceEditor from "@/components/Admin/ServiceAdmin";
+
+
+export default function AdminPage() {
+
 
     return (
-        <ProtectedPage habilitation="ADMIN">
-            <CollapsibleSection title="PostNews" defaultOpen={false}>
-                <AdminPostNews/>
-            </CollapsibleSection>
-            <CollapsibleSection title="User" defaultOpen={false}>
-                <AdminUser/>
-            </CollapsibleSection>
-        </ProtectedPage>
+        <>
+            <Deroulant title={"Edité un Incident"}>
+                <IncidentEditor/>
+            </Deroulant>
+            <Deroulant title={"Edité un objet IOT"}>
+                <IotEditor/>
+            </Deroulant>
+            <Deroulant title={"Edité une Actu"}>
+                <ActuEditor/>
+            </Deroulant>
+            <Deroulant title={"Edité un Service"}>
+                <ServiceEditor/>
+            </Deroulant>
+        </>
+
+
     )
 }

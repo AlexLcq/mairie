@@ -6,7 +6,7 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
+  output   = "../app/generated/prisma"
 }
 
 datasource db {
@@ -14,18 +14,60 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum UserType {
-  USER
-  SUPER
-  ADMIN
-}
-
-model User {
-  id        Int      @id @default(autoincrement())
-  username  String   @unique
+model TableUser {
+  id        Int     @id @default(autoincrement())
+  username  String  @unique
   password  String
-  email     String   @unique
+  email     String  @unique
   firstname String
   lastname  String
-  user_type UserType @default(USER)
+  role      String  @default("USER")
+  autorized Boolean @default(true)
+
+  incidentsByUsername TableIncident[] @relation("IncidentByUsername")
+}
+
+model TableService {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  name         String
+  type         String
+  status       String
+  description  String
+  localisation String
+}
+
+model TableObject {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+  name       String
+  type       String
+  status     String
+  location   String
+  lastUpdate DateTime
+}
+
+model TableIncident {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  title       String
+  description String
+  status      String
+  location    String
+
+  username           String
+  reportedByUsername TableUser @relation("IncidentByUsername", fields: [username], references: [username])
+}
+
+model TableActu {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  category    String
+  title       String
+  description String
+  date        DateTime
 }

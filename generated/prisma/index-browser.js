@@ -117,27 +117,29 @@ exports.Prisma.TransactionIsolationLevel = makeStrictEnum({
   Serializable: 'Serializable'
 });
 
-exports.Prisma.UserScalarFieldEnum = {
+exports.Prisma.TableUserScalarFieldEnum = {
   id: 'id',
   username: 'username',
   password: 'password',
   email: 'email',
   firstname: 'firstname',
   lastname: 'lastname',
-  user_type: 'user_type'
+  role: 'role',
+  autorized: 'autorized'
 };
 
-exports.Prisma.MunicipalServiceScalarFieldEnum = {
+exports.Prisma.TableServiceScalarFieldEnum = {
   id: 'id',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
   name: 'name',
   type: 'type',
   status: 'status',
-  description: 'description'
+  description: 'description',
+  localisation: 'localisation'
 };
 
-exports.Prisma.ConnectedObjectScalarFieldEnum = {
+exports.Prisma.TableObjectScalarFieldEnum = {
   id: 'id',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
@@ -145,11 +147,10 @@ exports.Prisma.ConnectedObjectScalarFieldEnum = {
   type: 'type',
   status: 'status',
   location: 'location',
-  lastValue: 'lastValue',
   lastUpdate: 'lastUpdate'
 };
 
-exports.Prisma.IncidentScalarFieldEnum = {
+exports.Prisma.TableIncidentScalarFieldEnum = {
   id: 'id',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
@@ -157,18 +158,17 @@ exports.Prisma.IncidentScalarFieldEnum = {
   description: 'description',
   status: 'status',
   location: 'location',
-  userId: 'userId'
+  username: 'username'
 };
 
-exports.Prisma.NewsScalarFieldEnum = {
+exports.Prisma.TableActuScalarFieldEnum = {
   id: 'id',
   createdAt: 'createdAt',
   updatedAt: 'updatedAt',
+  category: 'category',
   title: 'title',
   description: 'description',
-  date: 'date',
-  category: 'category',
-  imageUrl: 'imageUrl'
+  date: 'date'
 };
 
 exports.Prisma.SortOrder = {
@@ -181,22 +181,13 @@ exports.Prisma.QueryMode = {
   insensitive: 'insensitive'
 };
 
-exports.Prisma.NullsOrder = {
-  first: 'first',
-  last: 'last'
-};
-exports.UserType = exports.$Enums.UserType = {
-  USER: 'USER',
-  SUPER: 'SUPER',
-  ADMIN: 'ADMIN'
-};
 
 exports.Prisma.ModelName = {
-  User: 'User',
-  MunicipalService: 'MunicipalService',
-  ConnectedObject: 'ConnectedObject',
-  Incident: 'Incident',
-  News: 'News'
+  TableUser: 'TableUser',
+  TableService: 'TableService',
+  TableObject: 'TableObject',
+  TableIncident: 'TableIncident',
+  TableActu: 'TableActu'
 };
 
 /**

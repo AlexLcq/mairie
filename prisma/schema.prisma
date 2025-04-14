@@ -6,7 +6,6 @@
 
 generator client {
   provider = "prisma-client-js"
-  output   = "../generated/prisma"
 }
 
 datasource db {
@@ -14,65 +13,60 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-enum UserType {
-  USER
-  SUPER
-  ADMIN
-}
-
-model User {
-  id        Int      @id @default(autoincrement())
-  username  String   @unique
+model TableUser {
+  id        Int     @id @default(autoincrement())
+  username  String  @unique
   password  String
-  email     String   @unique
+  email     String  @unique
   firstname String
   lastname  String
-  user_type UserType @default(USER)
+  role      String  @default("USER")
+  autorized Boolean @default(true)
 
-  incidents Incident[]
+  incidentsByUsername TableIncident[] @relation("IncidentByUsername")
 }
 
-model MunicipalService {
-  id          Int      @id @default(autoincrement())
-  createdAt   DateTime @default(now())
-  updatedAt   DateTime @updatedAt
-  name        String
-  type        String
-  status      String
-  description String?
+model TableService {
+  id           Int      @id @default(autoincrement())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+  name         String
+  type         String
+  status       String
+  description  String
+  localisation String
 }
 
-model ConnectedObject {
-  id         Int       @id @default(autoincrement())
-  createdAt  DateTime  @default(now())
-  updatedAt  DateTime  @updatedAt
+model TableObject {
+  id         Int      @id @default(autoincrement())
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
   name       String
   type       String
   status     String
   location   String
-  lastValue  String?
-  lastUpdate DateTime?
+  lastUpdate DateTime @updatedAt
 }
 
-model Incident {
+model TableIncident {
   id          Int      @id @default(autoincrement())
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
   title       String
   description String
-  status      String // "signalé", "en cours", "résolu"
+  status      String
   location    String
-  reportedBy  User     @relation(fields: [userId], references: [id])
-  userId      Int
+
+  username           String
+  reportedByUsername TableUser @relation("IncidentByUsername", fields: [username], references: [username])
 }
 
-model News {
+model TableActu {
   id          Int      @id @default(autoincrement())
   createdAt   DateTime @default(now())
   updatedAt   DateTime @updatedAt
+  category    String
   title       String
   description String
   date        DateTime
-  category    String
-  imageUrl    String?
 }

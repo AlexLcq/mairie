@@ -4,7 +4,7 @@ import type React from "react"
 import { useState } from "react"
 import axios from "axios"
 import { useRouter, useSearchParams } from "next/navigation"
-import type { LoginType } from "@/lib/type"
+
 import { useAuth } from "@/hook/useAuth"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
@@ -13,6 +13,7 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Loader2, CheckCircle } from "lucide-react"
+import {LoginType} from "@/type/UserType";
 
 export default function LoginPage() {
     const [loginData, setLoginData] = useState<LoginType>({
@@ -34,13 +35,14 @@ export default function LoginPage() {
         setErrors(null)
 
         axios
-            .post("/api/login", loginData, {
+            .post("/api/user/login", loginData, {
                 headers: {
                     "Content-Type": "application/json",
                 },
             })
             .then((response) => {
-                login(response.data.message)
+                console.log(response.data.data)
+                login(response.data.data)
                 router.push("/")
             })
             .catch((error) => {
@@ -100,9 +102,6 @@ export default function LoginPage() {
                         <div className="space-y-2">
                             <div className="flex items-center justify-between">
                                 <Label htmlFor="password">Mot de passe</Label>
-                                <Link href="#" className="text-xs text-primary hover:underline">
-                                    Mot de passe oublié ?
-                                </Link>
                             </div>
                             <Input
                                 id="password"

@@ -1,11 +1,13 @@
-import {ProtectedProps} from "@/lib/type";
+"use client"
+
 import {useAuth} from "@/hook/useAuth";
+import {ProtectedProps} from "@/type/type";
 
 export const ProtectedComponent = ({ children, habilitation }: ProtectedProps) => {
 
     const {user} = useAuth();
 
-    if (user?.user_type !== habilitation || !user){
+    if (user?.role !== habilitation || !user){
         return null;
     }
 

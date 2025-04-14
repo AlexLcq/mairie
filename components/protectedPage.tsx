@@ -2,15 +2,15 @@
 
 import { useRouter } from "next/navigation";
 import { useAuth } from "@/hook/useAuth";
-import {ProtectedProps} from "@/lib/type";
 import {useEffect} from "react";
+import {ProtectedProps} from "@/type/type";
 
 export function ProtectedPage({ children, habilitation }: ProtectedProps) {
     const router = useRouter();
     const { user } = useAuth();
 
     useEffect(() => {
-        if (user && user.user_type !== habilitation || !user) {
+        if (user && user.role !== habilitation || !user) {
             router.push("/");
         }
     }, [user, habilitation, router]);

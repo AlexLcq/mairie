@@ -1,10 +1,13 @@
 "use client"
 
 import { useState, useEffect } from "react";
-import { UserType, AuthProviderProps } from "@/lib/type";
-import {AuthContext} from "@/context/AuthContext";
+
+import {AuthContextType, AuthProviderProps} from "@/type/type";
+import {UserType} from "@/type/UserType";
+import { createContext } from "react";
 
 
+export const AuthContext = createContext<AuthContextType | null>(null);
 
 export const AuthProvider = ({ children }: AuthProviderProps) => {
 

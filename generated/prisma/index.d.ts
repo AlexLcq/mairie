@@ -14,48 +14,30 @@ export type PrismaPromise<T> = $Public.PrismaPromise<T>
 
 
 /**
- * Model User
+ * Model TableUser
  * 
  */
-export type User = $Result.DefaultSelection<Prisma.$UserPayload>
+export type TableUser = $Result.DefaultSelection<Prisma.$TableUserPayload>
 /**
- * Model MunicipalService
+ * Model TableService
  * 
  */
-export type MunicipalService = $Result.DefaultSelection<Prisma.$MunicipalServicePayload>
+export type TableService = $Result.DefaultSelection<Prisma.$TableServicePayload>
 /**
- * Model ConnectedObject
+ * Model TableObject
  * 
  */
-export type ConnectedObject = $Result.DefaultSelection<Prisma.$ConnectedObjectPayload>
+export type TableObject = $Result.DefaultSelection<Prisma.$TableObjectPayload>
 /**
- * Model Incident
+ * Model TableIncident
  * 
  */
-export type Incident = $Result.DefaultSelection<Prisma.$IncidentPayload>
+export type TableIncident = $Result.DefaultSelection<Prisma.$TableIncidentPayload>
 /**
- * Model News
+ * Model TableActu
  * 
  */
-export type News = $Result.DefaultSelection<Prisma.$NewsPayload>
-
-/**
- * Enums
- */
-export namespace $Enums {
-  export const UserType: {
-  USER: 'USER',
-  SUPER: 'SUPER',
-  ADMIN: 'ADMIN'
-};
-
-export type UserType = (typeof UserType)[keyof typeof UserType]
-
-}
-
-export type UserType = $Enums.UserType
-
-export const UserType: typeof $Enums.UserType
+export type TableActu = $Result.DefaultSelection<Prisma.$TableActuPayload>
 
 /**
  * ##  Prisma Client ʲˢ
@@ -64,8 +46,8 @@ export const UserType: typeof $Enums.UserType
  * @example
  * ```
  * const prisma = new PrismaClient()
- * // Fetch zero or more Users
- * const users = await prisma.user.findMany()
+ * // Fetch zero or more TableUsers
+ * const tableUsers = await prisma.tableUser.findMany()
  * ```
  *
  *
@@ -85,8 +67,8 @@ export class PrismaClient<
    * @example
    * ```
    * const prisma = new PrismaClient()
-   * // Fetch zero or more Users
-   * const users = await prisma.user.findMany()
+   * // Fetch zero or more TableUsers
+   * const tableUsers = await prisma.tableUser.findMany()
    * ```
    *
    *
@@ -183,54 +165,54 @@ export class PrismaClient<
   }>>
 
       /**
-   * `prisma.user`: Exposes CRUD operations for the **User** model.
+   * `prisma.tableUser`: Exposes CRUD operations for the **TableUser** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Users
-    * const users = await prisma.user.findMany()
+    * // Fetch zero or more TableUsers
+    * const tableUsers = await prisma.tableUser.findMany()
     * ```
     */
-  get user(): Prisma.UserDelegate<ExtArgs, ClientOptions>;
+  get tableUser(): Prisma.TableUserDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.municipalService`: Exposes CRUD operations for the **MunicipalService** model.
+   * `prisma.tableService`: Exposes CRUD operations for the **TableService** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more MunicipalServices
-    * const municipalServices = await prisma.municipalService.findMany()
+    * // Fetch zero or more TableServices
+    * const tableServices = await prisma.tableService.findMany()
     * ```
     */
-  get municipalService(): Prisma.MunicipalServiceDelegate<ExtArgs, ClientOptions>;
+  get tableService(): Prisma.TableServiceDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.connectedObject`: Exposes CRUD operations for the **ConnectedObject** model.
+   * `prisma.tableObject`: Exposes CRUD operations for the **TableObject** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more ConnectedObjects
-    * const connectedObjects = await prisma.connectedObject.findMany()
+    * // Fetch zero or more TableObjects
+    * const tableObjects = await prisma.tableObject.findMany()
     * ```
     */
-  get connectedObject(): Prisma.ConnectedObjectDelegate<ExtArgs, ClientOptions>;
+  get tableObject(): Prisma.TableObjectDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.incident`: Exposes CRUD operations for the **Incident** model.
+   * `prisma.tableIncident`: Exposes CRUD operations for the **TableIncident** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more Incidents
-    * const incidents = await prisma.incident.findMany()
+    * // Fetch zero or more TableIncidents
+    * const tableIncidents = await prisma.tableIncident.findMany()
     * ```
     */
-  get incident(): Prisma.IncidentDelegate<ExtArgs, ClientOptions>;
+  get tableIncident(): Prisma.TableIncidentDelegate<ExtArgs, ClientOptions>;
 
   /**
-   * `prisma.news`: Exposes CRUD operations for the **News** model.
+   * `prisma.tableActu`: Exposes CRUD operations for the **TableActu** model.
     * Example usage:
     * ```ts
-    * // Fetch zero or more News
-    * const news = await prisma.news.findMany()
+    * // Fetch zero or more TableActus
+    * const tableActus = await prisma.tableActu.findMany()
     * ```
     */
-  get news(): Prisma.NewsDelegate<ExtArgs, ClientOptions>;
+  get tableActu(): Prisma.TableActuDelegate<ExtArgs, ClientOptions>;
 }
 
 export namespace Prisma {
@@ -671,11 +653,11 @@ export namespace Prisma {
 
 
   export const ModelName: {
-    User: 'User',
-    MunicipalService: 'MunicipalService',
-    ConnectedObject: 'ConnectedObject',
-    Incident: 'Incident',
-    News: 'News'
+    TableUser: 'TableUser',
+    TableService: 'TableService',
+    TableObject: 'TableObject',
+    TableIncident: 'TableIncident',
+    TableActu: 'TableActu'
   };
 
   export type ModelName = (typeof ModelName)[keyof typeof ModelName]
@@ -694,377 +676,377 @@ export namespace Prisma {
       omit: GlobalOmitOptions
     }
     meta: {
-      modelProps: "user" | "municipalService" | "connectedObject" | "incident" | "news"
+      modelProps: "tableUser" | "tableService" | "tableObject" | "tableIncident" | "tableActu"
       txIsolationLevel: Prisma.TransactionIsolationLevel
     }
     model: {
-      User: {
-        payload: Prisma.$UserPayload<ExtArgs>
-        fields: Prisma.UserFieldRefs
+      TableUser: {
+        payload: Prisma.$TableUserPayload<ExtArgs>
+        fields: Prisma.TableUserFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.UserFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
+            args: Prisma.TableUserFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.UserFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.TableUserFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>
           }
           findFirst: {
-            args: Prisma.UserFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload> | null
+            args: Prisma.TableUserFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.UserFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.TableUserFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>
           }
           findMany: {
-            args: Prisma.UserFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
+            args: Prisma.TableUserFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>[]
           }
           create: {
-            args: Prisma.UserCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.TableUserCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>
           }
           createMany: {
-            args: Prisma.UserCreateManyArgs<ExtArgs>
+            args: Prisma.TableUserCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.UserCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
+            args: Prisma.TableUserCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>[]
           }
           delete: {
-            args: Prisma.UserDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.TableUserDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>
           }
           update: {
-            args: Prisma.UserUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.TableUserUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>
           }
           deleteMany: {
-            args: Prisma.UserDeleteManyArgs<ExtArgs>
+            args: Prisma.TableUserDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.UserUpdateManyArgs<ExtArgs>
+            args: Prisma.TableUserUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.UserUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>[]
+            args: Prisma.TableUserUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>[]
           }
           upsert: {
-            args: Prisma.UserUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$UserPayload>
+            args: Prisma.TableUserUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableUserPayload>
           }
           aggregate: {
-            args: Prisma.UserAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateUser>
+            args: Prisma.TableUserAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTableUser>
           }
           groupBy: {
-            args: Prisma.UserGroupByArgs<ExtArgs>
-            result: $Utils.Optional<UserGroupByOutputType>[]
+            args: Prisma.TableUserGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TableUserGroupByOutputType>[]
           }
           count: {
-            args: Prisma.UserCountArgs<ExtArgs>
-            result: $Utils.Optional<UserCountAggregateOutputType> | number
+            args: Prisma.TableUserCountArgs<ExtArgs>
+            result: $Utils.Optional<TableUserCountAggregateOutputType> | number
           }
         }
       }
-      MunicipalService: {
-        payload: Prisma.$MunicipalServicePayload<ExtArgs>
-        fields: Prisma.MunicipalServiceFieldRefs
+      TableService: {
+        payload: Prisma.$TableServicePayload<ExtArgs>
+        fields: Prisma.TableServiceFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.MunicipalServiceFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload> | null
+            args: Prisma.TableServiceFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.MunicipalServiceFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>
+            args: Prisma.TableServiceFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>
           }
           findFirst: {
-            args: Prisma.MunicipalServiceFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload> | null
+            args: Prisma.TableServiceFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.MunicipalServiceFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>
+            args: Prisma.TableServiceFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>
           }
           findMany: {
-            args: Prisma.MunicipalServiceFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>[]
+            args: Prisma.TableServiceFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>[]
           }
           create: {
-            args: Prisma.MunicipalServiceCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>
+            args: Prisma.TableServiceCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>
           }
           createMany: {
-            args: Prisma.MunicipalServiceCreateManyArgs<ExtArgs>
+            args: Prisma.TableServiceCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.MunicipalServiceCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>[]
+            args: Prisma.TableServiceCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>[]
           }
           delete: {
-            args: Prisma.MunicipalServiceDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>
+            args: Prisma.TableServiceDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>
           }
           update: {
-            args: Prisma.MunicipalServiceUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>
+            args: Prisma.TableServiceUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>
           }
           deleteMany: {
-            args: Prisma.MunicipalServiceDeleteManyArgs<ExtArgs>
+            args: Prisma.TableServiceDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.MunicipalServiceUpdateManyArgs<ExtArgs>
+            args: Prisma.TableServiceUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.MunicipalServiceUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>[]
+            args: Prisma.TableServiceUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>[]
           }
           upsert: {
-            args: Prisma.MunicipalServiceUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$MunicipalServicePayload>
+            args: Prisma.TableServiceUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableServicePayload>
           }
           aggregate: {
-            args: Prisma.MunicipalServiceAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateMunicipalService>
+            args: Prisma.TableServiceAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTableService>
           }
           groupBy: {
-            args: Prisma.MunicipalServiceGroupByArgs<ExtArgs>
-            result: $Utils.Optional<MunicipalServiceGroupByOutputType>[]
+            args: Prisma.TableServiceGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TableServiceGroupByOutputType>[]
           }
           count: {
-            args: Prisma.MunicipalServiceCountArgs<ExtArgs>
-            result: $Utils.Optional<MunicipalServiceCountAggregateOutputType> | number
+            args: Prisma.TableServiceCountArgs<ExtArgs>
+            result: $Utils.Optional<TableServiceCountAggregateOutputType> | number
           }
         }
       }
-      ConnectedObject: {
-        payload: Prisma.$ConnectedObjectPayload<ExtArgs>
-        fields: Prisma.ConnectedObjectFieldRefs
+      TableObject: {
+        payload: Prisma.$TableObjectPayload<ExtArgs>
+        fields: Prisma.TableObjectFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.ConnectedObjectFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload> | null
+            args: Prisma.TableObjectFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.ConnectedObjectFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>
+            args: Prisma.TableObjectFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>
           }
           findFirst: {
-            args: Prisma.ConnectedObjectFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload> | null
+            args: Prisma.TableObjectFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.ConnectedObjectFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>
+            args: Prisma.TableObjectFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>
           }
           findMany: {
-            args: Prisma.ConnectedObjectFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>[]
+            args: Prisma.TableObjectFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>[]
           }
           create: {
-            args: Prisma.ConnectedObjectCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>
+            args: Prisma.TableObjectCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>
           }
           createMany: {
-            args: Prisma.ConnectedObjectCreateManyArgs<ExtArgs>
+            args: Prisma.TableObjectCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.ConnectedObjectCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>[]
+            args: Prisma.TableObjectCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>[]
           }
           delete: {
-            args: Prisma.ConnectedObjectDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>
+            args: Prisma.TableObjectDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>
           }
           update: {
-            args: Prisma.ConnectedObjectUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>
+            args: Prisma.TableObjectUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>
           }
           deleteMany: {
-            args: Prisma.ConnectedObjectDeleteManyArgs<ExtArgs>
+            args: Prisma.TableObjectDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.ConnectedObjectUpdateManyArgs<ExtArgs>
+            args: Prisma.TableObjectUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.ConnectedObjectUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>[]
+            args: Prisma.TableObjectUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>[]
           }
           upsert: {
-            args: Prisma.ConnectedObjectUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$ConnectedObjectPayload>
+            args: Prisma.TableObjectUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableObjectPayload>
           }
           aggregate: {
-            args: Prisma.ConnectedObjectAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateConnectedObject>
+            args: Prisma.TableObjectAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTableObject>
           }
           groupBy: {
-            args: Prisma.ConnectedObjectGroupByArgs<ExtArgs>
-            result: $Utils.Optional<ConnectedObjectGroupByOutputType>[]
+            args: Prisma.TableObjectGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TableObjectGroupByOutputType>[]
           }
           count: {
-            args: Prisma.ConnectedObjectCountArgs<ExtArgs>
-            result: $Utils.Optional<ConnectedObjectCountAggregateOutputType> | number
+            args: Prisma.TableObjectCountArgs<ExtArgs>
+            result: $Utils.Optional<TableObjectCountAggregateOutputType> | number
           }
         }
       }
-      Incident: {
-        payload: Prisma.$IncidentPayload<ExtArgs>
-        fields: Prisma.IncidentFieldRefs
+      TableIncident: {
+        payload: Prisma.$TableIncidentPayload<ExtArgs>
+        fields: Prisma.TableIncidentFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.IncidentFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload> | null
+            args: Prisma.TableIncidentFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.IncidentFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>
+            args: Prisma.TableIncidentFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>
           }
           findFirst: {
-            args: Prisma.IncidentFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload> | null
+            args: Prisma.TableIncidentFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.IncidentFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>
+            args: Prisma.TableIncidentFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>
           }
           findMany: {
-            args: Prisma.IncidentFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>[]
+            args: Prisma.TableIncidentFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>[]
           }
           create: {
-            args: Prisma.IncidentCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>
+            args: Prisma.TableIncidentCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>
           }
           createMany: {
-            args: Prisma.IncidentCreateManyArgs<ExtArgs>
+            args: Prisma.TableIncidentCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.IncidentCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>[]
+            args: Prisma.TableIncidentCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>[]
           }
           delete: {
-            args: Prisma.IncidentDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>
+            args: Prisma.TableIncidentDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>
           }
           update: {
-            args: Prisma.IncidentUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>
+            args: Prisma.TableIncidentUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>
           }
           deleteMany: {
-            args: Prisma.IncidentDeleteManyArgs<ExtArgs>
+            args: Prisma.TableIncidentDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.IncidentUpdateManyArgs<ExtArgs>
+            args: Prisma.TableIncidentUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.IncidentUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>[]
+            args: Prisma.TableIncidentUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>[]
           }
           upsert: {
-            args: Prisma.IncidentUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$IncidentPayload>
+            args: Prisma.TableIncidentUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableIncidentPayload>
           }
           aggregate: {
-            args: Prisma.IncidentAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateIncident>
+            args: Prisma.TableIncidentAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTableIncident>
           }
           groupBy: {
-            args: Prisma.IncidentGroupByArgs<ExtArgs>
-            result: $Utils.Optional<IncidentGroupByOutputType>[]
+            args: Prisma.TableIncidentGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TableIncidentGroupByOutputType>[]
           }
           count: {
-            args: Prisma.IncidentCountArgs<ExtArgs>
-            result: $Utils.Optional<IncidentCountAggregateOutputType> | number
+            args: Prisma.TableIncidentCountArgs<ExtArgs>
+            result: $Utils.Optional<TableIncidentCountAggregateOutputType> | number
           }
         }
       }
-      News: {
-        payload: Prisma.$NewsPayload<ExtArgs>
-        fields: Prisma.NewsFieldRefs
+      TableActu: {
+        payload: Prisma.$TableActuPayload<ExtArgs>
+        fields: Prisma.TableActuFieldRefs
         operations: {
           findUnique: {
-            args: Prisma.NewsFindUniqueArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload> | null
+            args: Prisma.TableActuFindUniqueArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload> | null
           }
           findUniqueOrThrow: {
-            args: Prisma.NewsFindUniqueOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>
+            args: Prisma.TableActuFindUniqueOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>
           }
           findFirst: {
-            args: Prisma.NewsFindFirstArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload> | null
+            args: Prisma.TableActuFindFirstArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload> | null
           }
           findFirstOrThrow: {
-            args: Prisma.NewsFindFirstOrThrowArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>
+            args: Prisma.TableActuFindFirstOrThrowArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>
           }
           findMany: {
-            args: Prisma.NewsFindManyArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>[]
+            args: Prisma.TableActuFindManyArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>[]
           }
           create: {
-            args: Prisma.NewsCreateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>
+            args: Prisma.TableActuCreateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>
           }
           createMany: {
-            args: Prisma.NewsCreateManyArgs<ExtArgs>
+            args: Prisma.TableActuCreateManyArgs<ExtArgs>
             result: BatchPayload
           }
           createManyAndReturn: {
-            args: Prisma.NewsCreateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>[]
+            args: Prisma.TableActuCreateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>[]
           }
           delete: {
-            args: Prisma.NewsDeleteArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>
+            args: Prisma.TableActuDeleteArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>
           }
           update: {
-            args: Prisma.NewsUpdateArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>
+            args: Prisma.TableActuUpdateArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>
           }
           deleteMany: {
-            args: Prisma.NewsDeleteManyArgs<ExtArgs>
+            args: Prisma.TableActuDeleteManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateMany: {
-            args: Prisma.NewsUpdateManyArgs<ExtArgs>
+            args: Prisma.TableActuUpdateManyArgs<ExtArgs>
             result: BatchPayload
           }
           updateManyAndReturn: {
-            args: Prisma.NewsUpdateManyAndReturnArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>[]
+            args: Prisma.TableActuUpdateManyAndReturnArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>[]
           }
           upsert: {
-            args: Prisma.NewsUpsertArgs<ExtArgs>
-            result: $Utils.PayloadToResult<Prisma.$NewsPayload>
+            args: Prisma.TableActuUpsertArgs<ExtArgs>
+            result: $Utils.PayloadToResult<Prisma.$TableActuPayload>
           }
           aggregate: {
-            args: Prisma.NewsAggregateArgs<ExtArgs>
-            result: $Utils.Optional<AggregateNews>
+            args: Prisma.TableActuAggregateArgs<ExtArgs>
+            result: $Utils.Optional<AggregateTableActu>
           }
           groupBy: {
-            args: Prisma.NewsGroupByArgs<ExtArgs>
-            result: $Utils.Optional<NewsGroupByOutputType>[]
+            args: Prisma.TableActuGroupByArgs<ExtArgs>
+            result: $Utils.Optional<TableActuGroupByOutputType>[]
           }
           count: {
-            args: Prisma.NewsCountArgs<ExtArgs>
-            result: $Utils.Optional<NewsCountAggregateOutputType> | number
+            args: Prisma.TableActuCountArgs<ExtArgs>
+            result: $Utils.Optional<TableActuCountAggregateOutputType> | number
           }
         }
       }
@@ -1152,11 +1134,11 @@ export namespace Prisma {
     omit?: Prisma.GlobalOmitConfig
   }
   export type GlobalOmitConfig = {
-    user?: UserOmit
-    municipalService?: MunicipalServiceOmit
-    connectedObject?: ConnectedObjectOmit
-    incident?: IncidentOmit
-    news?: NewsOmit
+    tableUser?: TableUserOmit
+    tableService?: TableServiceOmit
+    tableObject?: TableObjectOmit
+    tableIncident?: TableIncidentOmit
+    tableActu?: TableActuOmit
   }
 
   /* Types for Logging */
@@ -1247,33 +1229,33 @@ export namespace Prisma {
 
 
   /**
-   * Count Type UserCountOutputType
+   * Count Type TableUserCountOutputType
    */
 
-  export type UserCountOutputType = {
-    incidents: number
+  export type TableUserCountOutputType = {
+    incidentsByUsername: number
   }
 
-  export type UserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    incidents?: boolean | UserCountOutputTypeCountIncidentsArgs
+  export type TableUserCountOutputTypeSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    incidentsByUsername?: boolean | TableUserCountOutputTypeCountIncidentsByUsernameArgs
   }
 
   // Custom InputTypes
   /**
-   * UserCountOutputType without action
+   * TableUserCountOutputType without action
    */
-  export type UserCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserCountOutputTypeDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the UserCountOutputType
+     * Select specific fields to fetch from the TableUserCountOutputType
      */
-    select?: UserCountOutputTypeSelect<ExtArgs> | null
+    select?: TableUserCountOutputTypeSelect<ExtArgs> | null
   }
 
   /**
-   * UserCountOutputType without action
+   * TableUserCountOutputType without action
    */
-  export type UserCountOutputTypeCountIncidentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: IncidentWhereInput
+  export type TableUserCountOutputTypeCountIncidentsByUsernameArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TableIncidentWhereInput
   }
 
 
@@ -1282,265 +1264,276 @@ export namespace Prisma {
    */
 
   /**
-   * Model User
+   * Model TableUser
    */
 
-  export type AggregateUser = {
-    _count: UserCountAggregateOutputType | null
-    _avg: UserAvgAggregateOutputType | null
-    _sum: UserSumAggregateOutputType | null
-    _min: UserMinAggregateOutputType | null
-    _max: UserMaxAggregateOutputType | null
+  export type AggregateTableUser = {
+    _count: TableUserCountAggregateOutputType | null
+    _avg: TableUserAvgAggregateOutputType | null
+    _sum: TableUserSumAggregateOutputType | null
+    _min: TableUserMinAggregateOutputType | null
+    _max: TableUserMaxAggregateOutputType | null
   }
 
-  export type UserAvgAggregateOutputType = {
+  export type TableUserAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type UserSumAggregateOutputType = {
+  export type TableUserSumAggregateOutputType = {
     id: number | null
   }
 
-  export type UserMinAggregateOutputType = {
-    id: number | null
-    username: string | null
-    password: string | null
-    email: string | null
-    firstname: string | null
-    lastname: string | null
-    user_type: $Enums.UserType | null
-  }
-
-  export type UserMaxAggregateOutputType = {
+  export type TableUserMinAggregateOutputType = {
     id: number | null
     username: string | null
     password: string | null
     email: string | null
     firstname: string | null
     lastname: string | null
-    user_type: $Enums.UserType | null
+    role: string | null
+    autorized: boolean | null
   }
 
-  export type UserCountAggregateOutputType = {
+  export type TableUserMaxAggregateOutputType = {
+    id: number | null
+    username: string | null
+    password: string | null
+    email: string | null
+    firstname: string | null
+    lastname: string | null
+    role: string | null
+    autorized: boolean | null
+  }
+
+  export type TableUserCountAggregateOutputType = {
     id: number
     username: number
     password: number
     email: number
     firstname: number
     lastname: number
-    user_type: number
+    role: number
+    autorized: number
     _all: number
   }
 
 
-  export type UserAvgAggregateInputType = {
+  export type TableUserAvgAggregateInputType = {
     id?: true
   }
 
-  export type UserSumAggregateInputType = {
+  export type TableUserSumAggregateInputType = {
     id?: true
   }
 
-  export type UserMinAggregateInputType = {
+  export type TableUserMinAggregateInputType = {
     id?: true
     username?: true
     password?: true
     email?: true
     firstname?: true
     lastname?: true
-    user_type?: true
+    role?: true
+    autorized?: true
   }
 
-  export type UserMaxAggregateInputType = {
+  export type TableUserMaxAggregateInputType = {
     id?: true
     username?: true
     password?: true
     email?: true
     firstname?: true
     lastname?: true
-    user_type?: true
+    role?: true
+    autorized?: true
   }
 
-  export type UserCountAggregateInputType = {
+  export type TableUserCountAggregateInputType = {
     id?: true
     username?: true
     password?: true
     email?: true
     firstname?: true
     lastname?: true
-    user_type?: true
+    role?: true
+    autorized?: true
     _all?: true
   }
 
-  export type UserAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which User to aggregate.
+     * Filter which TableUser to aggregate.
      */
-    where?: UserWhereInput
+    where?: TableUserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of TableUsers to fetch.
      */
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    orderBy?: TableUserOrderByWithRelationInput | TableUserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: UserWhereUniqueInput
+    cursor?: TableUserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` TableUsers from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` TableUsers.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Users
+     * Count returned TableUsers
     **/
-    _count?: true | UserCountAggregateInputType
+    _count?: true | TableUserCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: UserAvgAggregateInputType
+    _avg?: TableUserAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: UserSumAggregateInputType
+    _sum?: TableUserSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: UserMinAggregateInputType
+    _min?: TableUserMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: UserMaxAggregateInputType
+    _max?: TableUserMaxAggregateInputType
   }
 
-  export type GetUserAggregateType<T extends UserAggregateArgs> = {
-        [P in keyof T & keyof AggregateUser]: P extends '_count' | 'count'
+  export type GetTableUserAggregateType<T extends TableUserAggregateArgs> = {
+        [P in keyof T & keyof AggregateTableUser]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateUser[P]>
-      : GetScalarType<T[P], AggregateUser[P]>
+        : GetScalarType<T[P], AggregateTableUser[P]>
+      : GetScalarType<T[P], AggregateTableUser[P]>
   }
 
 
 
 
-  export type UserGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: UserWhereInput
-    orderBy?: UserOrderByWithAggregationInput | UserOrderByWithAggregationInput[]
-    by: UserScalarFieldEnum[] | UserScalarFieldEnum
-    having?: UserScalarWhereWithAggregatesInput
+  export type TableUserGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TableUserWhereInput
+    orderBy?: TableUserOrderByWithAggregationInput | TableUserOrderByWithAggregationInput[]
+    by: TableUserScalarFieldEnum[] | TableUserScalarFieldEnum
+    having?: TableUserScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: UserCountAggregateInputType | true
-    _avg?: UserAvgAggregateInputType
-    _sum?: UserSumAggregateInputType
-    _min?: UserMinAggregateInputType
-    _max?: UserMaxAggregateInputType
+    _count?: TableUserCountAggregateInputType | true
+    _avg?: TableUserAvgAggregateInputType
+    _sum?: TableUserSumAggregateInputType
+    _min?: TableUserMinAggregateInputType
+    _max?: TableUserMaxAggregateInputType
   }
 
-  export type UserGroupByOutputType = {
+  export type TableUserGroupByOutputType = {
     id: number
     username: string
     password: string
     email: string
     firstname: string
     lastname: string
-    user_type: $Enums.UserType
-    _count: UserCountAggregateOutputType | null
-    _avg: UserAvgAggregateOutputType | null
-    _sum: UserSumAggregateOutputType | null
-    _min: UserMinAggregateOutputType | null
-    _max: UserMaxAggregateOutputType | null
+    role: string
+    autorized: boolean
+    _count: TableUserCountAggregateOutputType | null
+    _avg: TableUserAvgAggregateOutputType | null
+    _sum: TableUserSumAggregateOutputType | null
+    _min: TableUserMinAggregateOutputType | null
+    _max: TableUserMaxAggregateOutputType | null
   }
 
-  type GetUserGroupByPayload<T extends UserGroupByArgs> = Prisma.PrismaPromise<
+  type GetTableUserGroupByPayload<T extends TableUserGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<UserGroupByOutputType, T['by']> &
+      PickEnumerable<TableUserGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof UserGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof TableUserGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], UserGroupByOutputType[P]>
-            : GetScalarType<T[P], UserGroupByOutputType[P]>
+              : GetScalarType<T[P], TableUserGroupByOutputType[P]>
+            : GetScalarType<T[P], TableUserGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type UserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableUserSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
     password?: boolean
     email?: boolean
     firstname?: boolean
     lastname?: boolean
-    user_type?: boolean
-    incidents?: boolean | User$incidentsArgs<ExtArgs>
-    _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["user"]>
+    role?: boolean
+    autorized?: boolean
+    incidentsByUsername?: boolean | TableUser$incidentsByUsernameArgs<ExtArgs>
+    _count?: boolean | TableUserCountOutputTypeDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["tableUser"]>
 
-  export type UserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableUserSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
     password?: boolean
     email?: boolean
     firstname?: boolean
     lastname?: boolean
-    user_type?: boolean
-  }, ExtArgs["result"]["user"]>
+    role?: boolean
+    autorized?: boolean
+  }, ExtArgs["result"]["tableUser"]>
 
-  export type UserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableUserSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     username?: boolean
     password?: boolean
     email?: boolean
     firstname?: boolean
     lastname?: boolean
-    user_type?: boolean
-  }, ExtArgs["result"]["user"]>
+    role?: boolean
+    autorized?: boolean
+  }, ExtArgs["result"]["tableUser"]>
 
-  export type UserSelectScalar = {
+  export type TableUserSelectScalar = {
     id?: boolean
     username?: boolean
     password?: boolean
     email?: boolean
     firstname?: boolean
     lastname?: boolean
-    user_type?: boolean
+    role?: boolean
+    autorized?: boolean
   }
 
-  export type UserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "password" | "email" | "firstname" | "lastname" | "user_type", ExtArgs["result"]["user"]>
-  export type UserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    incidents?: boolean | User$incidentsArgs<ExtArgs>
-    _count?: boolean | UserCountOutputTypeDefaultArgs<ExtArgs>
+  export type TableUserOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "username" | "password" | "email" | "firstname" | "lastname" | "role" | "autorized", ExtArgs["result"]["tableUser"]>
+  export type TableUserInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    incidentsByUsername?: boolean | TableUser$incidentsByUsernameArgs<ExtArgs>
+    _count?: boolean | TableUserCountOutputTypeDefaultArgs<ExtArgs>
   }
-  export type UserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
-  export type UserIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type TableUserIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
+  export type TableUserIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {}
 
-  export type $UserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "User"
+  export type $TableUserPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TableUser"
     objects: {
-      incidents: Prisma.$IncidentPayload<ExtArgs>[]
+      incidentsByUsername: Prisma.$TableIncidentPayload<ExtArgs>[]
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -1549,137 +1542,138 @@ export namespace Prisma {
       email: string
       firstname: string
       lastname: string
-      user_type: $Enums.UserType
-    }, ExtArgs["result"]["user"]>
+      role: string
+      autorized: boolean
+    }, ExtArgs["result"]["tableUser"]>
     composites: {}
   }
 
-  type UserGetPayload<S extends boolean | null | undefined | UserDefaultArgs> = $Result.GetResult<Prisma.$UserPayload, S>
+  type TableUserGetPayload<S extends boolean | null | undefined | TableUserDefaultArgs> = $Result.GetResult<Prisma.$TableUserPayload, S>
 
-  type UserCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<UserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: UserCountAggregateInputType | true
+  type TableUserCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TableUserFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TableUserCountAggregateInputType | true
     }
 
-  export interface UserDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['User'], meta: { name: 'User' } }
+  export interface TableUserDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TableUser'], meta: { name: 'TableUser' } }
     /**
-     * Find zero or one User that matches the filter.
-     * @param {UserFindUniqueArgs} args - Arguments to find a User
+     * Find zero or one TableUser that matches the filter.
+     * @param {TableUserFindUniqueArgs} args - Arguments to find a TableUser
      * @example
-     * // Get one User
-     * const user = await prisma.user.findUnique({
+     * // Get one TableUser
+     * const tableUser = await prisma.tableUser.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends UserFindUniqueArgs>(args: SelectSubset<T, UserFindUniqueArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends TableUserFindUniqueArgs>(args: SelectSubset<T, TableUserFindUniqueArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one User that matches the filter or throw an error with `error.code='P2025'`
+     * Find one TableUser that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {UserFindUniqueOrThrowArgs} args - Arguments to find a User
+     * @param {TableUserFindUniqueOrThrowArgs} args - Arguments to find a TableUser
      * @example
-     * // Get one User
-     * const user = await prisma.user.findUniqueOrThrow({
+     * // Get one TableUser
+     * const tableUser = await prisma.tableUser.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends UserFindUniqueOrThrowArgs>(args: SelectSubset<T, UserFindUniqueOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends TableUserFindUniqueOrThrowArgs>(args: SelectSubset<T, TableUserFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first User that matches the filter.
+     * Find the first TableUser that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserFindFirstArgs} args - Arguments to find a User
+     * @param {TableUserFindFirstArgs} args - Arguments to find a TableUser
      * @example
-     * // Get one User
-     * const user = await prisma.user.findFirst({
+     * // Get one TableUser
+     * const tableUser = await prisma.tableUser.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends UserFindFirstArgs>(args?: SelectSubset<T, UserFindFirstArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends TableUserFindFirstArgs>(args?: SelectSubset<T, TableUserFindFirstArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first User that matches the filter or
+     * Find the first TableUser that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserFindFirstOrThrowArgs} args - Arguments to find a User
+     * @param {TableUserFindFirstOrThrowArgs} args - Arguments to find a TableUser
      * @example
-     * // Get one User
-     * const user = await prisma.user.findFirstOrThrow({
+     * // Get one TableUser
+     * const tableUser = await prisma.tableUser.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends UserFindFirstOrThrowArgs>(args?: SelectSubset<T, UserFindFirstOrThrowArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends TableUserFindFirstOrThrowArgs>(args?: SelectSubset<T, TableUserFindFirstOrThrowArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Users that matches the filter.
+     * Find zero or more TableUsers that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {TableUserFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Users
-     * const users = await prisma.user.findMany()
+     * // Get all TableUsers
+     * const tableUsers = await prisma.tableUser.findMany()
      * 
-     * // Get first 10 Users
-     * const users = await prisma.user.findMany({ take: 10 })
+     * // Get first 10 TableUsers
+     * const tableUsers = await prisma.tableUser.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const userWithIdOnly = await prisma.user.findMany({ select: { id: true } })
+     * const tableUserWithIdOnly = await prisma.tableUser.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends UserFindManyArgs>(args?: SelectSubset<T, UserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends TableUserFindManyArgs>(args?: SelectSubset<T, TableUserFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a User.
-     * @param {UserCreateArgs} args - Arguments to create a User.
+     * Create a TableUser.
+     * @param {TableUserCreateArgs} args - Arguments to create a TableUser.
      * @example
-     * // Create one User
-     * const User = await prisma.user.create({
+     * // Create one TableUser
+     * const TableUser = await prisma.tableUser.create({
      *   data: {
-     *     // ... data to create a User
+     *     // ... data to create a TableUser
      *   }
      * })
      * 
      */
-    create<T extends UserCreateArgs>(args: SelectSubset<T, UserCreateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends TableUserCreateArgs>(args: SelectSubset<T, TableUserCreateArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Users.
-     * @param {UserCreateManyArgs} args - Arguments to create many Users.
+     * Create many TableUsers.
+     * @param {TableUserCreateManyArgs} args - Arguments to create many TableUsers.
      * @example
-     * // Create many Users
-     * const user = await prisma.user.createMany({
+     * // Create many TableUsers
+     * const tableUser = await prisma.tableUser.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends UserCreateManyArgs>(args?: SelectSubset<T, UserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends TableUserCreateManyArgs>(args?: SelectSubset<T, TableUserCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Users and returns the data saved in the database.
-     * @param {UserCreateManyAndReturnArgs} args - Arguments to create many Users.
+     * Create many TableUsers and returns the data saved in the database.
+     * @param {TableUserCreateManyAndReturnArgs} args - Arguments to create many TableUsers.
      * @example
-     * // Create many Users
-     * const user = await prisma.user.createManyAndReturn({
+     * // Create many TableUsers
+     * const tableUser = await prisma.tableUser.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Users and only return the `id`
-     * const userWithIdOnly = await prisma.user.createManyAndReturn({
+     * // Create many TableUsers and only return the `id`
+     * const tableUserWithIdOnly = await prisma.tableUser.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -1689,28 +1683,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends UserCreateManyAndReturnArgs>(args?: SelectSubset<T, UserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends TableUserCreateManyAndReturnArgs>(args?: SelectSubset<T, TableUserCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a User.
-     * @param {UserDeleteArgs} args - Arguments to delete one User.
+     * Delete a TableUser.
+     * @param {TableUserDeleteArgs} args - Arguments to delete one TableUser.
      * @example
-     * // Delete one User
-     * const User = await prisma.user.delete({
+     * // Delete one TableUser
+     * const TableUser = await prisma.tableUser.delete({
      *   where: {
-     *     // ... filter to delete one User
+     *     // ... filter to delete one TableUser
      *   }
      * })
      * 
      */
-    delete<T extends UserDeleteArgs>(args: SelectSubset<T, UserDeleteArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends TableUserDeleteArgs>(args: SelectSubset<T, TableUserDeleteArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one User.
-     * @param {UserUpdateArgs} args - Arguments to update one User.
+     * Update one TableUser.
+     * @param {TableUserUpdateArgs} args - Arguments to update one TableUser.
      * @example
-     * // Update one User
-     * const user = await prisma.user.update({
+     * // Update one TableUser
+     * const tableUser = await prisma.tableUser.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1720,30 +1714,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends UserUpdateArgs>(args: SelectSubset<T, UserUpdateArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends TableUserUpdateArgs>(args: SelectSubset<T, TableUserUpdateArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Users.
-     * @param {UserDeleteManyArgs} args - Arguments to filter Users to delete.
+     * Delete zero or more TableUsers.
+     * @param {TableUserDeleteManyArgs} args - Arguments to filter TableUsers to delete.
      * @example
-     * // Delete a few Users
-     * const { count } = await prisma.user.deleteMany({
+     * // Delete a few TableUsers
+     * const { count } = await prisma.tableUser.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends UserDeleteManyArgs>(args?: SelectSubset<T, UserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends TableUserDeleteManyArgs>(args?: SelectSubset<T, TableUserDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Users.
+     * Update zero or more TableUsers.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {TableUserUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Users
-     * const user = await prisma.user.updateMany({
+     * // Update many TableUsers
+     * const tableUser = await prisma.tableUser.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1753,14 +1747,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends UserUpdateManyArgs>(args: SelectSubset<T, UserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends TableUserUpdateManyArgs>(args: SelectSubset<T, TableUserUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Users and returns the data updated in the database.
-     * @param {UserUpdateManyAndReturnArgs} args - Arguments to update many Users.
+     * Update zero or more TableUsers and returns the data updated in the database.
+     * @param {TableUserUpdateManyAndReturnArgs} args - Arguments to update many TableUsers.
      * @example
-     * // Update many Users
-     * const user = await prisma.user.updateManyAndReturn({
+     * // Update many TableUsers
+     * const tableUser = await prisma.tableUser.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -1769,8 +1763,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Users and only return the `id`
-     * const userWithIdOnly = await prisma.user.updateManyAndReturn({
+     * // Update zero or more TableUsers and only return the `id`
+     * const tableUserWithIdOnly = await prisma.tableUser.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -1783,56 +1777,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends UserUpdateManyAndReturnArgs>(args: SelectSubset<T, UserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends TableUserUpdateManyAndReturnArgs>(args: SelectSubset<T, TableUserUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one User.
-     * @param {UserUpsertArgs} args - Arguments to update or create a User.
+     * Create or update one TableUser.
+     * @param {TableUserUpsertArgs} args - Arguments to update or create a TableUser.
      * @example
-     * // Update or create a User
-     * const user = await prisma.user.upsert({
+     * // Update or create a TableUser
+     * const tableUser = await prisma.tableUser.upsert({
      *   create: {
-     *     // ... data to create a User
+     *     // ... data to create a TableUser
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the User we want to update
+     *     // ... the filter for the TableUser we want to update
      *   }
      * })
      */
-    upsert<T extends UserUpsertArgs>(args: SelectSubset<T, UserUpsertArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends TableUserUpsertArgs>(args: SelectSubset<T, TableUserUpsertArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Users.
+     * Count the number of TableUsers.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserCountArgs} args - Arguments to filter Users to count.
+     * @param {TableUserCountArgs} args - Arguments to filter TableUsers to count.
      * @example
-     * // Count the number of Users
-     * const count = await prisma.user.count({
+     * // Count the number of TableUsers
+     * const count = await prisma.tableUser.count({
      *   where: {
-     *     // ... the filter for the Users we want to count
+     *     // ... the filter for the TableUsers we want to count
      *   }
      * })
     **/
-    count<T extends UserCountArgs>(
-      args?: Subset<T, UserCountArgs>,
+    count<T extends TableUserCountArgs>(
+      args?: Subset<T, TableUserCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], UserCountAggregateOutputType>
+          : GetScalarType<T['select'], TableUserCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a User.
+     * Allows you to perform aggregations operations on a TableUser.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {TableUserAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -1852,13 +1846,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends UserAggregateArgs>(args: Subset<T, UserAggregateArgs>): Prisma.PrismaPromise<GetUserAggregateType<T>>
+    aggregate<T extends TableUserAggregateArgs>(args: Subset<T, TableUserAggregateArgs>): Prisma.PrismaPromise<GetTableUserAggregateType<T>>
 
     /**
-     * Group by User.
+     * Group by TableUser.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {UserGroupByArgs} args - Group by arguments.
+     * @param {TableUserGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -1873,14 +1867,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends UserGroupByArgs,
+      T extends TableUserGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: UserGroupByArgs['orderBy'] }
-        : { orderBy?: UserGroupByArgs['orderBy'] },
+        ? { orderBy: TableUserGroupByArgs['orderBy'] }
+        : { orderBy?: TableUserGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -1929,22 +1923,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, UserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, TableUserGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTableUserGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the User model
+   * Fields of the TableUser model
    */
-  readonly fields: UserFieldRefs;
+  readonly fields: TableUserFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for User.
+   * The delegate class that acts as a "Promise-like" for TableUser.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__UserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__TableUserClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    incidents<T extends User$incidentsArgs<ExtArgs> = {}>(args?: Subset<T, User$incidentsArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
+    incidentsByUsername<T extends TableUser$incidentsByUsernameArgs<ExtArgs> = {}>(args?: Subset<T, TableUser$incidentsByUsernameArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions> | Null>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -1971,467 +1965,468 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the User model
+   * Fields of the TableUser model
    */
-  interface UserFieldRefs {
-    readonly id: FieldRef<"User", 'Int'>
-    readonly username: FieldRef<"User", 'String'>
-    readonly password: FieldRef<"User", 'String'>
-    readonly email: FieldRef<"User", 'String'>
-    readonly firstname: FieldRef<"User", 'String'>
-    readonly lastname: FieldRef<"User", 'String'>
-    readonly user_type: FieldRef<"User", 'UserType'>
+  interface TableUserFieldRefs {
+    readonly id: FieldRef<"TableUser", 'Int'>
+    readonly username: FieldRef<"TableUser", 'String'>
+    readonly password: FieldRef<"TableUser", 'String'>
+    readonly email: FieldRef<"TableUser", 'String'>
+    readonly firstname: FieldRef<"TableUser", 'String'>
+    readonly lastname: FieldRef<"TableUser", 'String'>
+    readonly role: FieldRef<"TableUser", 'String'>
+    readonly autorized: FieldRef<"TableUser", 'Boolean'>
   }
     
 
   // Custom InputTypes
   /**
-   * User findUnique
+   * TableUser findUnique
    */
-  export type UserFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * Filter, which User to fetch.
+     * Filter, which TableUser to fetch.
      */
-    where: UserWhereUniqueInput
+    where: TableUserWhereUniqueInput
   }
 
   /**
-   * User findUniqueOrThrow
+   * TableUser findUniqueOrThrow
    */
-  export type UserFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * Filter, which User to fetch.
+     * Filter, which TableUser to fetch.
      */
-    where: UserWhereUniqueInput
+    where: TableUserWhereUniqueInput
   }
 
   /**
-   * User findFirst
+   * TableUser findFirst
    */
-  export type UserFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * Filter, which User to fetch.
+     * Filter, which TableUser to fetch.
      */
-    where?: UserWhereInput
+    where?: TableUserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of TableUsers to fetch.
      */
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    orderBy?: TableUserOrderByWithRelationInput | TableUserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Users.
+     * Sets the position for searching for TableUsers.
      */
-    cursor?: UserWhereUniqueInput
+    cursor?: TableUserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` TableUsers from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` TableUsers.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Users.
+     * Filter by unique combinations of TableUsers.
      */
-    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
+    distinct?: TableUserScalarFieldEnum | TableUserScalarFieldEnum[]
   }
 
   /**
-   * User findFirstOrThrow
+   * TableUser findFirstOrThrow
    */
-  export type UserFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * Filter, which User to fetch.
+     * Filter, which TableUser to fetch.
      */
-    where?: UserWhereInput
+    where?: TableUserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of TableUsers to fetch.
      */
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    orderBy?: TableUserOrderByWithRelationInput | TableUserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Users.
+     * Sets the position for searching for TableUsers.
      */
-    cursor?: UserWhereUniqueInput
+    cursor?: TableUserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` TableUsers from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` TableUsers.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Users.
+     * Filter by unique combinations of TableUsers.
      */
-    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
+    distinct?: TableUserScalarFieldEnum | TableUserScalarFieldEnum[]
   }
 
   /**
-   * User findMany
+   * TableUser findMany
    */
-  export type UserFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * Filter, which Users to fetch.
+     * Filter, which TableUsers to fetch.
      */
-    where?: UserWhereInput
+    where?: TableUserWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Users to fetch.
+     * Determine the order of TableUsers to fetch.
      */
-    orderBy?: UserOrderByWithRelationInput | UserOrderByWithRelationInput[]
+    orderBy?: TableUserOrderByWithRelationInput | TableUserOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Users.
+     * Sets the position for listing TableUsers.
      */
-    cursor?: UserWhereUniqueInput
+    cursor?: TableUserWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Users from the position of the cursor.
+     * Take `±n` TableUsers from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Users.
+     * Skip the first `n` TableUsers.
      */
     skip?: number
-    distinct?: UserScalarFieldEnum | UserScalarFieldEnum[]
+    distinct?: TableUserScalarFieldEnum | TableUserScalarFieldEnum[]
   }
 
   /**
-   * User create
+   * TableUser create
    */
-  export type UserCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * The data needed to create a User.
+     * The data needed to create a TableUser.
      */
-    data: XOR<UserCreateInput, UserUncheckedCreateInput>
+    data: XOR<TableUserCreateInput, TableUserUncheckedCreateInput>
   }
 
   /**
-   * User createMany
+   * TableUser createMany
    */
-  export type UserCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Users.
+     * The data used to create many TableUsers.
      */
-    data: UserCreateManyInput | UserCreateManyInput[]
+    data: TableUserCreateManyInput | TableUserCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * User createManyAndReturn
+   * TableUser createManyAndReturn
    */
-  export type UserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelectCreateManyAndReturn<ExtArgs> | null
+    select?: TableUserSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
-     * The data used to create many Users.
+     * The data used to create many TableUsers.
      */
-    data: UserCreateManyInput | UserCreateManyInput[]
+    data: TableUserCreateManyInput | TableUserCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * User update
+   * TableUser update
    */
-  export type UserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * The data needed to update a User.
+     * The data needed to update a TableUser.
      */
-    data: XOR<UserUpdateInput, UserUncheckedUpdateInput>
+    data: XOR<TableUserUpdateInput, TableUserUncheckedUpdateInput>
     /**
-     * Choose, which User to update.
+     * Choose, which TableUser to update.
      */
-    where: UserWhereUniqueInput
+    where: TableUserWhereUniqueInput
   }
 
   /**
-   * User updateMany
+   * TableUser updateMany
    */
-  export type UserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Users.
+     * The data used to update TableUsers.
      */
-    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
+    data: XOR<TableUserUpdateManyMutationInput, TableUserUncheckedUpdateManyInput>
     /**
-     * Filter which Users to update
+     * Filter which TableUsers to update
      */
-    where?: UserWhereInput
+    where?: TableUserWhereInput
     /**
-     * Limit how many Users to update.
+     * Limit how many TableUsers to update.
      */
     limit?: number
   }
 
   /**
-   * User updateManyAndReturn
+   * TableUser updateManyAndReturn
    */
-  export type UserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: TableUserSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
-     * The data used to update Users.
+     * The data used to update TableUsers.
      */
-    data: XOR<UserUpdateManyMutationInput, UserUncheckedUpdateManyInput>
+    data: XOR<TableUserUpdateManyMutationInput, TableUserUncheckedUpdateManyInput>
     /**
-     * Filter which Users to update
+     * Filter which TableUsers to update
      */
-    where?: UserWhereInput
+    where?: TableUserWhereInput
     /**
-     * Limit how many Users to update.
+     * Limit how many TableUsers to update.
      */
     limit?: number
   }
 
   /**
-   * User upsert
+   * TableUser upsert
    */
-  export type UserUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * The filter to search for the User to update in case it exists.
+     * The filter to search for the TableUser to update in case it exists.
      */
-    where: UserWhereUniqueInput
+    where: TableUserWhereUniqueInput
     /**
-     * In case the User found by the `where` argument doesn't exist, create a new User with this data.
+     * In case the TableUser found by the `where` argument doesn't exist, create a new TableUser with this data.
      */
-    create: XOR<UserCreateInput, UserUncheckedCreateInput>
+    create: XOR<TableUserCreateInput, TableUserUncheckedCreateInput>
     /**
-     * In case the User was found with the provided `where` argument, update it with this data.
+     * In case the TableUser was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<UserUpdateInput, UserUncheckedUpdateInput>
+    update: XOR<TableUserUpdateInput, TableUserUncheckedUpdateInput>
   }
 
   /**
-   * User delete
+   * TableUser delete
    */
-  export type UserDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
     /**
-     * Filter which User to delete.
+     * Filter which TableUser to delete.
      */
-    where: UserWhereUniqueInput
+    where: TableUserWhereUniqueInput
   }
 
   /**
-   * User deleteMany
+   * TableUser deleteMany
    */
-  export type UserDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Users to delete
+     * Filter which TableUsers to delete
      */
-    where?: UserWhereInput
+    where?: TableUserWhereInput
     /**
-     * Limit how many Users to delete.
+     * Limit how many TableUsers to delete.
      */
     limit?: number
   }
 
   /**
-   * User.incidents
+   * TableUser.incidentsByUsername
    */
-  export type User$incidentsArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUser$incidentsByUsernameArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
-    where?: IncidentWhereInput
-    orderBy?: IncidentOrderByWithRelationInput | IncidentOrderByWithRelationInput[]
-    cursor?: IncidentWhereUniqueInput
+    include?: TableIncidentInclude<ExtArgs> | null
+    where?: TableIncidentWhereInput
+    orderBy?: TableIncidentOrderByWithRelationInput | TableIncidentOrderByWithRelationInput[]
+    cursor?: TableIncidentWhereUniqueInput
     take?: number
     skip?: number
-    distinct?: IncidentScalarFieldEnum | IncidentScalarFieldEnum[]
+    distinct?: TableIncidentScalarFieldEnum | TableIncidentScalarFieldEnum[]
   }
 
   /**
-   * User without action
+   * TableUser without action
    */
-  export type UserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableUserDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the User
+     * Select specific fields to fetch from the TableUser
      */
-    select?: UserSelect<ExtArgs> | null
+    select?: TableUserSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the User
+     * Omit specific fields from the TableUser
      */
-    omit?: UserOmit<ExtArgs> | null
+    omit?: TableUserOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: UserInclude<ExtArgs> | null
+    include?: TableUserInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model MunicipalService
+   * Model TableService
    */
 
-  export type AggregateMunicipalService = {
-    _count: MunicipalServiceCountAggregateOutputType | null
-    _avg: MunicipalServiceAvgAggregateOutputType | null
-    _sum: MunicipalServiceSumAggregateOutputType | null
-    _min: MunicipalServiceMinAggregateOutputType | null
-    _max: MunicipalServiceMaxAggregateOutputType | null
+  export type AggregateTableService = {
+    _count: TableServiceCountAggregateOutputType | null
+    _avg: TableServiceAvgAggregateOutputType | null
+    _sum: TableServiceSumAggregateOutputType | null
+    _min: TableServiceMinAggregateOutputType | null
+    _max: TableServiceMaxAggregateOutputType | null
   }
 
-  export type MunicipalServiceAvgAggregateOutputType = {
+  export type TableServiceAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type MunicipalServiceSumAggregateOutputType = {
+  export type TableServiceSumAggregateOutputType = {
     id: number | null
   }
 
-  export type MunicipalServiceMinAggregateOutputType = {
+  export type TableServiceMinAggregateOutputType = {
     id: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -2439,9 +2434,10 @@ export namespace Prisma {
     type: string | null
     status: string | null
     description: string | null
+    localisation: string | null
   }
 
-  export type MunicipalServiceMaxAggregateOutputType = {
+  export type TableServiceMaxAggregateOutputType = {
     id: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -2449,9 +2445,10 @@ export namespace Prisma {
     type: string | null
     status: string | null
     description: string | null
+    localisation: string | null
   }
 
-  export type MunicipalServiceCountAggregateOutputType = {
+  export type TableServiceCountAggregateOutputType = {
     id: number
     createdAt: number
     updatedAt: number
@@ -2459,19 +2456,20 @@ export namespace Prisma {
     type: number
     status: number
     description: number
+    localisation: number
     _all: number
   }
 
 
-  export type MunicipalServiceAvgAggregateInputType = {
+  export type TableServiceAvgAggregateInputType = {
     id?: true
   }
 
-  export type MunicipalServiceSumAggregateInputType = {
+  export type TableServiceSumAggregateInputType = {
     id?: true
   }
 
-  export type MunicipalServiceMinAggregateInputType = {
+  export type TableServiceMinAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -2479,9 +2477,10 @@ export namespace Prisma {
     type?: true
     status?: true
     description?: true
+    localisation?: true
   }
 
-  export type MunicipalServiceMaxAggregateInputType = {
+  export type TableServiceMaxAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -2489,9 +2488,10 @@ export namespace Prisma {
     type?: true
     status?: true
     description?: true
+    localisation?: true
   }
 
-  export type MunicipalServiceCountAggregateInputType = {
+  export type TableServiceCountAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -2499,125 +2499,127 @@ export namespace Prisma {
     type?: true
     status?: true
     description?: true
+    localisation?: true
     _all?: true
   }
 
-  export type MunicipalServiceAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which MunicipalService to aggregate.
+     * Filter which TableService to aggregate.
      */
-    where?: MunicipalServiceWhereInput
+    where?: TableServiceWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of MunicipalServices to fetch.
+     * Determine the order of TableServices to fetch.
      */
-    orderBy?: MunicipalServiceOrderByWithRelationInput | MunicipalServiceOrderByWithRelationInput[]
+    orderBy?: TableServiceOrderByWithRelationInput | TableServiceOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: MunicipalServiceWhereUniqueInput
+    cursor?: TableServiceWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` MunicipalServices from the position of the cursor.
+     * Take `±n` TableServices from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` MunicipalServices.
+     * Skip the first `n` TableServices.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned MunicipalServices
+     * Count returned TableServices
     **/
-    _count?: true | MunicipalServiceCountAggregateInputType
+    _count?: true | TableServiceCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: MunicipalServiceAvgAggregateInputType
+    _avg?: TableServiceAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: MunicipalServiceSumAggregateInputType
+    _sum?: TableServiceSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: MunicipalServiceMinAggregateInputType
+    _min?: TableServiceMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: MunicipalServiceMaxAggregateInputType
+    _max?: TableServiceMaxAggregateInputType
   }
 
-  export type GetMunicipalServiceAggregateType<T extends MunicipalServiceAggregateArgs> = {
-        [P in keyof T & keyof AggregateMunicipalService]: P extends '_count' | 'count'
+  export type GetTableServiceAggregateType<T extends TableServiceAggregateArgs> = {
+        [P in keyof T & keyof AggregateTableService]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateMunicipalService[P]>
-      : GetScalarType<T[P], AggregateMunicipalService[P]>
+        : GetScalarType<T[P], AggregateTableService[P]>
+      : GetScalarType<T[P], AggregateTableService[P]>
   }
 
 
 
 
-  export type MunicipalServiceGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: MunicipalServiceWhereInput
-    orderBy?: MunicipalServiceOrderByWithAggregationInput | MunicipalServiceOrderByWithAggregationInput[]
-    by: MunicipalServiceScalarFieldEnum[] | MunicipalServiceScalarFieldEnum
-    having?: MunicipalServiceScalarWhereWithAggregatesInput
+  export type TableServiceGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TableServiceWhereInput
+    orderBy?: TableServiceOrderByWithAggregationInput | TableServiceOrderByWithAggregationInput[]
+    by: TableServiceScalarFieldEnum[] | TableServiceScalarFieldEnum
+    having?: TableServiceScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: MunicipalServiceCountAggregateInputType | true
-    _avg?: MunicipalServiceAvgAggregateInputType
-    _sum?: MunicipalServiceSumAggregateInputType
-    _min?: MunicipalServiceMinAggregateInputType
-    _max?: MunicipalServiceMaxAggregateInputType
+    _count?: TableServiceCountAggregateInputType | true
+    _avg?: TableServiceAvgAggregateInputType
+    _sum?: TableServiceSumAggregateInputType
+    _min?: TableServiceMinAggregateInputType
+    _max?: TableServiceMaxAggregateInputType
   }
 
-  export type MunicipalServiceGroupByOutputType = {
+  export type TableServiceGroupByOutputType = {
     id: number
     createdAt: Date
     updatedAt: Date
     name: string
     type: string
     status: string
-    description: string | null
-    _count: MunicipalServiceCountAggregateOutputType | null
-    _avg: MunicipalServiceAvgAggregateOutputType | null
-    _sum: MunicipalServiceSumAggregateOutputType | null
-    _min: MunicipalServiceMinAggregateOutputType | null
-    _max: MunicipalServiceMaxAggregateOutputType | null
+    description: string
+    localisation: string
+    _count: TableServiceCountAggregateOutputType | null
+    _avg: TableServiceAvgAggregateOutputType | null
+    _sum: TableServiceSumAggregateOutputType | null
+    _min: TableServiceMinAggregateOutputType | null
+    _max: TableServiceMaxAggregateOutputType | null
   }
 
-  type GetMunicipalServiceGroupByPayload<T extends MunicipalServiceGroupByArgs> = Prisma.PrismaPromise<
+  type GetTableServiceGroupByPayload<T extends TableServiceGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<MunicipalServiceGroupByOutputType, T['by']> &
+      PickEnumerable<TableServiceGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof MunicipalServiceGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof TableServiceGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], MunicipalServiceGroupByOutputType[P]>
-            : GetScalarType<T[P], MunicipalServiceGroupByOutputType[P]>
+              : GetScalarType<T[P], TableServiceGroupByOutputType[P]>
+            : GetScalarType<T[P], TableServiceGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type MunicipalServiceSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableServiceSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -2625,9 +2627,10 @@ export namespace Prisma {
     type?: boolean
     status?: boolean
     description?: boolean
-  }, ExtArgs["result"]["municipalService"]>
+    localisation?: boolean
+  }, ExtArgs["result"]["tableService"]>
 
-  export type MunicipalServiceSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableServiceSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -2635,9 +2638,10 @@ export namespace Prisma {
     type?: boolean
     status?: boolean
     description?: boolean
-  }, ExtArgs["result"]["municipalService"]>
+    localisation?: boolean
+  }, ExtArgs["result"]["tableService"]>
 
-  export type MunicipalServiceSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableServiceSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -2645,9 +2649,10 @@ export namespace Prisma {
     type?: boolean
     status?: boolean
     description?: boolean
-  }, ExtArgs["result"]["municipalService"]>
+    localisation?: boolean
+  }, ExtArgs["result"]["tableService"]>
 
-  export type MunicipalServiceSelectScalar = {
+  export type TableServiceSelectScalar = {
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -2655,12 +2660,13 @@ export namespace Prisma {
     type?: boolean
     status?: boolean
     description?: boolean
+    localisation?: boolean
   }
 
-  export type MunicipalServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "name" | "type" | "status" | "description", ExtArgs["result"]["municipalService"]>
+  export type TableServiceOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "name" | "type" | "status" | "description" | "localisation", ExtArgs["result"]["tableService"]>
 
-  export type $MunicipalServicePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "MunicipalService"
+  export type $TableServicePayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TableService"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -2669,137 +2675,138 @@ export namespace Prisma {
       name: string
       type: string
       status: string
-      description: string | null
-    }, ExtArgs["result"]["municipalService"]>
+      description: string
+      localisation: string
+    }, ExtArgs["result"]["tableService"]>
     composites: {}
   }
 
-  type MunicipalServiceGetPayload<S extends boolean | null | undefined | MunicipalServiceDefaultArgs> = $Result.GetResult<Prisma.$MunicipalServicePayload, S>
+  type TableServiceGetPayload<S extends boolean | null | undefined | TableServiceDefaultArgs> = $Result.GetResult<Prisma.$TableServicePayload, S>
 
-  type MunicipalServiceCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<MunicipalServiceFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: MunicipalServiceCountAggregateInputType | true
+  type TableServiceCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TableServiceFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TableServiceCountAggregateInputType | true
     }
 
-  export interface MunicipalServiceDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['MunicipalService'], meta: { name: 'MunicipalService' } }
+  export interface TableServiceDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TableService'], meta: { name: 'TableService' } }
     /**
-     * Find zero or one MunicipalService that matches the filter.
-     * @param {MunicipalServiceFindUniqueArgs} args - Arguments to find a MunicipalService
+     * Find zero or one TableService that matches the filter.
+     * @param {TableServiceFindUniqueArgs} args - Arguments to find a TableService
      * @example
-     * // Get one MunicipalService
-     * const municipalService = await prisma.municipalService.findUnique({
+     * // Get one TableService
+     * const tableService = await prisma.tableService.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends MunicipalServiceFindUniqueArgs>(args: SelectSubset<T, MunicipalServiceFindUniqueArgs<ExtArgs>>): Prisma__MunicipalServiceClient<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends TableServiceFindUniqueArgs>(args: SelectSubset<T, TableServiceFindUniqueArgs<ExtArgs>>): Prisma__TableServiceClient<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one MunicipalService that matches the filter or throw an error with `error.code='P2025'`
+     * Find one TableService that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {MunicipalServiceFindUniqueOrThrowArgs} args - Arguments to find a MunicipalService
+     * @param {TableServiceFindUniqueOrThrowArgs} args - Arguments to find a TableService
      * @example
-     * // Get one MunicipalService
-     * const municipalService = await prisma.municipalService.findUniqueOrThrow({
+     * // Get one TableService
+     * const tableService = await prisma.tableService.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends MunicipalServiceFindUniqueOrThrowArgs>(args: SelectSubset<T, MunicipalServiceFindUniqueOrThrowArgs<ExtArgs>>): Prisma__MunicipalServiceClient<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends TableServiceFindUniqueOrThrowArgs>(args: SelectSubset<T, TableServiceFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TableServiceClient<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first MunicipalService that matches the filter.
+     * Find the first TableService that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MunicipalServiceFindFirstArgs} args - Arguments to find a MunicipalService
+     * @param {TableServiceFindFirstArgs} args - Arguments to find a TableService
      * @example
-     * // Get one MunicipalService
-     * const municipalService = await prisma.municipalService.findFirst({
+     * // Get one TableService
+     * const tableService = await prisma.tableService.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends MunicipalServiceFindFirstArgs>(args?: SelectSubset<T, MunicipalServiceFindFirstArgs<ExtArgs>>): Prisma__MunicipalServiceClient<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends TableServiceFindFirstArgs>(args?: SelectSubset<T, TableServiceFindFirstArgs<ExtArgs>>): Prisma__TableServiceClient<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first MunicipalService that matches the filter or
+     * Find the first TableService that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MunicipalServiceFindFirstOrThrowArgs} args - Arguments to find a MunicipalService
+     * @param {TableServiceFindFirstOrThrowArgs} args - Arguments to find a TableService
      * @example
-     * // Get one MunicipalService
-     * const municipalService = await prisma.municipalService.findFirstOrThrow({
+     * // Get one TableService
+     * const tableService = await prisma.tableService.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends MunicipalServiceFindFirstOrThrowArgs>(args?: SelectSubset<T, MunicipalServiceFindFirstOrThrowArgs<ExtArgs>>): Prisma__MunicipalServiceClient<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends TableServiceFindFirstOrThrowArgs>(args?: SelectSubset<T, TableServiceFindFirstOrThrowArgs<ExtArgs>>): Prisma__TableServiceClient<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more MunicipalServices that matches the filter.
+     * Find zero or more TableServices that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MunicipalServiceFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {TableServiceFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all MunicipalServices
-     * const municipalServices = await prisma.municipalService.findMany()
+     * // Get all TableServices
+     * const tableServices = await prisma.tableService.findMany()
      * 
-     * // Get first 10 MunicipalServices
-     * const municipalServices = await prisma.municipalService.findMany({ take: 10 })
+     * // Get first 10 TableServices
+     * const tableServices = await prisma.tableService.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const municipalServiceWithIdOnly = await prisma.municipalService.findMany({ select: { id: true } })
+     * const tableServiceWithIdOnly = await prisma.tableService.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends MunicipalServiceFindManyArgs>(args?: SelectSubset<T, MunicipalServiceFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends TableServiceFindManyArgs>(args?: SelectSubset<T, TableServiceFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a MunicipalService.
-     * @param {MunicipalServiceCreateArgs} args - Arguments to create a MunicipalService.
+     * Create a TableService.
+     * @param {TableServiceCreateArgs} args - Arguments to create a TableService.
      * @example
-     * // Create one MunicipalService
-     * const MunicipalService = await prisma.municipalService.create({
+     * // Create one TableService
+     * const TableService = await prisma.tableService.create({
      *   data: {
-     *     // ... data to create a MunicipalService
+     *     // ... data to create a TableService
      *   }
      * })
      * 
      */
-    create<T extends MunicipalServiceCreateArgs>(args: SelectSubset<T, MunicipalServiceCreateArgs<ExtArgs>>): Prisma__MunicipalServiceClient<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends TableServiceCreateArgs>(args: SelectSubset<T, TableServiceCreateArgs<ExtArgs>>): Prisma__TableServiceClient<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many MunicipalServices.
-     * @param {MunicipalServiceCreateManyArgs} args - Arguments to create many MunicipalServices.
+     * Create many TableServices.
+     * @param {TableServiceCreateManyArgs} args - Arguments to create many TableServices.
      * @example
-     * // Create many MunicipalServices
-     * const municipalService = await prisma.municipalService.createMany({
+     * // Create many TableServices
+     * const tableService = await prisma.tableService.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends MunicipalServiceCreateManyArgs>(args?: SelectSubset<T, MunicipalServiceCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends TableServiceCreateManyArgs>(args?: SelectSubset<T, TableServiceCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many MunicipalServices and returns the data saved in the database.
-     * @param {MunicipalServiceCreateManyAndReturnArgs} args - Arguments to create many MunicipalServices.
+     * Create many TableServices and returns the data saved in the database.
+     * @param {TableServiceCreateManyAndReturnArgs} args - Arguments to create many TableServices.
      * @example
-     * // Create many MunicipalServices
-     * const municipalService = await prisma.municipalService.createManyAndReturn({
+     * // Create many TableServices
+     * const tableService = await prisma.tableService.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many MunicipalServices and only return the `id`
-     * const municipalServiceWithIdOnly = await prisma.municipalService.createManyAndReturn({
+     * // Create many TableServices and only return the `id`
+     * const tableServiceWithIdOnly = await prisma.tableService.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -2809,28 +2816,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends MunicipalServiceCreateManyAndReturnArgs>(args?: SelectSubset<T, MunicipalServiceCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends TableServiceCreateManyAndReturnArgs>(args?: SelectSubset<T, TableServiceCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a MunicipalService.
-     * @param {MunicipalServiceDeleteArgs} args - Arguments to delete one MunicipalService.
+     * Delete a TableService.
+     * @param {TableServiceDeleteArgs} args - Arguments to delete one TableService.
      * @example
-     * // Delete one MunicipalService
-     * const MunicipalService = await prisma.municipalService.delete({
+     * // Delete one TableService
+     * const TableService = await prisma.tableService.delete({
      *   where: {
-     *     // ... filter to delete one MunicipalService
+     *     // ... filter to delete one TableService
      *   }
      * })
      * 
      */
-    delete<T extends MunicipalServiceDeleteArgs>(args: SelectSubset<T, MunicipalServiceDeleteArgs<ExtArgs>>): Prisma__MunicipalServiceClient<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends TableServiceDeleteArgs>(args: SelectSubset<T, TableServiceDeleteArgs<ExtArgs>>): Prisma__TableServiceClient<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one MunicipalService.
-     * @param {MunicipalServiceUpdateArgs} args - Arguments to update one MunicipalService.
+     * Update one TableService.
+     * @param {TableServiceUpdateArgs} args - Arguments to update one TableService.
      * @example
-     * // Update one MunicipalService
-     * const municipalService = await prisma.municipalService.update({
+     * // Update one TableService
+     * const tableService = await prisma.tableService.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2840,30 +2847,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends MunicipalServiceUpdateArgs>(args: SelectSubset<T, MunicipalServiceUpdateArgs<ExtArgs>>): Prisma__MunicipalServiceClient<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends TableServiceUpdateArgs>(args: SelectSubset<T, TableServiceUpdateArgs<ExtArgs>>): Prisma__TableServiceClient<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more MunicipalServices.
-     * @param {MunicipalServiceDeleteManyArgs} args - Arguments to filter MunicipalServices to delete.
+     * Delete zero or more TableServices.
+     * @param {TableServiceDeleteManyArgs} args - Arguments to filter TableServices to delete.
      * @example
-     * // Delete a few MunicipalServices
-     * const { count } = await prisma.municipalService.deleteMany({
+     * // Delete a few TableServices
+     * const { count } = await prisma.tableService.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends MunicipalServiceDeleteManyArgs>(args?: SelectSubset<T, MunicipalServiceDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends TableServiceDeleteManyArgs>(args?: SelectSubset<T, TableServiceDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more MunicipalServices.
+     * Update zero or more TableServices.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MunicipalServiceUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {TableServiceUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many MunicipalServices
-     * const municipalService = await prisma.municipalService.updateMany({
+     * // Update many TableServices
+     * const tableService = await prisma.tableService.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2873,14 +2880,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends MunicipalServiceUpdateManyArgs>(args: SelectSubset<T, MunicipalServiceUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends TableServiceUpdateManyArgs>(args: SelectSubset<T, TableServiceUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more MunicipalServices and returns the data updated in the database.
-     * @param {MunicipalServiceUpdateManyAndReturnArgs} args - Arguments to update many MunicipalServices.
+     * Update zero or more TableServices and returns the data updated in the database.
+     * @param {TableServiceUpdateManyAndReturnArgs} args - Arguments to update many TableServices.
      * @example
-     * // Update many MunicipalServices
-     * const municipalService = await prisma.municipalService.updateManyAndReturn({
+     * // Update many TableServices
+     * const tableService = await prisma.tableService.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -2889,8 +2896,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more MunicipalServices and only return the `id`
-     * const municipalServiceWithIdOnly = await prisma.municipalService.updateManyAndReturn({
+     * // Update zero or more TableServices and only return the `id`
+     * const tableServiceWithIdOnly = await prisma.tableService.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -2903,56 +2910,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends MunicipalServiceUpdateManyAndReturnArgs>(args: SelectSubset<T, MunicipalServiceUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends TableServiceUpdateManyAndReturnArgs>(args: SelectSubset<T, TableServiceUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one MunicipalService.
-     * @param {MunicipalServiceUpsertArgs} args - Arguments to update or create a MunicipalService.
+     * Create or update one TableService.
+     * @param {TableServiceUpsertArgs} args - Arguments to update or create a TableService.
      * @example
-     * // Update or create a MunicipalService
-     * const municipalService = await prisma.municipalService.upsert({
+     * // Update or create a TableService
+     * const tableService = await prisma.tableService.upsert({
      *   create: {
-     *     // ... data to create a MunicipalService
+     *     // ... data to create a TableService
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the MunicipalService we want to update
+     *     // ... the filter for the TableService we want to update
      *   }
      * })
      */
-    upsert<T extends MunicipalServiceUpsertArgs>(args: SelectSubset<T, MunicipalServiceUpsertArgs<ExtArgs>>): Prisma__MunicipalServiceClient<$Result.GetResult<Prisma.$MunicipalServicePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends TableServiceUpsertArgs>(args: SelectSubset<T, TableServiceUpsertArgs<ExtArgs>>): Prisma__TableServiceClient<$Result.GetResult<Prisma.$TableServicePayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of MunicipalServices.
+     * Count the number of TableServices.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MunicipalServiceCountArgs} args - Arguments to filter MunicipalServices to count.
+     * @param {TableServiceCountArgs} args - Arguments to filter TableServices to count.
      * @example
-     * // Count the number of MunicipalServices
-     * const count = await prisma.municipalService.count({
+     * // Count the number of TableServices
+     * const count = await prisma.tableService.count({
      *   where: {
-     *     // ... the filter for the MunicipalServices we want to count
+     *     // ... the filter for the TableServices we want to count
      *   }
      * })
     **/
-    count<T extends MunicipalServiceCountArgs>(
-      args?: Subset<T, MunicipalServiceCountArgs>,
+    count<T extends TableServiceCountArgs>(
+      args?: Subset<T, TableServiceCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], MunicipalServiceCountAggregateOutputType>
+          : GetScalarType<T['select'], TableServiceCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a MunicipalService.
+     * Allows you to perform aggregations operations on a TableService.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MunicipalServiceAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {TableServiceAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -2972,13 +2979,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends MunicipalServiceAggregateArgs>(args: Subset<T, MunicipalServiceAggregateArgs>): Prisma.PrismaPromise<GetMunicipalServiceAggregateType<T>>
+    aggregate<T extends TableServiceAggregateArgs>(args: Subset<T, TableServiceAggregateArgs>): Prisma.PrismaPromise<GetTableServiceAggregateType<T>>
 
     /**
-     * Group by MunicipalService.
+     * Group by TableService.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {MunicipalServiceGroupByArgs} args - Group by arguments.
+     * @param {TableServiceGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -2993,14 +3000,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends MunicipalServiceGroupByArgs,
+      T extends TableServiceGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: MunicipalServiceGroupByArgs['orderBy'] }
-        : { orderBy?: MunicipalServiceGroupByArgs['orderBy'] },
+        ? { orderBy: TableServiceGroupByArgs['orderBy'] }
+        : { orderBy?: TableServiceGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -3049,20 +3056,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, MunicipalServiceGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetMunicipalServiceGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, TableServiceGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTableServiceGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the MunicipalService model
+   * Fields of the TableService model
    */
-  readonly fields: MunicipalServiceFieldRefs;
+  readonly fields: TableServiceFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for MunicipalService.
+   * The delegate class that acts as a "Promise-like" for TableService.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__MunicipalServiceClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__TableServiceClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -3090,403 +3097,404 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the MunicipalService model
+   * Fields of the TableService model
    */
-  interface MunicipalServiceFieldRefs {
-    readonly id: FieldRef<"MunicipalService", 'Int'>
-    readonly createdAt: FieldRef<"MunicipalService", 'DateTime'>
-    readonly updatedAt: FieldRef<"MunicipalService", 'DateTime'>
-    readonly name: FieldRef<"MunicipalService", 'String'>
-    readonly type: FieldRef<"MunicipalService", 'String'>
-    readonly status: FieldRef<"MunicipalService", 'String'>
-    readonly description: FieldRef<"MunicipalService", 'String'>
+  interface TableServiceFieldRefs {
+    readonly id: FieldRef<"TableService", 'Int'>
+    readonly createdAt: FieldRef<"TableService", 'DateTime'>
+    readonly updatedAt: FieldRef<"TableService", 'DateTime'>
+    readonly name: FieldRef<"TableService", 'String'>
+    readonly type: FieldRef<"TableService", 'String'>
+    readonly status: FieldRef<"TableService", 'String'>
+    readonly description: FieldRef<"TableService", 'String'>
+    readonly localisation: FieldRef<"TableService", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * MunicipalService findUnique
+   * TableService findUnique
    */
-  export type MunicipalServiceFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * Filter, which MunicipalService to fetch.
+     * Filter, which TableService to fetch.
      */
-    where: MunicipalServiceWhereUniqueInput
+    where: TableServiceWhereUniqueInput
   }
 
   /**
-   * MunicipalService findUniqueOrThrow
+   * TableService findUniqueOrThrow
    */
-  export type MunicipalServiceFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * Filter, which MunicipalService to fetch.
+     * Filter, which TableService to fetch.
      */
-    where: MunicipalServiceWhereUniqueInput
+    where: TableServiceWhereUniqueInput
   }
 
   /**
-   * MunicipalService findFirst
+   * TableService findFirst
    */
-  export type MunicipalServiceFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * Filter, which MunicipalService to fetch.
+     * Filter, which TableService to fetch.
      */
-    where?: MunicipalServiceWhereInput
+    where?: TableServiceWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of MunicipalServices to fetch.
+     * Determine the order of TableServices to fetch.
      */
-    orderBy?: MunicipalServiceOrderByWithRelationInput | MunicipalServiceOrderByWithRelationInput[]
+    orderBy?: TableServiceOrderByWithRelationInput | TableServiceOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for MunicipalServices.
+     * Sets the position for searching for TableServices.
      */
-    cursor?: MunicipalServiceWhereUniqueInput
+    cursor?: TableServiceWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` MunicipalServices from the position of the cursor.
+     * Take `±n` TableServices from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` MunicipalServices.
+     * Skip the first `n` TableServices.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of MunicipalServices.
+     * Filter by unique combinations of TableServices.
      */
-    distinct?: MunicipalServiceScalarFieldEnum | MunicipalServiceScalarFieldEnum[]
+    distinct?: TableServiceScalarFieldEnum | TableServiceScalarFieldEnum[]
   }
 
   /**
-   * MunicipalService findFirstOrThrow
+   * TableService findFirstOrThrow
    */
-  export type MunicipalServiceFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * Filter, which MunicipalService to fetch.
+     * Filter, which TableService to fetch.
      */
-    where?: MunicipalServiceWhereInput
+    where?: TableServiceWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of MunicipalServices to fetch.
+     * Determine the order of TableServices to fetch.
      */
-    orderBy?: MunicipalServiceOrderByWithRelationInput | MunicipalServiceOrderByWithRelationInput[]
+    orderBy?: TableServiceOrderByWithRelationInput | TableServiceOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for MunicipalServices.
+     * Sets the position for searching for TableServices.
      */
-    cursor?: MunicipalServiceWhereUniqueInput
+    cursor?: TableServiceWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` MunicipalServices from the position of the cursor.
+     * Take `±n` TableServices from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` MunicipalServices.
+     * Skip the first `n` TableServices.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of MunicipalServices.
+     * Filter by unique combinations of TableServices.
      */
-    distinct?: MunicipalServiceScalarFieldEnum | MunicipalServiceScalarFieldEnum[]
+    distinct?: TableServiceScalarFieldEnum | TableServiceScalarFieldEnum[]
   }
 
   /**
-   * MunicipalService findMany
+   * TableService findMany
    */
-  export type MunicipalServiceFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * Filter, which MunicipalServices to fetch.
+     * Filter, which TableServices to fetch.
      */
-    where?: MunicipalServiceWhereInput
+    where?: TableServiceWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of MunicipalServices to fetch.
+     * Determine the order of TableServices to fetch.
      */
-    orderBy?: MunicipalServiceOrderByWithRelationInput | MunicipalServiceOrderByWithRelationInput[]
+    orderBy?: TableServiceOrderByWithRelationInput | TableServiceOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing MunicipalServices.
+     * Sets the position for listing TableServices.
      */
-    cursor?: MunicipalServiceWhereUniqueInput
+    cursor?: TableServiceWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` MunicipalServices from the position of the cursor.
+     * Take `±n` TableServices from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` MunicipalServices.
+     * Skip the first `n` TableServices.
      */
     skip?: number
-    distinct?: MunicipalServiceScalarFieldEnum | MunicipalServiceScalarFieldEnum[]
+    distinct?: TableServiceScalarFieldEnum | TableServiceScalarFieldEnum[]
   }
 
   /**
-   * MunicipalService create
+   * TableService create
    */
-  export type MunicipalServiceCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * The data needed to create a MunicipalService.
+     * The data needed to create a TableService.
      */
-    data: XOR<MunicipalServiceCreateInput, MunicipalServiceUncheckedCreateInput>
+    data: XOR<TableServiceCreateInput, TableServiceUncheckedCreateInput>
   }
 
   /**
-   * MunicipalService createMany
+   * TableService createMany
    */
-  export type MunicipalServiceCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many MunicipalServices.
+     * The data used to create many TableServices.
      */
-    data: MunicipalServiceCreateManyInput | MunicipalServiceCreateManyInput[]
+    data: TableServiceCreateManyInput | TableServiceCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * MunicipalService createManyAndReturn
+   * TableService createManyAndReturn
    */
-  export type MunicipalServiceCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelectCreateManyAndReturn<ExtArgs> | null
+    select?: TableServiceSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * The data used to create many MunicipalServices.
+     * The data used to create many TableServices.
      */
-    data: MunicipalServiceCreateManyInput | MunicipalServiceCreateManyInput[]
+    data: TableServiceCreateManyInput | TableServiceCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * MunicipalService update
+   * TableService update
    */
-  export type MunicipalServiceUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * The data needed to update a MunicipalService.
+     * The data needed to update a TableService.
      */
-    data: XOR<MunicipalServiceUpdateInput, MunicipalServiceUncheckedUpdateInput>
+    data: XOR<TableServiceUpdateInput, TableServiceUncheckedUpdateInput>
     /**
-     * Choose, which MunicipalService to update.
+     * Choose, which TableService to update.
      */
-    where: MunicipalServiceWhereUniqueInput
+    where: TableServiceWhereUniqueInput
   }
 
   /**
-   * MunicipalService updateMany
+   * TableService updateMany
    */
-  export type MunicipalServiceUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update MunicipalServices.
+     * The data used to update TableServices.
      */
-    data: XOR<MunicipalServiceUpdateManyMutationInput, MunicipalServiceUncheckedUpdateManyInput>
+    data: XOR<TableServiceUpdateManyMutationInput, TableServiceUncheckedUpdateManyInput>
     /**
-     * Filter which MunicipalServices to update
+     * Filter which TableServices to update
      */
-    where?: MunicipalServiceWhereInput
+    where?: TableServiceWhereInput
     /**
-     * Limit how many MunicipalServices to update.
+     * Limit how many TableServices to update.
      */
     limit?: number
   }
 
   /**
-   * MunicipalService updateManyAndReturn
+   * TableService updateManyAndReturn
    */
-  export type MunicipalServiceUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: TableServiceSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * The data used to update MunicipalServices.
+     * The data used to update TableServices.
      */
-    data: XOR<MunicipalServiceUpdateManyMutationInput, MunicipalServiceUncheckedUpdateManyInput>
+    data: XOR<TableServiceUpdateManyMutationInput, TableServiceUncheckedUpdateManyInput>
     /**
-     * Filter which MunicipalServices to update
+     * Filter which TableServices to update
      */
-    where?: MunicipalServiceWhereInput
+    where?: TableServiceWhereInput
     /**
-     * Limit how many MunicipalServices to update.
+     * Limit how many TableServices to update.
      */
     limit?: number
   }
 
   /**
-   * MunicipalService upsert
+   * TableService upsert
    */
-  export type MunicipalServiceUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * The filter to search for the MunicipalService to update in case it exists.
+     * The filter to search for the TableService to update in case it exists.
      */
-    where: MunicipalServiceWhereUniqueInput
+    where: TableServiceWhereUniqueInput
     /**
-     * In case the MunicipalService found by the `where` argument doesn't exist, create a new MunicipalService with this data.
+     * In case the TableService found by the `where` argument doesn't exist, create a new TableService with this data.
      */
-    create: XOR<MunicipalServiceCreateInput, MunicipalServiceUncheckedCreateInput>
+    create: XOR<TableServiceCreateInput, TableServiceUncheckedCreateInput>
     /**
-     * In case the MunicipalService was found with the provided `where` argument, update it with this data.
+     * In case the TableService was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<MunicipalServiceUpdateInput, MunicipalServiceUncheckedUpdateInput>
+    update: XOR<TableServiceUpdateInput, TableServiceUncheckedUpdateInput>
   }
 
   /**
-   * MunicipalService delete
+   * TableService delete
    */
-  export type MunicipalServiceDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
     /**
-     * Filter which MunicipalService to delete.
+     * Filter which TableService to delete.
      */
-    where: MunicipalServiceWhereUniqueInput
+    where: TableServiceWhereUniqueInput
   }
 
   /**
-   * MunicipalService deleteMany
+   * TableService deleteMany
    */
-  export type MunicipalServiceDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which MunicipalServices to delete
+     * Filter which TableServices to delete
      */
-    where?: MunicipalServiceWhereInput
+    where?: TableServiceWhereInput
     /**
-     * Limit how many MunicipalServices to delete.
+     * Limit how many TableServices to delete.
      */
     limit?: number
   }
 
   /**
-   * MunicipalService without action
+   * TableService without action
    */
-  export type MunicipalServiceDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableServiceDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the MunicipalService
+     * Select specific fields to fetch from the TableService
      */
-    select?: MunicipalServiceSelect<ExtArgs> | null
+    select?: TableServiceSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the MunicipalService
+     * Omit specific fields from the TableService
      */
-    omit?: MunicipalServiceOmit<ExtArgs> | null
+    omit?: TableServiceOmit<ExtArgs> | null
   }
 
 
   /**
-   * Model ConnectedObject
+   * Model TableObject
    */
 
-  export type AggregateConnectedObject = {
-    _count: ConnectedObjectCountAggregateOutputType | null
-    _avg: ConnectedObjectAvgAggregateOutputType | null
-    _sum: ConnectedObjectSumAggregateOutputType | null
-    _min: ConnectedObjectMinAggregateOutputType | null
-    _max: ConnectedObjectMaxAggregateOutputType | null
+  export type AggregateTableObject = {
+    _count: TableObjectCountAggregateOutputType | null
+    _avg: TableObjectAvgAggregateOutputType | null
+    _sum: TableObjectSumAggregateOutputType | null
+    _min: TableObjectMinAggregateOutputType | null
+    _max: TableObjectMaxAggregateOutputType | null
   }
 
-  export type ConnectedObjectAvgAggregateOutputType = {
+  export type TableObjectAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type ConnectedObjectSumAggregateOutputType = {
+  export type TableObjectSumAggregateOutputType = {
     id: number | null
   }
 
-  export type ConnectedObjectMinAggregateOutputType = {
+  export type TableObjectMinAggregateOutputType = {
     id: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -3494,11 +3502,10 @@ export namespace Prisma {
     type: string | null
     status: string | null
     location: string | null
-    lastValue: string | null
     lastUpdate: Date | null
   }
 
-  export type ConnectedObjectMaxAggregateOutputType = {
+  export type TableObjectMaxAggregateOutputType = {
     id: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -3506,11 +3513,10 @@ export namespace Prisma {
     type: string | null
     status: string | null
     location: string | null
-    lastValue: string | null
     lastUpdate: Date | null
   }
 
-  export type ConnectedObjectCountAggregateOutputType = {
+  export type TableObjectCountAggregateOutputType = {
     id: number
     createdAt: number
     updatedAt: number
@@ -3518,21 +3524,20 @@ export namespace Prisma {
     type: number
     status: number
     location: number
-    lastValue: number
     lastUpdate: number
     _all: number
   }
 
 
-  export type ConnectedObjectAvgAggregateInputType = {
+  export type TableObjectAvgAggregateInputType = {
     id?: true
   }
 
-  export type ConnectedObjectSumAggregateInputType = {
+  export type TableObjectSumAggregateInputType = {
     id?: true
   }
 
-  export type ConnectedObjectMinAggregateInputType = {
+  export type TableObjectMinAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -3540,11 +3545,10 @@ export namespace Prisma {
     type?: true
     status?: true
     location?: true
-    lastValue?: true
     lastUpdate?: true
   }
 
-  export type ConnectedObjectMaxAggregateInputType = {
+  export type TableObjectMaxAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -3552,11 +3556,10 @@ export namespace Prisma {
     type?: true
     status?: true
     location?: true
-    lastValue?: true
     lastUpdate?: true
   }
 
-  export type ConnectedObjectCountAggregateInputType = {
+  export type TableObjectCountAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -3564,98 +3567,97 @@ export namespace Prisma {
     type?: true
     status?: true
     location?: true
-    lastValue?: true
     lastUpdate?: true
     _all?: true
   }
 
-  export type ConnectedObjectAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which ConnectedObject to aggregate.
+     * Filter which TableObject to aggregate.
      */
-    where?: ConnectedObjectWhereInput
+    where?: TableObjectWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of ConnectedObjects to fetch.
+     * Determine the order of TableObjects to fetch.
      */
-    orderBy?: ConnectedObjectOrderByWithRelationInput | ConnectedObjectOrderByWithRelationInput[]
+    orderBy?: TableObjectOrderByWithRelationInput | TableObjectOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: ConnectedObjectWhereUniqueInput
+    cursor?: TableObjectWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` ConnectedObjects from the position of the cursor.
+     * Take `±n` TableObjects from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` ConnectedObjects.
+     * Skip the first `n` TableObjects.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned ConnectedObjects
+     * Count returned TableObjects
     **/
-    _count?: true | ConnectedObjectCountAggregateInputType
+    _count?: true | TableObjectCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: ConnectedObjectAvgAggregateInputType
+    _avg?: TableObjectAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: ConnectedObjectSumAggregateInputType
+    _sum?: TableObjectSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: ConnectedObjectMinAggregateInputType
+    _min?: TableObjectMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: ConnectedObjectMaxAggregateInputType
+    _max?: TableObjectMaxAggregateInputType
   }
 
-  export type GetConnectedObjectAggregateType<T extends ConnectedObjectAggregateArgs> = {
-        [P in keyof T & keyof AggregateConnectedObject]: P extends '_count' | 'count'
+  export type GetTableObjectAggregateType<T extends TableObjectAggregateArgs> = {
+        [P in keyof T & keyof AggregateTableObject]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateConnectedObject[P]>
-      : GetScalarType<T[P], AggregateConnectedObject[P]>
+        : GetScalarType<T[P], AggregateTableObject[P]>
+      : GetScalarType<T[P], AggregateTableObject[P]>
   }
 
 
 
 
-  export type ConnectedObjectGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: ConnectedObjectWhereInput
-    orderBy?: ConnectedObjectOrderByWithAggregationInput | ConnectedObjectOrderByWithAggregationInput[]
-    by: ConnectedObjectScalarFieldEnum[] | ConnectedObjectScalarFieldEnum
-    having?: ConnectedObjectScalarWhereWithAggregatesInput
+  export type TableObjectGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TableObjectWhereInput
+    orderBy?: TableObjectOrderByWithAggregationInput | TableObjectOrderByWithAggregationInput[]
+    by: TableObjectScalarFieldEnum[] | TableObjectScalarFieldEnum
+    having?: TableObjectScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: ConnectedObjectCountAggregateInputType | true
-    _avg?: ConnectedObjectAvgAggregateInputType
-    _sum?: ConnectedObjectSumAggregateInputType
-    _min?: ConnectedObjectMinAggregateInputType
-    _max?: ConnectedObjectMaxAggregateInputType
+    _count?: TableObjectCountAggregateInputType | true
+    _avg?: TableObjectAvgAggregateInputType
+    _sum?: TableObjectSumAggregateInputType
+    _min?: TableObjectMinAggregateInputType
+    _max?: TableObjectMaxAggregateInputType
   }
 
-  export type ConnectedObjectGroupByOutputType = {
+  export type TableObjectGroupByOutputType = {
     id: number
     createdAt: Date
     updatedAt: Date
@@ -3663,30 +3665,29 @@ export namespace Prisma {
     type: string
     status: string
     location: string
-    lastValue: string | null
-    lastUpdate: Date | null
-    _count: ConnectedObjectCountAggregateOutputType | null
-    _avg: ConnectedObjectAvgAggregateOutputType | null
-    _sum: ConnectedObjectSumAggregateOutputType | null
-    _min: ConnectedObjectMinAggregateOutputType | null
-    _max: ConnectedObjectMaxAggregateOutputType | null
+    lastUpdate: Date
+    _count: TableObjectCountAggregateOutputType | null
+    _avg: TableObjectAvgAggregateOutputType | null
+    _sum: TableObjectSumAggregateOutputType | null
+    _min: TableObjectMinAggregateOutputType | null
+    _max: TableObjectMaxAggregateOutputType | null
   }
 
-  type GetConnectedObjectGroupByPayload<T extends ConnectedObjectGroupByArgs> = Prisma.PrismaPromise<
+  type GetTableObjectGroupByPayload<T extends TableObjectGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<ConnectedObjectGroupByOutputType, T['by']> &
+      PickEnumerable<TableObjectGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof ConnectedObjectGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof TableObjectGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], ConnectedObjectGroupByOutputType[P]>
-            : GetScalarType<T[P], ConnectedObjectGroupByOutputType[P]>
+              : GetScalarType<T[P], TableObjectGroupByOutputType[P]>
+            : GetScalarType<T[P], TableObjectGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type ConnectedObjectSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableObjectSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -3694,11 +3695,10 @@ export namespace Prisma {
     type?: boolean
     status?: boolean
     location?: boolean
-    lastValue?: boolean
     lastUpdate?: boolean
-  }, ExtArgs["result"]["connectedObject"]>
+  }, ExtArgs["result"]["tableObject"]>
 
-  export type ConnectedObjectSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableObjectSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -3706,11 +3706,10 @@ export namespace Prisma {
     type?: boolean
     status?: boolean
     location?: boolean
-    lastValue?: boolean
     lastUpdate?: boolean
-  }, ExtArgs["result"]["connectedObject"]>
+  }, ExtArgs["result"]["tableObject"]>
 
-  export type ConnectedObjectSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableObjectSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -3718,11 +3717,10 @@ export namespace Prisma {
     type?: boolean
     status?: boolean
     location?: boolean
-    lastValue?: boolean
     lastUpdate?: boolean
-  }, ExtArgs["result"]["connectedObject"]>
+  }, ExtArgs["result"]["tableObject"]>
 
-  export type ConnectedObjectSelectScalar = {
+  export type TableObjectSelectScalar = {
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -3730,14 +3728,13 @@ export namespace Prisma {
     type?: boolean
     status?: boolean
     location?: boolean
-    lastValue?: boolean
     lastUpdate?: boolean
   }
 
-  export type ConnectedObjectOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "name" | "type" | "status" | "location" | "lastValue" | "lastUpdate", ExtArgs["result"]["connectedObject"]>
+  export type TableObjectOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "name" | "type" | "status" | "location" | "lastUpdate", ExtArgs["result"]["tableObject"]>
 
-  export type $ConnectedObjectPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "ConnectedObject"
+  export type $TableObjectPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TableObject"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -3747,138 +3744,137 @@ export namespace Prisma {
       type: string
       status: string
       location: string
-      lastValue: string | null
-      lastUpdate: Date | null
-    }, ExtArgs["result"]["connectedObject"]>
+      lastUpdate: Date
+    }, ExtArgs["result"]["tableObject"]>
     composites: {}
   }
 
-  type ConnectedObjectGetPayload<S extends boolean | null | undefined | ConnectedObjectDefaultArgs> = $Result.GetResult<Prisma.$ConnectedObjectPayload, S>
+  type TableObjectGetPayload<S extends boolean | null | undefined | TableObjectDefaultArgs> = $Result.GetResult<Prisma.$TableObjectPayload, S>
 
-  type ConnectedObjectCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<ConnectedObjectFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: ConnectedObjectCountAggregateInputType | true
+  type TableObjectCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TableObjectFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TableObjectCountAggregateInputType | true
     }
 
-  export interface ConnectedObjectDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['ConnectedObject'], meta: { name: 'ConnectedObject' } }
+  export interface TableObjectDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TableObject'], meta: { name: 'TableObject' } }
     /**
-     * Find zero or one ConnectedObject that matches the filter.
-     * @param {ConnectedObjectFindUniqueArgs} args - Arguments to find a ConnectedObject
+     * Find zero or one TableObject that matches the filter.
+     * @param {TableObjectFindUniqueArgs} args - Arguments to find a TableObject
      * @example
-     * // Get one ConnectedObject
-     * const connectedObject = await prisma.connectedObject.findUnique({
+     * // Get one TableObject
+     * const tableObject = await prisma.tableObject.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends ConnectedObjectFindUniqueArgs>(args: SelectSubset<T, ConnectedObjectFindUniqueArgs<ExtArgs>>): Prisma__ConnectedObjectClient<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends TableObjectFindUniqueArgs>(args: SelectSubset<T, TableObjectFindUniqueArgs<ExtArgs>>): Prisma__TableObjectClient<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one ConnectedObject that matches the filter or throw an error with `error.code='P2025'`
+     * Find one TableObject that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {ConnectedObjectFindUniqueOrThrowArgs} args - Arguments to find a ConnectedObject
+     * @param {TableObjectFindUniqueOrThrowArgs} args - Arguments to find a TableObject
      * @example
-     * // Get one ConnectedObject
-     * const connectedObject = await prisma.connectedObject.findUniqueOrThrow({
+     * // Get one TableObject
+     * const tableObject = await prisma.tableObject.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends ConnectedObjectFindUniqueOrThrowArgs>(args: SelectSubset<T, ConnectedObjectFindUniqueOrThrowArgs<ExtArgs>>): Prisma__ConnectedObjectClient<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends TableObjectFindUniqueOrThrowArgs>(args: SelectSubset<T, TableObjectFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TableObjectClient<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first ConnectedObject that matches the filter.
+     * Find the first TableObject that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ConnectedObjectFindFirstArgs} args - Arguments to find a ConnectedObject
+     * @param {TableObjectFindFirstArgs} args - Arguments to find a TableObject
      * @example
-     * // Get one ConnectedObject
-     * const connectedObject = await prisma.connectedObject.findFirst({
+     * // Get one TableObject
+     * const tableObject = await prisma.tableObject.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends ConnectedObjectFindFirstArgs>(args?: SelectSubset<T, ConnectedObjectFindFirstArgs<ExtArgs>>): Prisma__ConnectedObjectClient<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends TableObjectFindFirstArgs>(args?: SelectSubset<T, TableObjectFindFirstArgs<ExtArgs>>): Prisma__TableObjectClient<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first ConnectedObject that matches the filter or
+     * Find the first TableObject that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ConnectedObjectFindFirstOrThrowArgs} args - Arguments to find a ConnectedObject
+     * @param {TableObjectFindFirstOrThrowArgs} args - Arguments to find a TableObject
      * @example
-     * // Get one ConnectedObject
-     * const connectedObject = await prisma.connectedObject.findFirstOrThrow({
+     * // Get one TableObject
+     * const tableObject = await prisma.tableObject.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends ConnectedObjectFindFirstOrThrowArgs>(args?: SelectSubset<T, ConnectedObjectFindFirstOrThrowArgs<ExtArgs>>): Prisma__ConnectedObjectClient<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends TableObjectFindFirstOrThrowArgs>(args?: SelectSubset<T, TableObjectFindFirstOrThrowArgs<ExtArgs>>): Prisma__TableObjectClient<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more ConnectedObjects that matches the filter.
+     * Find zero or more TableObjects that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ConnectedObjectFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {TableObjectFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all ConnectedObjects
-     * const connectedObjects = await prisma.connectedObject.findMany()
+     * // Get all TableObjects
+     * const tableObjects = await prisma.tableObject.findMany()
      * 
-     * // Get first 10 ConnectedObjects
-     * const connectedObjects = await prisma.connectedObject.findMany({ take: 10 })
+     * // Get first 10 TableObjects
+     * const tableObjects = await prisma.tableObject.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const connectedObjectWithIdOnly = await prisma.connectedObject.findMany({ select: { id: true } })
+     * const tableObjectWithIdOnly = await prisma.tableObject.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends ConnectedObjectFindManyArgs>(args?: SelectSubset<T, ConnectedObjectFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends TableObjectFindManyArgs>(args?: SelectSubset<T, TableObjectFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a ConnectedObject.
-     * @param {ConnectedObjectCreateArgs} args - Arguments to create a ConnectedObject.
+     * Create a TableObject.
+     * @param {TableObjectCreateArgs} args - Arguments to create a TableObject.
      * @example
-     * // Create one ConnectedObject
-     * const ConnectedObject = await prisma.connectedObject.create({
+     * // Create one TableObject
+     * const TableObject = await prisma.tableObject.create({
      *   data: {
-     *     // ... data to create a ConnectedObject
+     *     // ... data to create a TableObject
      *   }
      * })
      * 
      */
-    create<T extends ConnectedObjectCreateArgs>(args: SelectSubset<T, ConnectedObjectCreateArgs<ExtArgs>>): Prisma__ConnectedObjectClient<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends TableObjectCreateArgs>(args: SelectSubset<T, TableObjectCreateArgs<ExtArgs>>): Prisma__TableObjectClient<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many ConnectedObjects.
-     * @param {ConnectedObjectCreateManyArgs} args - Arguments to create many ConnectedObjects.
+     * Create many TableObjects.
+     * @param {TableObjectCreateManyArgs} args - Arguments to create many TableObjects.
      * @example
-     * // Create many ConnectedObjects
-     * const connectedObject = await prisma.connectedObject.createMany({
+     * // Create many TableObjects
+     * const tableObject = await prisma.tableObject.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends ConnectedObjectCreateManyArgs>(args?: SelectSubset<T, ConnectedObjectCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends TableObjectCreateManyArgs>(args?: SelectSubset<T, TableObjectCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many ConnectedObjects and returns the data saved in the database.
-     * @param {ConnectedObjectCreateManyAndReturnArgs} args - Arguments to create many ConnectedObjects.
+     * Create many TableObjects and returns the data saved in the database.
+     * @param {TableObjectCreateManyAndReturnArgs} args - Arguments to create many TableObjects.
      * @example
-     * // Create many ConnectedObjects
-     * const connectedObject = await prisma.connectedObject.createManyAndReturn({
+     * // Create many TableObjects
+     * const tableObject = await prisma.tableObject.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many ConnectedObjects and only return the `id`
-     * const connectedObjectWithIdOnly = await prisma.connectedObject.createManyAndReturn({
+     * // Create many TableObjects and only return the `id`
+     * const tableObjectWithIdOnly = await prisma.tableObject.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -3888,28 +3884,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends ConnectedObjectCreateManyAndReturnArgs>(args?: SelectSubset<T, ConnectedObjectCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends TableObjectCreateManyAndReturnArgs>(args?: SelectSubset<T, TableObjectCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a ConnectedObject.
-     * @param {ConnectedObjectDeleteArgs} args - Arguments to delete one ConnectedObject.
+     * Delete a TableObject.
+     * @param {TableObjectDeleteArgs} args - Arguments to delete one TableObject.
      * @example
-     * // Delete one ConnectedObject
-     * const ConnectedObject = await prisma.connectedObject.delete({
+     * // Delete one TableObject
+     * const TableObject = await prisma.tableObject.delete({
      *   where: {
-     *     // ... filter to delete one ConnectedObject
+     *     // ... filter to delete one TableObject
      *   }
      * })
      * 
      */
-    delete<T extends ConnectedObjectDeleteArgs>(args: SelectSubset<T, ConnectedObjectDeleteArgs<ExtArgs>>): Prisma__ConnectedObjectClient<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends TableObjectDeleteArgs>(args: SelectSubset<T, TableObjectDeleteArgs<ExtArgs>>): Prisma__TableObjectClient<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one ConnectedObject.
-     * @param {ConnectedObjectUpdateArgs} args - Arguments to update one ConnectedObject.
+     * Update one TableObject.
+     * @param {TableObjectUpdateArgs} args - Arguments to update one TableObject.
      * @example
-     * // Update one ConnectedObject
-     * const connectedObject = await prisma.connectedObject.update({
+     * // Update one TableObject
+     * const tableObject = await prisma.tableObject.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3919,30 +3915,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends ConnectedObjectUpdateArgs>(args: SelectSubset<T, ConnectedObjectUpdateArgs<ExtArgs>>): Prisma__ConnectedObjectClient<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends TableObjectUpdateArgs>(args: SelectSubset<T, TableObjectUpdateArgs<ExtArgs>>): Prisma__TableObjectClient<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more ConnectedObjects.
-     * @param {ConnectedObjectDeleteManyArgs} args - Arguments to filter ConnectedObjects to delete.
+     * Delete zero or more TableObjects.
+     * @param {TableObjectDeleteManyArgs} args - Arguments to filter TableObjects to delete.
      * @example
-     * // Delete a few ConnectedObjects
-     * const { count } = await prisma.connectedObject.deleteMany({
+     * // Delete a few TableObjects
+     * const { count } = await prisma.tableObject.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends ConnectedObjectDeleteManyArgs>(args?: SelectSubset<T, ConnectedObjectDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends TableObjectDeleteManyArgs>(args?: SelectSubset<T, TableObjectDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more ConnectedObjects.
+     * Update zero or more TableObjects.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ConnectedObjectUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {TableObjectUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many ConnectedObjects
-     * const connectedObject = await prisma.connectedObject.updateMany({
+     * // Update many TableObjects
+     * const tableObject = await prisma.tableObject.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3952,14 +3948,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends ConnectedObjectUpdateManyArgs>(args: SelectSubset<T, ConnectedObjectUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends TableObjectUpdateManyArgs>(args: SelectSubset<T, TableObjectUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more ConnectedObjects and returns the data updated in the database.
-     * @param {ConnectedObjectUpdateManyAndReturnArgs} args - Arguments to update many ConnectedObjects.
+     * Update zero or more TableObjects and returns the data updated in the database.
+     * @param {TableObjectUpdateManyAndReturnArgs} args - Arguments to update many TableObjects.
      * @example
-     * // Update many ConnectedObjects
-     * const connectedObject = await prisma.connectedObject.updateManyAndReturn({
+     * // Update many TableObjects
+     * const tableObject = await prisma.tableObject.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -3968,8 +3964,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more ConnectedObjects and only return the `id`
-     * const connectedObjectWithIdOnly = await prisma.connectedObject.updateManyAndReturn({
+     * // Update zero or more TableObjects and only return the `id`
+     * const tableObjectWithIdOnly = await prisma.tableObject.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -3982,56 +3978,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends ConnectedObjectUpdateManyAndReturnArgs>(args: SelectSubset<T, ConnectedObjectUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends TableObjectUpdateManyAndReturnArgs>(args: SelectSubset<T, TableObjectUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one ConnectedObject.
-     * @param {ConnectedObjectUpsertArgs} args - Arguments to update or create a ConnectedObject.
+     * Create or update one TableObject.
+     * @param {TableObjectUpsertArgs} args - Arguments to update or create a TableObject.
      * @example
-     * // Update or create a ConnectedObject
-     * const connectedObject = await prisma.connectedObject.upsert({
+     * // Update or create a TableObject
+     * const tableObject = await prisma.tableObject.upsert({
      *   create: {
-     *     // ... data to create a ConnectedObject
+     *     // ... data to create a TableObject
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the ConnectedObject we want to update
+     *     // ... the filter for the TableObject we want to update
      *   }
      * })
      */
-    upsert<T extends ConnectedObjectUpsertArgs>(args: SelectSubset<T, ConnectedObjectUpsertArgs<ExtArgs>>): Prisma__ConnectedObjectClient<$Result.GetResult<Prisma.$ConnectedObjectPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends TableObjectUpsertArgs>(args: SelectSubset<T, TableObjectUpsertArgs<ExtArgs>>): Prisma__TableObjectClient<$Result.GetResult<Prisma.$TableObjectPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of ConnectedObjects.
+     * Count the number of TableObjects.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ConnectedObjectCountArgs} args - Arguments to filter ConnectedObjects to count.
+     * @param {TableObjectCountArgs} args - Arguments to filter TableObjects to count.
      * @example
-     * // Count the number of ConnectedObjects
-     * const count = await prisma.connectedObject.count({
+     * // Count the number of TableObjects
+     * const count = await prisma.tableObject.count({
      *   where: {
-     *     // ... the filter for the ConnectedObjects we want to count
+     *     // ... the filter for the TableObjects we want to count
      *   }
      * })
     **/
-    count<T extends ConnectedObjectCountArgs>(
-      args?: Subset<T, ConnectedObjectCountArgs>,
+    count<T extends TableObjectCountArgs>(
+      args?: Subset<T, TableObjectCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], ConnectedObjectCountAggregateOutputType>
+          : GetScalarType<T['select'], TableObjectCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a ConnectedObject.
+     * Allows you to perform aggregations operations on a TableObject.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ConnectedObjectAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {TableObjectAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -4051,13 +4047,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends ConnectedObjectAggregateArgs>(args: Subset<T, ConnectedObjectAggregateArgs>): Prisma.PrismaPromise<GetConnectedObjectAggregateType<T>>
+    aggregate<T extends TableObjectAggregateArgs>(args: Subset<T, TableObjectAggregateArgs>): Prisma.PrismaPromise<GetTableObjectAggregateType<T>>
 
     /**
-     * Group by ConnectedObject.
+     * Group by TableObject.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {ConnectedObjectGroupByArgs} args - Group by arguments.
+     * @param {TableObjectGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -4072,14 +4068,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends ConnectedObjectGroupByArgs,
+      T extends TableObjectGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: ConnectedObjectGroupByArgs['orderBy'] }
-        : { orderBy?: ConnectedObjectGroupByArgs['orderBy'] },
+        ? { orderBy: TableObjectGroupByArgs['orderBy'] }
+        : { orderBy?: TableObjectGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -4128,20 +4124,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, ConnectedObjectGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetConnectedObjectGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, TableObjectGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTableObjectGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the ConnectedObject model
+   * Fields of the TableObject model
    */
-  readonly fields: ConnectedObjectFieldRefs;
+  readonly fields: TableObjectFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for ConnectedObject.
+   * The delegate class that acts as a "Promise-like" for TableObject.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__ConnectedObjectClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__TableObjectClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -4169,407 +4165,404 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the ConnectedObject model
+   * Fields of the TableObject model
    */
-  interface ConnectedObjectFieldRefs {
-    readonly id: FieldRef<"ConnectedObject", 'Int'>
-    readonly createdAt: FieldRef<"ConnectedObject", 'DateTime'>
-    readonly updatedAt: FieldRef<"ConnectedObject", 'DateTime'>
-    readonly name: FieldRef<"ConnectedObject", 'String'>
-    readonly type: FieldRef<"ConnectedObject", 'String'>
-    readonly status: FieldRef<"ConnectedObject", 'String'>
-    readonly location: FieldRef<"ConnectedObject", 'String'>
-    readonly lastValue: FieldRef<"ConnectedObject", 'String'>
-    readonly lastUpdate: FieldRef<"ConnectedObject", 'DateTime'>
+  interface TableObjectFieldRefs {
+    readonly id: FieldRef<"TableObject", 'Int'>
+    readonly createdAt: FieldRef<"TableObject", 'DateTime'>
+    readonly updatedAt: FieldRef<"TableObject", 'DateTime'>
+    readonly name: FieldRef<"TableObject", 'String'>
+    readonly type: FieldRef<"TableObject", 'String'>
+    readonly status: FieldRef<"TableObject", 'String'>
+    readonly location: FieldRef<"TableObject", 'String'>
+    readonly lastUpdate: FieldRef<"TableObject", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * ConnectedObject findUnique
+   * TableObject findUnique
    */
-  export type ConnectedObjectFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * Filter, which ConnectedObject to fetch.
+     * Filter, which TableObject to fetch.
      */
-    where: ConnectedObjectWhereUniqueInput
+    where: TableObjectWhereUniqueInput
   }
 
   /**
-   * ConnectedObject findUniqueOrThrow
+   * TableObject findUniqueOrThrow
    */
-  export type ConnectedObjectFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * Filter, which ConnectedObject to fetch.
+     * Filter, which TableObject to fetch.
      */
-    where: ConnectedObjectWhereUniqueInput
+    where: TableObjectWhereUniqueInput
   }
 
   /**
-   * ConnectedObject findFirst
+   * TableObject findFirst
    */
-  export type ConnectedObjectFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * Filter, which ConnectedObject to fetch.
+     * Filter, which TableObject to fetch.
      */
-    where?: ConnectedObjectWhereInput
+    where?: TableObjectWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of ConnectedObjects to fetch.
+     * Determine the order of TableObjects to fetch.
      */
-    orderBy?: ConnectedObjectOrderByWithRelationInput | ConnectedObjectOrderByWithRelationInput[]
+    orderBy?: TableObjectOrderByWithRelationInput | TableObjectOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for ConnectedObjects.
+     * Sets the position for searching for TableObjects.
      */
-    cursor?: ConnectedObjectWhereUniqueInput
+    cursor?: TableObjectWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` ConnectedObjects from the position of the cursor.
+     * Take `±n` TableObjects from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` ConnectedObjects.
+     * Skip the first `n` TableObjects.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of ConnectedObjects.
+     * Filter by unique combinations of TableObjects.
      */
-    distinct?: ConnectedObjectScalarFieldEnum | ConnectedObjectScalarFieldEnum[]
+    distinct?: TableObjectScalarFieldEnum | TableObjectScalarFieldEnum[]
   }
 
   /**
-   * ConnectedObject findFirstOrThrow
+   * TableObject findFirstOrThrow
    */
-  export type ConnectedObjectFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * Filter, which ConnectedObject to fetch.
+     * Filter, which TableObject to fetch.
      */
-    where?: ConnectedObjectWhereInput
+    where?: TableObjectWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of ConnectedObjects to fetch.
+     * Determine the order of TableObjects to fetch.
      */
-    orderBy?: ConnectedObjectOrderByWithRelationInput | ConnectedObjectOrderByWithRelationInput[]
+    orderBy?: TableObjectOrderByWithRelationInput | TableObjectOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for ConnectedObjects.
+     * Sets the position for searching for TableObjects.
      */
-    cursor?: ConnectedObjectWhereUniqueInput
+    cursor?: TableObjectWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` ConnectedObjects from the position of the cursor.
+     * Take `±n` TableObjects from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` ConnectedObjects.
+     * Skip the first `n` TableObjects.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of ConnectedObjects.
+     * Filter by unique combinations of TableObjects.
      */
-    distinct?: ConnectedObjectScalarFieldEnum | ConnectedObjectScalarFieldEnum[]
+    distinct?: TableObjectScalarFieldEnum | TableObjectScalarFieldEnum[]
   }
 
   /**
-   * ConnectedObject findMany
+   * TableObject findMany
    */
-  export type ConnectedObjectFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * Filter, which ConnectedObjects to fetch.
+     * Filter, which TableObjects to fetch.
      */
-    where?: ConnectedObjectWhereInput
+    where?: TableObjectWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of ConnectedObjects to fetch.
+     * Determine the order of TableObjects to fetch.
      */
-    orderBy?: ConnectedObjectOrderByWithRelationInput | ConnectedObjectOrderByWithRelationInput[]
+    orderBy?: TableObjectOrderByWithRelationInput | TableObjectOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing ConnectedObjects.
+     * Sets the position for listing TableObjects.
      */
-    cursor?: ConnectedObjectWhereUniqueInput
+    cursor?: TableObjectWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` ConnectedObjects from the position of the cursor.
+     * Take `±n` TableObjects from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` ConnectedObjects.
+     * Skip the first `n` TableObjects.
      */
     skip?: number
-    distinct?: ConnectedObjectScalarFieldEnum | ConnectedObjectScalarFieldEnum[]
+    distinct?: TableObjectScalarFieldEnum | TableObjectScalarFieldEnum[]
   }
 
   /**
-   * ConnectedObject create
+   * TableObject create
    */
-  export type ConnectedObjectCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * The data needed to create a ConnectedObject.
+     * The data needed to create a TableObject.
      */
-    data: XOR<ConnectedObjectCreateInput, ConnectedObjectUncheckedCreateInput>
+    data: XOR<TableObjectCreateInput, TableObjectUncheckedCreateInput>
   }
 
   /**
-   * ConnectedObject createMany
+   * TableObject createMany
    */
-  export type ConnectedObjectCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many ConnectedObjects.
+     * The data used to create many TableObjects.
      */
-    data: ConnectedObjectCreateManyInput | ConnectedObjectCreateManyInput[]
+    data: TableObjectCreateManyInput | TableObjectCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * ConnectedObject createManyAndReturn
+   * TableObject createManyAndReturn
    */
-  export type ConnectedObjectCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelectCreateManyAndReturn<ExtArgs> | null
+    select?: TableObjectSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * The data used to create many ConnectedObjects.
+     * The data used to create many TableObjects.
      */
-    data: ConnectedObjectCreateManyInput | ConnectedObjectCreateManyInput[]
+    data: TableObjectCreateManyInput | TableObjectCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * ConnectedObject update
+   * TableObject update
    */
-  export type ConnectedObjectUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * The data needed to update a ConnectedObject.
+     * The data needed to update a TableObject.
      */
-    data: XOR<ConnectedObjectUpdateInput, ConnectedObjectUncheckedUpdateInput>
+    data: XOR<TableObjectUpdateInput, TableObjectUncheckedUpdateInput>
     /**
-     * Choose, which ConnectedObject to update.
+     * Choose, which TableObject to update.
      */
-    where: ConnectedObjectWhereUniqueInput
+    where: TableObjectWhereUniqueInput
   }
 
   /**
-   * ConnectedObject updateMany
+   * TableObject updateMany
    */
-  export type ConnectedObjectUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update ConnectedObjects.
+     * The data used to update TableObjects.
      */
-    data: XOR<ConnectedObjectUpdateManyMutationInput, ConnectedObjectUncheckedUpdateManyInput>
+    data: XOR<TableObjectUpdateManyMutationInput, TableObjectUncheckedUpdateManyInput>
     /**
-     * Filter which ConnectedObjects to update
+     * Filter which TableObjects to update
      */
-    where?: ConnectedObjectWhereInput
+    where?: TableObjectWhereInput
     /**
-     * Limit how many ConnectedObjects to update.
+     * Limit how many TableObjects to update.
      */
     limit?: number
   }
 
   /**
-   * ConnectedObject updateManyAndReturn
+   * TableObject updateManyAndReturn
    */
-  export type ConnectedObjectUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: TableObjectSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * The data used to update ConnectedObjects.
+     * The data used to update TableObjects.
      */
-    data: XOR<ConnectedObjectUpdateManyMutationInput, ConnectedObjectUncheckedUpdateManyInput>
+    data: XOR<TableObjectUpdateManyMutationInput, TableObjectUncheckedUpdateManyInput>
     /**
-     * Filter which ConnectedObjects to update
+     * Filter which TableObjects to update
      */
-    where?: ConnectedObjectWhereInput
+    where?: TableObjectWhereInput
     /**
-     * Limit how many ConnectedObjects to update.
+     * Limit how many TableObjects to update.
      */
     limit?: number
   }
 
   /**
-   * ConnectedObject upsert
+   * TableObject upsert
    */
-  export type ConnectedObjectUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * The filter to search for the ConnectedObject to update in case it exists.
+     * The filter to search for the TableObject to update in case it exists.
      */
-    where: ConnectedObjectWhereUniqueInput
+    where: TableObjectWhereUniqueInput
     /**
-     * In case the ConnectedObject found by the `where` argument doesn't exist, create a new ConnectedObject with this data.
+     * In case the TableObject found by the `where` argument doesn't exist, create a new TableObject with this data.
      */
-    create: XOR<ConnectedObjectCreateInput, ConnectedObjectUncheckedCreateInput>
+    create: XOR<TableObjectCreateInput, TableObjectUncheckedCreateInput>
     /**
-     * In case the ConnectedObject was found with the provided `where` argument, update it with this data.
+     * In case the TableObject was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<ConnectedObjectUpdateInput, ConnectedObjectUncheckedUpdateInput>
+    update: XOR<TableObjectUpdateInput, TableObjectUncheckedUpdateInput>
   }
 
   /**
-   * ConnectedObject delete
+   * TableObject delete
    */
-  export type ConnectedObjectDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
     /**
-     * Filter which ConnectedObject to delete.
+     * Filter which TableObject to delete.
      */
-    where: ConnectedObjectWhereUniqueInput
+    where: TableObjectWhereUniqueInput
   }
 
   /**
-   * ConnectedObject deleteMany
+   * TableObject deleteMany
    */
-  export type ConnectedObjectDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which ConnectedObjects to delete
+     * Filter which TableObjects to delete
      */
-    where?: ConnectedObjectWhereInput
+    where?: TableObjectWhereInput
     /**
-     * Limit how many ConnectedObjects to delete.
+     * Limit how many TableObjects to delete.
      */
     limit?: number
   }
 
   /**
-   * ConnectedObject without action
+   * TableObject without action
    */
-  export type ConnectedObjectDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableObjectDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the ConnectedObject
+     * Select specific fields to fetch from the TableObject
      */
-    select?: ConnectedObjectSelect<ExtArgs> | null
+    select?: TableObjectSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the ConnectedObject
+     * Omit specific fields from the TableObject
      */
-    omit?: ConnectedObjectOmit<ExtArgs> | null
+    omit?: TableObjectOmit<ExtArgs> | null
   }
 
 
   /**
-   * Model Incident
+   * Model TableIncident
    */
 
-  export type AggregateIncident = {
-    _count: IncidentCountAggregateOutputType | null
-    _avg: IncidentAvgAggregateOutputType | null
-    _sum: IncidentSumAggregateOutputType | null
-    _min: IncidentMinAggregateOutputType | null
-    _max: IncidentMaxAggregateOutputType | null
+  export type AggregateTableIncident = {
+    _count: TableIncidentCountAggregateOutputType | null
+    _avg: TableIncidentAvgAggregateOutputType | null
+    _sum: TableIncidentSumAggregateOutputType | null
+    _min: TableIncidentMinAggregateOutputType | null
+    _max: TableIncidentMaxAggregateOutputType | null
   }
 
-  export type IncidentAvgAggregateOutputType = {
+  export type TableIncidentAvgAggregateOutputType = {
     id: number | null
-    userId: number | null
   }
 
-  export type IncidentSumAggregateOutputType = {
+  export type TableIncidentSumAggregateOutputType = {
     id: number | null
-    userId: number | null
   }
 
-  export type IncidentMinAggregateOutputType = {
+  export type TableIncidentMinAggregateOutputType = {
     id: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -4577,10 +4570,10 @@ export namespace Prisma {
     description: string | null
     status: string | null
     location: string | null
-    userId: number | null
+    username: string | null
   }
 
-  export type IncidentMaxAggregateOutputType = {
+  export type TableIncidentMaxAggregateOutputType = {
     id: number | null
     createdAt: Date | null
     updatedAt: Date | null
@@ -4588,10 +4581,10 @@ export namespace Prisma {
     description: string | null
     status: string | null
     location: string | null
-    userId: number | null
+    username: string | null
   }
 
-  export type IncidentCountAggregateOutputType = {
+  export type TableIncidentCountAggregateOutputType = {
     id: number
     createdAt: number
     updatedAt: number
@@ -4599,22 +4592,20 @@ export namespace Prisma {
     description: number
     status: number
     location: number
-    userId: number
+    username: number
     _all: number
   }
 
 
-  export type IncidentAvgAggregateInputType = {
+  export type TableIncidentAvgAggregateInputType = {
     id?: true
-    userId?: true
   }
 
-  export type IncidentSumAggregateInputType = {
+  export type TableIncidentSumAggregateInputType = {
     id?: true
-    userId?: true
   }
 
-  export type IncidentMinAggregateInputType = {
+  export type TableIncidentMinAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -4622,10 +4613,10 @@ export namespace Prisma {
     description?: true
     status?: true
     location?: true
-    userId?: true
+    username?: true
   }
 
-  export type IncidentMaxAggregateInputType = {
+  export type TableIncidentMaxAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -4633,10 +4624,10 @@ export namespace Prisma {
     description?: true
     status?: true
     location?: true
-    userId?: true
+    username?: true
   }
 
-  export type IncidentCountAggregateInputType = {
+  export type TableIncidentCountAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
@@ -4644,97 +4635,97 @@ export namespace Prisma {
     description?: true
     status?: true
     location?: true
-    userId?: true
+    username?: true
     _all?: true
   }
 
-  export type IncidentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Incident to aggregate.
+     * Filter which TableIncident to aggregate.
      */
-    where?: IncidentWhereInput
+    where?: TableIncidentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Incidents to fetch.
+     * Determine the order of TableIncidents to fetch.
      */
-    orderBy?: IncidentOrderByWithRelationInput | IncidentOrderByWithRelationInput[]
+    orderBy?: TableIncidentOrderByWithRelationInput | TableIncidentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: IncidentWhereUniqueInput
+    cursor?: TableIncidentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Incidents from the position of the cursor.
+     * Take `±n` TableIncidents from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Incidents.
+     * Skip the first `n` TableIncidents.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned Incidents
+     * Count returned TableIncidents
     **/
-    _count?: true | IncidentCountAggregateInputType
+    _count?: true | TableIncidentCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: IncidentAvgAggregateInputType
+    _avg?: TableIncidentAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: IncidentSumAggregateInputType
+    _sum?: TableIncidentSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: IncidentMinAggregateInputType
+    _min?: TableIncidentMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: IncidentMaxAggregateInputType
+    _max?: TableIncidentMaxAggregateInputType
   }
 
-  export type GetIncidentAggregateType<T extends IncidentAggregateArgs> = {
-        [P in keyof T & keyof AggregateIncident]: P extends '_count' | 'count'
+  export type GetTableIncidentAggregateType<T extends TableIncidentAggregateArgs> = {
+        [P in keyof T & keyof AggregateTableIncident]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateIncident[P]>
-      : GetScalarType<T[P], AggregateIncident[P]>
+        : GetScalarType<T[P], AggregateTableIncident[P]>
+      : GetScalarType<T[P], AggregateTableIncident[P]>
   }
 
 
 
 
-  export type IncidentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: IncidentWhereInput
-    orderBy?: IncidentOrderByWithAggregationInput | IncidentOrderByWithAggregationInput[]
-    by: IncidentScalarFieldEnum[] | IncidentScalarFieldEnum
-    having?: IncidentScalarWhereWithAggregatesInput
+  export type TableIncidentGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TableIncidentWhereInput
+    orderBy?: TableIncidentOrderByWithAggregationInput | TableIncidentOrderByWithAggregationInput[]
+    by: TableIncidentScalarFieldEnum[] | TableIncidentScalarFieldEnum
+    having?: TableIncidentScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: IncidentCountAggregateInputType | true
-    _avg?: IncidentAvgAggregateInputType
-    _sum?: IncidentSumAggregateInputType
-    _min?: IncidentMinAggregateInputType
-    _max?: IncidentMaxAggregateInputType
+    _count?: TableIncidentCountAggregateInputType | true
+    _avg?: TableIncidentAvgAggregateInputType
+    _sum?: TableIncidentSumAggregateInputType
+    _min?: TableIncidentMinAggregateInputType
+    _max?: TableIncidentMaxAggregateInputType
   }
 
-  export type IncidentGroupByOutputType = {
+  export type TableIncidentGroupByOutputType = {
     id: number
     createdAt: Date
     updatedAt: Date
@@ -4742,29 +4733,29 @@ export namespace Prisma {
     description: string
     status: string
     location: string
-    userId: number
-    _count: IncidentCountAggregateOutputType | null
-    _avg: IncidentAvgAggregateOutputType | null
-    _sum: IncidentSumAggregateOutputType | null
-    _min: IncidentMinAggregateOutputType | null
-    _max: IncidentMaxAggregateOutputType | null
+    username: string
+    _count: TableIncidentCountAggregateOutputType | null
+    _avg: TableIncidentAvgAggregateOutputType | null
+    _sum: TableIncidentSumAggregateOutputType | null
+    _min: TableIncidentMinAggregateOutputType | null
+    _max: TableIncidentMaxAggregateOutputType | null
   }
 
-  type GetIncidentGroupByPayload<T extends IncidentGroupByArgs> = Prisma.PrismaPromise<
+  type GetTableIncidentGroupByPayload<T extends TableIncidentGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<IncidentGroupByOutputType, T['by']> &
+      PickEnumerable<TableIncidentGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof IncidentGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof TableIncidentGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], IncidentGroupByOutputType[P]>
-            : GetScalarType<T[P], IncidentGroupByOutputType[P]>
+              : GetScalarType<T[P], TableIncidentGroupByOutputType[P]>
+            : GetScalarType<T[P], TableIncidentGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type IncidentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableIncidentSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -4772,11 +4763,11 @@ export namespace Prisma {
     description?: boolean
     status?: boolean
     location?: boolean
-    userId?: boolean
-    reportedBy?: boolean | UserDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["incident"]>
+    username?: boolean
+    reportedByUsername?: boolean | TableUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["tableIncident"]>
 
-  export type IncidentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableIncidentSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -4784,11 +4775,11 @@ export namespace Prisma {
     description?: boolean
     status?: boolean
     location?: boolean
-    userId?: boolean
-    reportedBy?: boolean | UserDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["incident"]>
+    username?: boolean
+    reportedByUsername?: boolean | TableUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["tableIncident"]>
 
-  export type IncidentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableIncidentSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -4796,11 +4787,11 @@ export namespace Prisma {
     description?: boolean
     status?: boolean
     location?: boolean
-    userId?: boolean
-    reportedBy?: boolean | UserDefaultArgs<ExtArgs>
-  }, ExtArgs["result"]["incident"]>
+    username?: boolean
+    reportedByUsername?: boolean | TableUserDefaultArgs<ExtArgs>
+  }, ExtArgs["result"]["tableIncident"]>
 
-  export type IncidentSelectScalar = {
+  export type TableIncidentSelectScalar = {
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
@@ -4808,24 +4799,24 @@ export namespace Prisma {
     description?: boolean
     status?: boolean
     location?: boolean
-    userId?: boolean
+    username?: boolean
   }
 
-  export type IncidentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "title" | "description" | "status" | "location" | "userId", ExtArgs["result"]["incident"]>
-  export type IncidentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    reportedBy?: boolean | UserDefaultArgs<ExtArgs>
+  export type TableIncidentOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "title" | "description" | "status" | "location" | "username", ExtArgs["result"]["tableIncident"]>
+  export type TableIncidentInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reportedByUsername?: boolean | TableUserDefaultArgs<ExtArgs>
   }
-  export type IncidentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    reportedBy?: boolean | UserDefaultArgs<ExtArgs>
+  export type TableIncidentIncludeCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reportedByUsername?: boolean | TableUserDefaultArgs<ExtArgs>
   }
-  export type IncidentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    reportedBy?: boolean | UserDefaultArgs<ExtArgs>
+  export type TableIncidentIncludeUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    reportedByUsername?: boolean | TableUserDefaultArgs<ExtArgs>
   }
 
-  export type $IncidentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "Incident"
+  export type $TableIncidentPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TableIncident"
     objects: {
-      reportedBy: Prisma.$UserPayload<ExtArgs>
+      reportedByUsername: Prisma.$TableUserPayload<ExtArgs>
     }
     scalars: $Extensions.GetPayloadResult<{
       id: number
@@ -4835,137 +4826,137 @@ export namespace Prisma {
       description: string
       status: string
       location: string
-      userId: number
-    }, ExtArgs["result"]["incident"]>
+      username: string
+    }, ExtArgs["result"]["tableIncident"]>
     composites: {}
   }
 
-  type IncidentGetPayload<S extends boolean | null | undefined | IncidentDefaultArgs> = $Result.GetResult<Prisma.$IncidentPayload, S>
+  type TableIncidentGetPayload<S extends boolean | null | undefined | TableIncidentDefaultArgs> = $Result.GetResult<Prisma.$TableIncidentPayload, S>
 
-  type IncidentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<IncidentFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: IncidentCountAggregateInputType | true
+  type TableIncidentCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TableIncidentFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TableIncidentCountAggregateInputType | true
     }
 
-  export interface IncidentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['Incident'], meta: { name: 'Incident' } }
+  export interface TableIncidentDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TableIncident'], meta: { name: 'TableIncident' } }
     /**
-     * Find zero or one Incident that matches the filter.
-     * @param {IncidentFindUniqueArgs} args - Arguments to find a Incident
+     * Find zero or one TableIncident that matches the filter.
+     * @param {TableIncidentFindUniqueArgs} args - Arguments to find a TableIncident
      * @example
-     * // Get one Incident
-     * const incident = await prisma.incident.findUnique({
+     * // Get one TableIncident
+     * const tableIncident = await prisma.tableIncident.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends IncidentFindUniqueArgs>(args: SelectSubset<T, IncidentFindUniqueArgs<ExtArgs>>): Prisma__IncidentClient<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends TableIncidentFindUniqueArgs>(args: SelectSubset<T, TableIncidentFindUniqueArgs<ExtArgs>>): Prisma__TableIncidentClient<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one Incident that matches the filter or throw an error with `error.code='P2025'`
+     * Find one TableIncident that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {IncidentFindUniqueOrThrowArgs} args - Arguments to find a Incident
+     * @param {TableIncidentFindUniqueOrThrowArgs} args - Arguments to find a TableIncident
      * @example
-     * // Get one Incident
-     * const incident = await prisma.incident.findUniqueOrThrow({
+     * // Get one TableIncident
+     * const tableIncident = await prisma.tableIncident.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends IncidentFindUniqueOrThrowArgs>(args: SelectSubset<T, IncidentFindUniqueOrThrowArgs<ExtArgs>>): Prisma__IncidentClient<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends TableIncidentFindUniqueOrThrowArgs>(args: SelectSubset<T, TableIncidentFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TableIncidentClient<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Incident that matches the filter.
+     * Find the first TableIncident that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IncidentFindFirstArgs} args - Arguments to find a Incident
+     * @param {TableIncidentFindFirstArgs} args - Arguments to find a TableIncident
      * @example
-     * // Get one Incident
-     * const incident = await prisma.incident.findFirst({
+     * // Get one TableIncident
+     * const tableIncident = await prisma.tableIncident.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends IncidentFindFirstArgs>(args?: SelectSubset<T, IncidentFindFirstArgs<ExtArgs>>): Prisma__IncidentClient<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends TableIncidentFindFirstArgs>(args?: SelectSubset<T, TableIncidentFindFirstArgs<ExtArgs>>): Prisma__TableIncidentClient<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first Incident that matches the filter or
+     * Find the first TableIncident that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IncidentFindFirstOrThrowArgs} args - Arguments to find a Incident
+     * @param {TableIncidentFindFirstOrThrowArgs} args - Arguments to find a TableIncident
      * @example
-     * // Get one Incident
-     * const incident = await prisma.incident.findFirstOrThrow({
+     * // Get one TableIncident
+     * const tableIncident = await prisma.tableIncident.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends IncidentFindFirstOrThrowArgs>(args?: SelectSubset<T, IncidentFindFirstOrThrowArgs<ExtArgs>>): Prisma__IncidentClient<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends TableIncidentFindFirstOrThrowArgs>(args?: SelectSubset<T, TableIncidentFindFirstOrThrowArgs<ExtArgs>>): Prisma__TableIncidentClient<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more Incidents that matches the filter.
+     * Find zero or more TableIncidents that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IncidentFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {TableIncidentFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all Incidents
-     * const incidents = await prisma.incident.findMany()
+     * // Get all TableIncidents
+     * const tableIncidents = await prisma.tableIncident.findMany()
      * 
-     * // Get first 10 Incidents
-     * const incidents = await prisma.incident.findMany({ take: 10 })
+     * // Get first 10 TableIncidents
+     * const tableIncidents = await prisma.tableIncident.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const incidentWithIdOnly = await prisma.incident.findMany({ select: { id: true } })
+     * const tableIncidentWithIdOnly = await prisma.tableIncident.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends IncidentFindManyArgs>(args?: SelectSubset<T, IncidentFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends TableIncidentFindManyArgs>(args?: SelectSubset<T, TableIncidentFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a Incident.
-     * @param {IncidentCreateArgs} args - Arguments to create a Incident.
+     * Create a TableIncident.
+     * @param {TableIncidentCreateArgs} args - Arguments to create a TableIncident.
      * @example
-     * // Create one Incident
-     * const Incident = await prisma.incident.create({
+     * // Create one TableIncident
+     * const TableIncident = await prisma.tableIncident.create({
      *   data: {
-     *     // ... data to create a Incident
+     *     // ... data to create a TableIncident
      *   }
      * })
      * 
      */
-    create<T extends IncidentCreateArgs>(args: SelectSubset<T, IncidentCreateArgs<ExtArgs>>): Prisma__IncidentClient<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends TableIncidentCreateArgs>(args: SelectSubset<T, TableIncidentCreateArgs<ExtArgs>>): Prisma__TableIncidentClient<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many Incidents.
-     * @param {IncidentCreateManyArgs} args - Arguments to create many Incidents.
+     * Create many TableIncidents.
+     * @param {TableIncidentCreateManyArgs} args - Arguments to create many TableIncidents.
      * @example
-     * // Create many Incidents
-     * const incident = await prisma.incident.createMany({
+     * // Create many TableIncidents
+     * const tableIncident = await prisma.tableIncident.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends IncidentCreateManyArgs>(args?: SelectSubset<T, IncidentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends TableIncidentCreateManyArgs>(args?: SelectSubset<T, TableIncidentCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many Incidents and returns the data saved in the database.
-     * @param {IncidentCreateManyAndReturnArgs} args - Arguments to create many Incidents.
+     * Create many TableIncidents and returns the data saved in the database.
+     * @param {TableIncidentCreateManyAndReturnArgs} args - Arguments to create many TableIncidents.
      * @example
-     * // Create many Incidents
-     * const incident = await prisma.incident.createManyAndReturn({
+     * // Create many TableIncidents
+     * const tableIncident = await prisma.tableIncident.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many Incidents and only return the `id`
-     * const incidentWithIdOnly = await prisma.incident.createManyAndReturn({
+     * // Create many TableIncidents and only return the `id`
+     * const tableIncidentWithIdOnly = await prisma.tableIncident.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -4975,28 +4966,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends IncidentCreateManyAndReturnArgs>(args?: SelectSubset<T, IncidentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends TableIncidentCreateManyAndReturnArgs>(args?: SelectSubset<T, TableIncidentCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a Incident.
-     * @param {IncidentDeleteArgs} args - Arguments to delete one Incident.
+     * Delete a TableIncident.
+     * @param {TableIncidentDeleteArgs} args - Arguments to delete one TableIncident.
      * @example
-     * // Delete one Incident
-     * const Incident = await prisma.incident.delete({
+     * // Delete one TableIncident
+     * const TableIncident = await prisma.tableIncident.delete({
      *   where: {
-     *     // ... filter to delete one Incident
+     *     // ... filter to delete one TableIncident
      *   }
      * })
      * 
      */
-    delete<T extends IncidentDeleteArgs>(args: SelectSubset<T, IncidentDeleteArgs<ExtArgs>>): Prisma__IncidentClient<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends TableIncidentDeleteArgs>(args: SelectSubset<T, TableIncidentDeleteArgs<ExtArgs>>): Prisma__TableIncidentClient<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one Incident.
-     * @param {IncidentUpdateArgs} args - Arguments to update one Incident.
+     * Update one TableIncident.
+     * @param {TableIncidentUpdateArgs} args - Arguments to update one TableIncident.
      * @example
-     * // Update one Incident
-     * const incident = await prisma.incident.update({
+     * // Update one TableIncident
+     * const tableIncident = await prisma.tableIncident.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5006,30 +4997,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends IncidentUpdateArgs>(args: SelectSubset<T, IncidentUpdateArgs<ExtArgs>>): Prisma__IncidentClient<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends TableIncidentUpdateArgs>(args: SelectSubset<T, TableIncidentUpdateArgs<ExtArgs>>): Prisma__TableIncidentClient<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more Incidents.
-     * @param {IncidentDeleteManyArgs} args - Arguments to filter Incidents to delete.
+     * Delete zero or more TableIncidents.
+     * @param {TableIncidentDeleteManyArgs} args - Arguments to filter TableIncidents to delete.
      * @example
-     * // Delete a few Incidents
-     * const { count } = await prisma.incident.deleteMany({
+     * // Delete a few TableIncidents
+     * const { count } = await prisma.tableIncident.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends IncidentDeleteManyArgs>(args?: SelectSubset<T, IncidentDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends TableIncidentDeleteManyArgs>(args?: SelectSubset<T, TableIncidentDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Incidents.
+     * Update zero or more TableIncidents.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IncidentUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {TableIncidentUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many Incidents
-     * const incident = await prisma.incident.updateMany({
+     * // Update many TableIncidents
+     * const tableIncident = await prisma.tableIncident.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5039,14 +5030,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends IncidentUpdateManyArgs>(args: SelectSubset<T, IncidentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends TableIncidentUpdateManyArgs>(args: SelectSubset<T, TableIncidentUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more Incidents and returns the data updated in the database.
-     * @param {IncidentUpdateManyAndReturnArgs} args - Arguments to update many Incidents.
+     * Update zero or more TableIncidents and returns the data updated in the database.
+     * @param {TableIncidentUpdateManyAndReturnArgs} args - Arguments to update many TableIncidents.
      * @example
-     * // Update many Incidents
-     * const incident = await prisma.incident.updateManyAndReturn({
+     * // Update many TableIncidents
+     * const tableIncident = await prisma.tableIncident.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -5055,8 +5046,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more Incidents and only return the `id`
-     * const incidentWithIdOnly = await prisma.incident.updateManyAndReturn({
+     * // Update zero or more TableIncidents and only return the `id`
+     * const tableIncidentWithIdOnly = await prisma.tableIncident.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -5069,56 +5060,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends IncidentUpdateManyAndReturnArgs>(args: SelectSubset<T, IncidentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends TableIncidentUpdateManyAndReturnArgs>(args: SelectSubset<T, TableIncidentUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one Incident.
-     * @param {IncidentUpsertArgs} args - Arguments to update or create a Incident.
+     * Create or update one TableIncident.
+     * @param {TableIncidentUpsertArgs} args - Arguments to update or create a TableIncident.
      * @example
-     * // Update or create a Incident
-     * const incident = await prisma.incident.upsert({
+     * // Update or create a TableIncident
+     * const tableIncident = await prisma.tableIncident.upsert({
      *   create: {
-     *     // ... data to create a Incident
+     *     // ... data to create a TableIncident
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the Incident we want to update
+     *     // ... the filter for the TableIncident we want to update
      *   }
      * })
      */
-    upsert<T extends IncidentUpsertArgs>(args: SelectSubset<T, IncidentUpsertArgs<ExtArgs>>): Prisma__IncidentClient<$Result.GetResult<Prisma.$IncidentPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends TableIncidentUpsertArgs>(args: SelectSubset<T, TableIncidentUpsertArgs<ExtArgs>>): Prisma__TableIncidentClient<$Result.GetResult<Prisma.$TableIncidentPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of Incidents.
+     * Count the number of TableIncidents.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IncidentCountArgs} args - Arguments to filter Incidents to count.
+     * @param {TableIncidentCountArgs} args - Arguments to filter TableIncidents to count.
      * @example
-     * // Count the number of Incidents
-     * const count = await prisma.incident.count({
+     * // Count the number of TableIncidents
+     * const count = await prisma.tableIncident.count({
      *   where: {
-     *     // ... the filter for the Incidents we want to count
+     *     // ... the filter for the TableIncidents we want to count
      *   }
      * })
     **/
-    count<T extends IncidentCountArgs>(
-      args?: Subset<T, IncidentCountArgs>,
+    count<T extends TableIncidentCountArgs>(
+      args?: Subset<T, TableIncidentCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], IncidentCountAggregateOutputType>
+          : GetScalarType<T['select'], TableIncidentCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a Incident.
+     * Allows you to perform aggregations operations on a TableIncident.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IncidentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {TableIncidentAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -5138,13 +5129,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends IncidentAggregateArgs>(args: Subset<T, IncidentAggregateArgs>): Prisma.PrismaPromise<GetIncidentAggregateType<T>>
+    aggregate<T extends TableIncidentAggregateArgs>(args: Subset<T, TableIncidentAggregateArgs>): Prisma.PrismaPromise<GetTableIncidentAggregateType<T>>
 
     /**
-     * Group by Incident.
+     * Group by TableIncident.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {IncidentGroupByArgs} args - Group by arguments.
+     * @param {TableIncidentGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -5159,14 +5150,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends IncidentGroupByArgs,
+      T extends TableIncidentGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: IncidentGroupByArgs['orderBy'] }
-        : { orderBy?: IncidentGroupByArgs['orderBy'] },
+        ? { orderBy: TableIncidentGroupByArgs['orderBy'] }
+        : { orderBy?: TableIncidentGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -5215,22 +5206,22 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, IncidentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetIncidentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, TableIncidentGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTableIncidentGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the Incident model
+   * Fields of the TableIncident model
    */
-  readonly fields: IncidentFieldRefs;
+  readonly fields: TableIncidentFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for Incident.
+   * The delegate class that acts as a "Promise-like" for TableIncident.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__IncidentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__TableIncidentClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
-    reportedBy<T extends UserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, UserDefaultArgs<ExtArgs>>): Prisma__UserClient<$Result.GetResult<Prisma.$UserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
+    reportedByUsername<T extends TableUserDefaultArgs<ExtArgs> = {}>(args?: Subset<T, TableUserDefaultArgs<ExtArgs>>): Prisma__TableUserClient<$Result.GetResult<Prisma.$TableUserPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions> | Null, Null, ExtArgs, GlobalOmitOptions>
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
      * @param onfulfilled The callback to execute when the Promise is resolved.
@@ -5257,832 +5248,820 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the Incident model
+   * Fields of the TableIncident model
    */
-  interface IncidentFieldRefs {
-    readonly id: FieldRef<"Incident", 'Int'>
-    readonly createdAt: FieldRef<"Incident", 'DateTime'>
-    readonly updatedAt: FieldRef<"Incident", 'DateTime'>
-    readonly title: FieldRef<"Incident", 'String'>
-    readonly description: FieldRef<"Incident", 'String'>
-    readonly status: FieldRef<"Incident", 'String'>
-    readonly location: FieldRef<"Incident", 'String'>
-    readonly userId: FieldRef<"Incident", 'Int'>
+  interface TableIncidentFieldRefs {
+    readonly id: FieldRef<"TableIncident", 'Int'>
+    readonly createdAt: FieldRef<"TableIncident", 'DateTime'>
+    readonly updatedAt: FieldRef<"TableIncident", 'DateTime'>
+    readonly title: FieldRef<"TableIncident", 'String'>
+    readonly description: FieldRef<"TableIncident", 'String'>
+    readonly status: FieldRef<"TableIncident", 'String'>
+    readonly location: FieldRef<"TableIncident", 'String'>
+    readonly username: FieldRef<"TableIncident", 'String'>
   }
     
 
   // Custom InputTypes
   /**
-   * Incident findUnique
+   * TableIncident findUnique
    */
-  export type IncidentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * Filter, which Incident to fetch.
+     * Filter, which TableIncident to fetch.
      */
-    where: IncidentWhereUniqueInput
+    where: TableIncidentWhereUniqueInput
   }
 
   /**
-   * Incident findUniqueOrThrow
+   * TableIncident findUniqueOrThrow
    */
-  export type IncidentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * Filter, which Incident to fetch.
+     * Filter, which TableIncident to fetch.
      */
-    where: IncidentWhereUniqueInput
+    where: TableIncidentWhereUniqueInput
   }
 
   /**
-   * Incident findFirst
+   * TableIncident findFirst
    */
-  export type IncidentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * Filter, which Incident to fetch.
+     * Filter, which TableIncident to fetch.
      */
-    where?: IncidentWhereInput
+    where?: TableIncidentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Incidents to fetch.
+     * Determine the order of TableIncidents to fetch.
      */
-    orderBy?: IncidentOrderByWithRelationInput | IncidentOrderByWithRelationInput[]
+    orderBy?: TableIncidentOrderByWithRelationInput | TableIncidentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Incidents.
+     * Sets the position for searching for TableIncidents.
      */
-    cursor?: IncidentWhereUniqueInput
+    cursor?: TableIncidentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Incidents from the position of the cursor.
+     * Take `±n` TableIncidents from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Incidents.
+     * Skip the first `n` TableIncidents.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Incidents.
+     * Filter by unique combinations of TableIncidents.
      */
-    distinct?: IncidentScalarFieldEnum | IncidentScalarFieldEnum[]
+    distinct?: TableIncidentScalarFieldEnum | TableIncidentScalarFieldEnum[]
   }
 
   /**
-   * Incident findFirstOrThrow
+   * TableIncident findFirstOrThrow
    */
-  export type IncidentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * Filter, which Incident to fetch.
+     * Filter, which TableIncident to fetch.
      */
-    where?: IncidentWhereInput
+    where?: TableIncidentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Incidents to fetch.
+     * Determine the order of TableIncidents to fetch.
      */
-    orderBy?: IncidentOrderByWithRelationInput | IncidentOrderByWithRelationInput[]
+    orderBy?: TableIncidentOrderByWithRelationInput | TableIncidentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for Incidents.
+     * Sets the position for searching for TableIncidents.
      */
-    cursor?: IncidentWhereUniqueInput
+    cursor?: TableIncidentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Incidents from the position of the cursor.
+     * Take `±n` TableIncidents from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Incidents.
+     * Skip the first `n` TableIncidents.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of Incidents.
+     * Filter by unique combinations of TableIncidents.
      */
-    distinct?: IncidentScalarFieldEnum | IncidentScalarFieldEnum[]
+    distinct?: TableIncidentScalarFieldEnum | TableIncidentScalarFieldEnum[]
   }
 
   /**
-   * Incident findMany
+   * TableIncident findMany
    */
-  export type IncidentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * Filter, which Incidents to fetch.
+     * Filter, which TableIncidents to fetch.
      */
-    where?: IncidentWhereInput
+    where?: TableIncidentWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of Incidents to fetch.
+     * Determine the order of TableIncidents to fetch.
      */
-    orderBy?: IncidentOrderByWithRelationInput | IncidentOrderByWithRelationInput[]
+    orderBy?: TableIncidentOrderByWithRelationInput | TableIncidentOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing Incidents.
+     * Sets the position for listing TableIncidents.
      */
-    cursor?: IncidentWhereUniqueInput
+    cursor?: TableIncidentWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` Incidents from the position of the cursor.
+     * Take `±n` TableIncidents from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` Incidents.
+     * Skip the first `n` TableIncidents.
      */
     skip?: number
-    distinct?: IncidentScalarFieldEnum | IncidentScalarFieldEnum[]
+    distinct?: TableIncidentScalarFieldEnum | TableIncidentScalarFieldEnum[]
   }
 
   /**
-   * Incident create
+   * TableIncident create
    */
-  export type IncidentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * The data needed to create a Incident.
+     * The data needed to create a TableIncident.
      */
-    data: XOR<IncidentCreateInput, IncidentUncheckedCreateInput>
+    data: XOR<TableIncidentCreateInput, TableIncidentUncheckedCreateInput>
   }
 
   /**
-   * Incident createMany
+   * TableIncident createMany
    */
-  export type IncidentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many Incidents.
+     * The data used to create many TableIncidents.
      */
-    data: IncidentCreateManyInput | IncidentCreateManyInput[]
+    data: TableIncidentCreateManyInput | TableIncidentCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * Incident createManyAndReturn
+   * TableIncident createManyAndReturn
    */
-  export type IncidentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelectCreateManyAndReturn<ExtArgs> | null
+    select?: TableIncidentSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
-     * The data used to create many Incidents.
+     * The data used to create many TableIncidents.
      */
-    data: IncidentCreateManyInput | IncidentCreateManyInput[]
+    data: TableIncidentCreateManyInput | TableIncidentCreateManyInput[]
     skipDuplicates?: boolean
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentIncludeCreateManyAndReturn<ExtArgs> | null
+    include?: TableIncidentIncludeCreateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Incident update
+   * TableIncident update
    */
-  export type IncidentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * The data needed to update a Incident.
+     * The data needed to update a TableIncident.
      */
-    data: XOR<IncidentUpdateInput, IncidentUncheckedUpdateInput>
+    data: XOR<TableIncidentUpdateInput, TableIncidentUncheckedUpdateInput>
     /**
-     * Choose, which Incident to update.
+     * Choose, which TableIncident to update.
      */
-    where: IncidentWhereUniqueInput
+    where: TableIncidentWhereUniqueInput
   }
 
   /**
-   * Incident updateMany
+   * TableIncident updateMany
    */
-  export type IncidentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update Incidents.
+     * The data used to update TableIncidents.
      */
-    data: XOR<IncidentUpdateManyMutationInput, IncidentUncheckedUpdateManyInput>
+    data: XOR<TableIncidentUpdateManyMutationInput, TableIncidentUncheckedUpdateManyInput>
     /**
-     * Filter which Incidents to update
+     * Filter which TableIncidents to update
      */
-    where?: IncidentWhereInput
+    where?: TableIncidentWhereInput
     /**
-     * Limit how many Incidents to update.
+     * Limit how many TableIncidents to update.
      */
     limit?: number
   }
 
   /**
-   * Incident updateManyAndReturn
+   * TableIncident updateManyAndReturn
    */
-  export type IncidentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: TableIncidentSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
-     * The data used to update Incidents.
+     * The data used to update TableIncidents.
      */
-    data: XOR<IncidentUpdateManyMutationInput, IncidentUncheckedUpdateManyInput>
+    data: XOR<TableIncidentUpdateManyMutationInput, TableIncidentUncheckedUpdateManyInput>
     /**
-     * Filter which Incidents to update
+     * Filter which TableIncidents to update
      */
-    where?: IncidentWhereInput
+    where?: TableIncidentWhereInput
     /**
-     * Limit how many Incidents to update.
+     * Limit how many TableIncidents to update.
      */
     limit?: number
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentIncludeUpdateManyAndReturn<ExtArgs> | null
+    include?: TableIncidentIncludeUpdateManyAndReturn<ExtArgs> | null
   }
 
   /**
-   * Incident upsert
+   * TableIncident upsert
    */
-  export type IncidentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * The filter to search for the Incident to update in case it exists.
+     * The filter to search for the TableIncident to update in case it exists.
      */
-    where: IncidentWhereUniqueInput
+    where: TableIncidentWhereUniqueInput
     /**
-     * In case the Incident found by the `where` argument doesn't exist, create a new Incident with this data.
+     * In case the TableIncident found by the `where` argument doesn't exist, create a new TableIncident with this data.
      */
-    create: XOR<IncidentCreateInput, IncidentUncheckedCreateInput>
+    create: XOR<TableIncidentCreateInput, TableIncidentUncheckedCreateInput>
     /**
-     * In case the Incident was found with the provided `where` argument, update it with this data.
+     * In case the TableIncident was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<IncidentUpdateInput, IncidentUncheckedUpdateInput>
+    update: XOR<TableIncidentUpdateInput, TableIncidentUncheckedUpdateInput>
   }
 
   /**
-   * Incident delete
+   * TableIncident delete
    */
-  export type IncidentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
     /**
-     * Filter which Incident to delete.
+     * Filter which TableIncident to delete.
      */
-    where: IncidentWhereUniqueInput
+    where: TableIncidentWhereUniqueInput
   }
 
   /**
-   * Incident deleteMany
+   * TableIncident deleteMany
    */
-  export type IncidentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which Incidents to delete
+     * Filter which TableIncidents to delete
      */
-    where?: IncidentWhereInput
+    where?: TableIncidentWhereInput
     /**
-     * Limit how many Incidents to delete.
+     * Limit how many TableIncidents to delete.
      */
     limit?: number
   }
 
   /**
-   * Incident without action
+   * TableIncident without action
    */
-  export type IncidentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableIncidentDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the Incident
+     * Select specific fields to fetch from the TableIncident
      */
-    select?: IncidentSelect<ExtArgs> | null
+    select?: TableIncidentSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the Incident
+     * Omit specific fields from the TableIncident
      */
-    omit?: IncidentOmit<ExtArgs> | null
+    omit?: TableIncidentOmit<ExtArgs> | null
     /**
      * Choose, which related nodes to fetch as well
      */
-    include?: IncidentInclude<ExtArgs> | null
+    include?: TableIncidentInclude<ExtArgs> | null
   }
 
 
   /**
-   * Model News
+   * Model TableActu
    */
 
-  export type AggregateNews = {
-    _count: NewsCountAggregateOutputType | null
-    _avg: NewsAvgAggregateOutputType | null
-    _sum: NewsSumAggregateOutputType | null
-    _min: NewsMinAggregateOutputType | null
-    _max: NewsMaxAggregateOutputType | null
+  export type AggregateTableActu = {
+    _count: TableActuCountAggregateOutputType | null
+    _avg: TableActuAvgAggregateOutputType | null
+    _sum: TableActuSumAggregateOutputType | null
+    _min: TableActuMinAggregateOutputType | null
+    _max: TableActuMaxAggregateOutputType | null
   }
 
-  export type NewsAvgAggregateOutputType = {
+  export type TableActuAvgAggregateOutputType = {
     id: number | null
   }
 
-  export type NewsSumAggregateOutputType = {
+  export type TableActuSumAggregateOutputType = {
     id: number | null
   }
 
-  export type NewsMinAggregateOutputType = {
+  export type TableActuMinAggregateOutputType = {
     id: number | null
     createdAt: Date | null
     updatedAt: Date | null
+    category: string | null
     title: string | null
     description: string | null
     date: Date | null
-    category: string | null
-    imageUrl: string | null
   }
 
-  export type NewsMaxAggregateOutputType = {
+  export type TableActuMaxAggregateOutputType = {
     id: number | null
     createdAt: Date | null
     updatedAt: Date | null
+    category: string | null
     title: string | null
     description: string | null
     date: Date | null
-    category: string | null
-    imageUrl: string | null
   }
 
-  export type NewsCountAggregateOutputType = {
+  export type TableActuCountAggregateOutputType = {
     id: number
     createdAt: number
     updatedAt: number
+    category: number
     title: number
     description: number
     date: number
-    category: number
-    imageUrl: number
     _all: number
   }
 
 
-  export type NewsAvgAggregateInputType = {
+  export type TableActuAvgAggregateInputType = {
     id?: true
   }
 
-  export type NewsSumAggregateInputType = {
+  export type TableActuSumAggregateInputType = {
     id?: true
   }
 
-  export type NewsMinAggregateInputType = {
+  export type TableActuMinAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
+    category?: true
     title?: true
     description?: true
     date?: true
-    category?: true
-    imageUrl?: true
   }
 
-  export type NewsMaxAggregateInputType = {
+  export type TableActuMaxAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
+    category?: true
     title?: true
     description?: true
     date?: true
-    category?: true
-    imageUrl?: true
   }
 
-  export type NewsCountAggregateInputType = {
+  export type TableActuCountAggregateInputType = {
     id?: true
     createdAt?: true
     updatedAt?: true
+    category?: true
     title?: true
     description?: true
     date?: true
-    category?: true
-    imageUrl?: true
     _all?: true
   }
 
-  export type NewsAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuAggregateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which News to aggregate.
+     * Filter which TableActu to aggregate.
      */
-    where?: NewsWhereInput
+    where?: TableActuWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of News to fetch.
+     * Determine the order of TableActus to fetch.
      */
-    orderBy?: NewsOrderByWithRelationInput | NewsOrderByWithRelationInput[]
+    orderBy?: TableActuOrderByWithRelationInput | TableActuOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
      * Sets the start position
      */
-    cursor?: NewsWhereUniqueInput
+    cursor?: TableActuWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` News from the position of the cursor.
+     * Take `±n` TableActus from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` News.
+     * Skip the first `n` TableActus.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
-     * Count returned News
+     * Count returned TableActus
     **/
-    _count?: true | NewsCountAggregateInputType
+    _count?: true | TableActuCountAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to average
     **/
-    _avg?: NewsAvgAggregateInputType
+    _avg?: TableActuAvgAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to sum
     **/
-    _sum?: NewsSumAggregateInputType
+    _sum?: TableActuSumAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the minimum value
     **/
-    _min?: NewsMinAggregateInputType
+    _min?: TableActuMinAggregateInputType
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/aggregations Aggregation Docs}
      * 
      * Select which fields to find the maximum value
     **/
-    _max?: NewsMaxAggregateInputType
+    _max?: TableActuMaxAggregateInputType
   }
 
-  export type GetNewsAggregateType<T extends NewsAggregateArgs> = {
-        [P in keyof T & keyof AggregateNews]: P extends '_count' | 'count'
+  export type GetTableActuAggregateType<T extends TableActuAggregateArgs> = {
+        [P in keyof T & keyof AggregateTableActu]: P extends '_count' | 'count'
       ? T[P] extends true
         ? number
-        : GetScalarType<T[P], AggregateNews[P]>
-      : GetScalarType<T[P], AggregateNews[P]>
+        : GetScalarType<T[P], AggregateTableActu[P]>
+      : GetScalarType<T[P], AggregateTableActu[P]>
   }
 
 
 
 
-  export type NewsGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    where?: NewsWhereInput
-    orderBy?: NewsOrderByWithAggregationInput | NewsOrderByWithAggregationInput[]
-    by: NewsScalarFieldEnum[] | NewsScalarFieldEnum
-    having?: NewsScalarWhereWithAggregatesInput
+  export type TableActuGroupByArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    where?: TableActuWhereInput
+    orderBy?: TableActuOrderByWithAggregationInput | TableActuOrderByWithAggregationInput[]
+    by: TableActuScalarFieldEnum[] | TableActuScalarFieldEnum
+    having?: TableActuScalarWhereWithAggregatesInput
     take?: number
     skip?: number
-    _count?: NewsCountAggregateInputType | true
-    _avg?: NewsAvgAggregateInputType
-    _sum?: NewsSumAggregateInputType
-    _min?: NewsMinAggregateInputType
-    _max?: NewsMaxAggregateInputType
+    _count?: TableActuCountAggregateInputType | true
+    _avg?: TableActuAvgAggregateInputType
+    _sum?: TableActuSumAggregateInputType
+    _min?: TableActuMinAggregateInputType
+    _max?: TableActuMaxAggregateInputType
   }
 
-  export type NewsGroupByOutputType = {
+  export type TableActuGroupByOutputType = {
     id: number
     createdAt: Date
     updatedAt: Date
+    category: string
     title: string
     description: string
     date: Date
-    category: string
-    imageUrl: string | null
-    _count: NewsCountAggregateOutputType | null
-    _avg: NewsAvgAggregateOutputType | null
-    _sum: NewsSumAggregateOutputType | null
-    _min: NewsMinAggregateOutputType | null
-    _max: NewsMaxAggregateOutputType | null
+    _count: TableActuCountAggregateOutputType | null
+    _avg: TableActuAvgAggregateOutputType | null
+    _sum: TableActuSumAggregateOutputType | null
+    _min: TableActuMinAggregateOutputType | null
+    _max: TableActuMaxAggregateOutputType | null
   }
 
-  type GetNewsGroupByPayload<T extends NewsGroupByArgs> = Prisma.PrismaPromise<
+  type GetTableActuGroupByPayload<T extends TableActuGroupByArgs> = Prisma.PrismaPromise<
     Array<
-      PickEnumerable<NewsGroupByOutputType, T['by']> &
+      PickEnumerable<TableActuGroupByOutputType, T['by']> &
         {
-          [P in ((keyof T) & (keyof NewsGroupByOutputType))]: P extends '_count'
+          [P in ((keyof T) & (keyof TableActuGroupByOutputType))]: P extends '_count'
             ? T[P] extends boolean
               ? number
-              : GetScalarType<T[P], NewsGroupByOutputType[P]>
-            : GetScalarType<T[P], NewsGroupByOutputType[P]>
+              : GetScalarType<T[P], TableActuGroupByOutputType[P]>
+            : GetScalarType<T[P], TableActuGroupByOutputType[P]>
         }
       >
     >
 
 
-  export type NewsSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableActuSelect<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    category?: boolean
     title?: boolean
     description?: boolean
     date?: boolean
-    category?: boolean
-    imageUrl?: boolean
-  }, ExtArgs["result"]["news"]>
+  }, ExtArgs["result"]["tableActu"]>
 
-  export type NewsSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableActuSelectCreateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    category?: boolean
     title?: boolean
     description?: boolean
     date?: boolean
-    category?: boolean
-    imageUrl?: boolean
-  }, ExtArgs["result"]["news"]>
+  }, ExtArgs["result"]["tableActu"]>
 
-  export type NewsSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
+  export type TableActuSelectUpdateManyAndReturn<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetSelect<{
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    category?: boolean
     title?: boolean
     description?: boolean
     date?: boolean
-    category?: boolean
-    imageUrl?: boolean
-  }, ExtArgs["result"]["news"]>
+  }, ExtArgs["result"]["tableActu"]>
 
-  export type NewsSelectScalar = {
+  export type TableActuSelectScalar = {
     id?: boolean
     createdAt?: boolean
     updatedAt?: boolean
+    category?: boolean
     title?: boolean
     description?: boolean
     date?: boolean
-    category?: boolean
-    imageUrl?: boolean
   }
 
-  export type NewsOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "title" | "description" | "date" | "category" | "imageUrl", ExtArgs["result"]["news"]>
+  export type TableActuOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "createdAt" | "updatedAt" | "category" | "title" | "description" | "date", ExtArgs["result"]["tableActu"]>
 
-  export type $NewsPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
-    name: "News"
+  export type $TableActuPayload<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+    name: "TableActu"
     objects: {}
     scalars: $Extensions.GetPayloadResult<{
       id: number
       createdAt: Date
       updatedAt: Date
+      category: string
       title: string
       description: string
       date: Date
-      category: string
-      imageUrl: string | null
-    }, ExtArgs["result"]["news"]>
+    }, ExtArgs["result"]["tableActu"]>
     composites: {}
   }
 
-  type NewsGetPayload<S extends boolean | null | undefined | NewsDefaultArgs> = $Result.GetResult<Prisma.$NewsPayload, S>
+  type TableActuGetPayload<S extends boolean | null | undefined | TableActuDefaultArgs> = $Result.GetResult<Prisma.$TableActuPayload, S>
 
-  type NewsCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
-    Omit<NewsFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
-      select?: NewsCountAggregateInputType | true
+  type TableActuCountArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> =
+    Omit<TableActuFindManyArgs, 'select' | 'include' | 'distinct' | 'omit'> & {
+      select?: TableActuCountAggregateInputType | true
     }
 
-  export interface NewsDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
-    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['News'], meta: { name: 'News' } }
+  export interface TableActuDelegate<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> {
+    [K: symbol]: { types: Prisma.TypeMap<ExtArgs>['model']['TableActu'], meta: { name: 'TableActu' } }
     /**
-     * Find zero or one News that matches the filter.
-     * @param {NewsFindUniqueArgs} args - Arguments to find a News
+     * Find zero or one TableActu that matches the filter.
+     * @param {TableActuFindUniqueArgs} args - Arguments to find a TableActu
      * @example
-     * // Get one News
-     * const news = await prisma.news.findUnique({
+     * // Get one TableActu
+     * const tableActu = await prisma.tableActu.findUnique({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUnique<T extends NewsFindUniqueArgs>(args: SelectSubset<T, NewsFindUniqueArgs<ExtArgs>>): Prisma__NewsClient<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findUnique<T extends TableActuFindUniqueArgs>(args: SelectSubset<T, TableActuFindUniqueArgs<ExtArgs>>): Prisma__TableActuClient<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "findUnique", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find one News that matches the filter or throw an error with `error.code='P2025'`
+     * Find one TableActu that matches the filter or throw an error with `error.code='P2025'`
      * if no matches were found.
-     * @param {NewsFindUniqueOrThrowArgs} args - Arguments to find a News
+     * @param {TableActuFindUniqueOrThrowArgs} args - Arguments to find a TableActu
      * @example
-     * // Get one News
-     * const news = await prisma.news.findUniqueOrThrow({
+     * // Get one TableActu
+     * const tableActu = await prisma.tableActu.findUniqueOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findUniqueOrThrow<T extends NewsFindUniqueOrThrowArgs>(args: SelectSubset<T, NewsFindUniqueOrThrowArgs<ExtArgs>>): Prisma__NewsClient<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findUniqueOrThrow<T extends TableActuFindUniqueOrThrowArgs>(args: SelectSubset<T, TableActuFindUniqueOrThrowArgs<ExtArgs>>): Prisma__TableActuClient<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "findUniqueOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first News that matches the filter.
+     * Find the first TableActu that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NewsFindFirstArgs} args - Arguments to find a News
+     * @param {TableActuFindFirstArgs} args - Arguments to find a TableActu
      * @example
-     * // Get one News
-     * const news = await prisma.news.findFirst({
+     * // Get one TableActu
+     * const tableActu = await prisma.tableActu.findFirst({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirst<T extends NewsFindFirstArgs>(args?: SelectSubset<T, NewsFindFirstArgs<ExtArgs>>): Prisma__NewsClient<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
+    findFirst<T extends TableActuFindFirstArgs>(args?: SelectSubset<T, TableActuFindFirstArgs<ExtArgs>>): Prisma__TableActuClient<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "findFirst", GlobalOmitOptions> | null, null, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find the first News that matches the filter or
+     * Find the first TableActu that matches the filter or
      * throw `PrismaKnownClientError` with `P2025` code if no matches were found.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NewsFindFirstOrThrowArgs} args - Arguments to find a News
+     * @param {TableActuFindFirstOrThrowArgs} args - Arguments to find a TableActu
      * @example
-     * // Get one News
-     * const news = await prisma.news.findFirstOrThrow({
+     * // Get one TableActu
+     * const tableActu = await prisma.tableActu.findFirstOrThrow({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      */
-    findFirstOrThrow<T extends NewsFindFirstOrThrowArgs>(args?: SelectSubset<T, NewsFindFirstOrThrowArgs<ExtArgs>>): Prisma__NewsClient<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    findFirstOrThrow<T extends TableActuFindFirstOrThrowArgs>(args?: SelectSubset<T, TableActuFindFirstOrThrowArgs<ExtArgs>>): Prisma__TableActuClient<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "findFirstOrThrow", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Find zero or more News that matches the filter.
+     * Find zero or more TableActus that matches the filter.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NewsFindManyArgs} args - Arguments to filter and select certain fields only.
+     * @param {TableActuFindManyArgs} args - Arguments to filter and select certain fields only.
      * @example
-     * // Get all News
-     * const news = await prisma.news.findMany()
+     * // Get all TableActus
+     * const tableActus = await prisma.tableActu.findMany()
      * 
-     * // Get first 10 News
-     * const news = await prisma.news.findMany({ take: 10 })
+     * // Get first 10 TableActus
+     * const tableActus = await prisma.tableActu.findMany({ take: 10 })
      * 
      * // Only select the `id`
-     * const newsWithIdOnly = await prisma.news.findMany({ select: { id: true } })
+     * const tableActuWithIdOnly = await prisma.tableActu.findMany({ select: { id: true } })
      * 
      */
-    findMany<T extends NewsFindManyArgs>(args?: SelectSubset<T, NewsFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
+    findMany<T extends TableActuFindManyArgs>(args?: SelectSubset<T, TableActuFindManyArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "findMany", GlobalOmitOptions>>
 
     /**
-     * Create a News.
-     * @param {NewsCreateArgs} args - Arguments to create a News.
+     * Create a TableActu.
+     * @param {TableActuCreateArgs} args - Arguments to create a TableActu.
      * @example
-     * // Create one News
-     * const News = await prisma.news.create({
+     * // Create one TableActu
+     * const TableActu = await prisma.tableActu.create({
      *   data: {
-     *     // ... data to create a News
+     *     // ... data to create a TableActu
      *   }
      * })
      * 
      */
-    create<T extends NewsCreateArgs>(args: SelectSubset<T, NewsCreateArgs<ExtArgs>>): Prisma__NewsClient<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    create<T extends TableActuCreateArgs>(args: SelectSubset<T, TableActuCreateArgs<ExtArgs>>): Prisma__TableActuClient<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "create", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Create many News.
-     * @param {NewsCreateManyArgs} args - Arguments to create many News.
+     * Create many TableActus.
+     * @param {TableActuCreateManyArgs} args - Arguments to create many TableActus.
      * @example
-     * // Create many News
-     * const news = await prisma.news.createMany({
+     * // Create many TableActus
+     * const tableActu = await prisma.tableActu.createMany({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      *     
      */
-    createMany<T extends NewsCreateManyArgs>(args?: SelectSubset<T, NewsCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    createMany<T extends TableActuCreateManyArgs>(args?: SelectSubset<T, TableActuCreateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Create many News and returns the data saved in the database.
-     * @param {NewsCreateManyAndReturnArgs} args - Arguments to create many News.
+     * Create many TableActus and returns the data saved in the database.
+     * @param {TableActuCreateManyAndReturnArgs} args - Arguments to create many TableActus.
      * @example
-     * // Create many News
-     * const news = await prisma.news.createManyAndReturn({
+     * // Create many TableActus
+     * const tableActu = await prisma.tableActu.createManyAndReturn({
      *   data: [
      *     // ... provide data here
      *   ]
      * })
      * 
-     * // Create many News and only return the `id`
-     * const newsWithIdOnly = await prisma.news.createManyAndReturn({
+     * // Create many TableActus and only return the `id`
+     * const tableActuWithIdOnly = await prisma.tableActu.createManyAndReturn({
      *   select: { id: true },
      *   data: [
      *     // ... provide data here
@@ -6092,28 +6071,28 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    createManyAndReturn<T extends NewsCreateManyAndReturnArgs>(args?: SelectSubset<T, NewsCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
+    createManyAndReturn<T extends TableActuCreateManyAndReturnArgs>(args?: SelectSubset<T, TableActuCreateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "createManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Delete a News.
-     * @param {NewsDeleteArgs} args - Arguments to delete one News.
+     * Delete a TableActu.
+     * @param {TableActuDeleteArgs} args - Arguments to delete one TableActu.
      * @example
-     * // Delete one News
-     * const News = await prisma.news.delete({
+     * // Delete one TableActu
+     * const TableActu = await prisma.tableActu.delete({
      *   where: {
-     *     // ... filter to delete one News
+     *     // ... filter to delete one TableActu
      *   }
      * })
      * 
      */
-    delete<T extends NewsDeleteArgs>(args: SelectSubset<T, NewsDeleteArgs<ExtArgs>>): Prisma__NewsClient<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    delete<T extends TableActuDeleteArgs>(args: SelectSubset<T, TableActuDeleteArgs<ExtArgs>>): Prisma__TableActuClient<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "delete", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Update one News.
-     * @param {NewsUpdateArgs} args - Arguments to update one News.
+     * Update one TableActu.
+     * @param {TableActuUpdateArgs} args - Arguments to update one TableActu.
      * @example
-     * // Update one News
-     * const news = await prisma.news.update({
+     * // Update one TableActu
+     * const tableActu = await prisma.tableActu.update({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6123,30 +6102,30 @@ export namespace Prisma {
      * })
      * 
      */
-    update<T extends NewsUpdateArgs>(args: SelectSubset<T, NewsUpdateArgs<ExtArgs>>): Prisma__NewsClient<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    update<T extends TableActuUpdateArgs>(args: SelectSubset<T, TableActuUpdateArgs<ExtArgs>>): Prisma__TableActuClient<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "update", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
     /**
-     * Delete zero or more News.
-     * @param {NewsDeleteManyArgs} args - Arguments to filter News to delete.
+     * Delete zero or more TableActus.
+     * @param {TableActuDeleteManyArgs} args - Arguments to filter TableActus to delete.
      * @example
-     * // Delete a few News
-     * const { count } = await prisma.news.deleteMany({
+     * // Delete a few TableActus
+     * const { count } = await prisma.tableActu.deleteMany({
      *   where: {
      *     // ... provide filter here
      *   }
      * })
      * 
      */
-    deleteMany<T extends NewsDeleteManyArgs>(args?: SelectSubset<T, NewsDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    deleteMany<T extends TableActuDeleteManyArgs>(args?: SelectSubset<T, TableActuDeleteManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more News.
+     * Update zero or more TableActus.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NewsUpdateManyArgs} args - Arguments to update one or more rows.
+     * @param {TableActuUpdateManyArgs} args - Arguments to update one or more rows.
      * @example
-     * // Update many News
-     * const news = await prisma.news.updateMany({
+     * // Update many TableActus
+     * const tableActu = await prisma.tableActu.updateMany({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6156,14 +6135,14 @@ export namespace Prisma {
      * })
      * 
      */
-    updateMany<T extends NewsUpdateManyArgs>(args: SelectSubset<T, NewsUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
+    updateMany<T extends TableActuUpdateManyArgs>(args: SelectSubset<T, TableActuUpdateManyArgs<ExtArgs>>): Prisma.PrismaPromise<BatchPayload>
 
     /**
-     * Update zero or more News and returns the data updated in the database.
-     * @param {NewsUpdateManyAndReturnArgs} args - Arguments to update many News.
+     * Update zero or more TableActus and returns the data updated in the database.
+     * @param {TableActuUpdateManyAndReturnArgs} args - Arguments to update many TableActus.
      * @example
-     * // Update many News
-     * const news = await prisma.news.updateManyAndReturn({
+     * // Update many TableActus
+     * const tableActu = await prisma.tableActu.updateManyAndReturn({
      *   where: {
      *     // ... provide filter here
      *   },
@@ -6172,8 +6151,8 @@ export namespace Prisma {
      *   ]
      * })
      * 
-     * // Update zero or more News and only return the `id`
-     * const newsWithIdOnly = await prisma.news.updateManyAndReturn({
+     * // Update zero or more TableActus and only return the `id`
+     * const tableActuWithIdOnly = await prisma.tableActu.updateManyAndReturn({
      *   select: { id: true },
      *   where: {
      *     // ... provide filter here
@@ -6186,56 +6165,56 @@ export namespace Prisma {
      * Read more here: https://pris.ly/d/null-undefined
      * 
      */
-    updateManyAndReturn<T extends NewsUpdateManyAndReturnArgs>(args: SelectSubset<T, NewsUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
+    updateManyAndReturn<T extends TableActuUpdateManyAndReturnArgs>(args: SelectSubset<T, TableActuUpdateManyAndReturnArgs<ExtArgs>>): Prisma.PrismaPromise<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "updateManyAndReturn", GlobalOmitOptions>>
 
     /**
-     * Create or update one News.
-     * @param {NewsUpsertArgs} args - Arguments to update or create a News.
+     * Create or update one TableActu.
+     * @param {TableActuUpsertArgs} args - Arguments to update or create a TableActu.
      * @example
-     * // Update or create a News
-     * const news = await prisma.news.upsert({
+     * // Update or create a TableActu
+     * const tableActu = await prisma.tableActu.upsert({
      *   create: {
-     *     // ... data to create a News
+     *     // ... data to create a TableActu
      *   },
      *   update: {
      *     // ... in case it already exists, update
      *   },
      *   where: {
-     *     // ... the filter for the News we want to update
+     *     // ... the filter for the TableActu we want to update
      *   }
      * })
      */
-    upsert<T extends NewsUpsertArgs>(args: SelectSubset<T, NewsUpsertArgs<ExtArgs>>): Prisma__NewsClient<$Result.GetResult<Prisma.$NewsPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
+    upsert<T extends TableActuUpsertArgs>(args: SelectSubset<T, TableActuUpsertArgs<ExtArgs>>): Prisma__TableActuClient<$Result.GetResult<Prisma.$TableActuPayload<ExtArgs>, T, "upsert", GlobalOmitOptions>, never, ExtArgs, GlobalOmitOptions>
 
 
     /**
-     * Count the number of News.
+     * Count the number of TableActus.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NewsCountArgs} args - Arguments to filter News to count.
+     * @param {TableActuCountArgs} args - Arguments to filter TableActus to count.
      * @example
-     * // Count the number of News
-     * const count = await prisma.news.count({
+     * // Count the number of TableActus
+     * const count = await prisma.tableActu.count({
      *   where: {
-     *     // ... the filter for the News we want to count
+     *     // ... the filter for the TableActus we want to count
      *   }
      * })
     **/
-    count<T extends NewsCountArgs>(
-      args?: Subset<T, NewsCountArgs>,
+    count<T extends TableActuCountArgs>(
+      args?: Subset<T, TableActuCountArgs>,
     ): Prisma.PrismaPromise<
       T extends $Utils.Record<'select', any>
         ? T['select'] extends true
           ? number
-          : GetScalarType<T['select'], NewsCountAggregateOutputType>
+          : GetScalarType<T['select'], TableActuCountAggregateOutputType>
         : number
     >
 
     /**
-     * Allows you to perform aggregations operations on a News.
+     * Allows you to perform aggregations operations on a TableActu.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NewsAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
+     * @param {TableActuAggregateArgs} args - Select which aggregations you would like to apply and on what fields.
      * @example
      * // Ordered by age ascending
      * // Where email contains prisma.io
@@ -6255,13 +6234,13 @@ export namespace Prisma {
      *   take: 10,
      * })
     **/
-    aggregate<T extends NewsAggregateArgs>(args: Subset<T, NewsAggregateArgs>): Prisma.PrismaPromise<GetNewsAggregateType<T>>
+    aggregate<T extends TableActuAggregateArgs>(args: Subset<T, TableActuAggregateArgs>): Prisma.PrismaPromise<GetTableActuAggregateType<T>>
 
     /**
-     * Group by News.
+     * Group by TableActu.
      * Note, that providing `undefined` is treated as the value not being there.
      * Read more here: https://pris.ly/d/null-undefined
-     * @param {NewsGroupByArgs} args - Group by arguments.
+     * @param {TableActuGroupByArgs} args - Group by arguments.
      * @example
      * // Group by city, order by createdAt, get count
      * const result = await prisma.user.groupBy({
@@ -6276,14 +6255,14 @@ export namespace Prisma {
      * 
     **/
     groupBy<
-      T extends NewsGroupByArgs,
+      T extends TableActuGroupByArgs,
       HasSelectOrTake extends Or<
         Extends<'skip', Keys<T>>,
         Extends<'take', Keys<T>>
       >,
       OrderByArg extends True extends HasSelectOrTake
-        ? { orderBy: NewsGroupByArgs['orderBy'] }
-        : { orderBy?: NewsGroupByArgs['orderBy'] },
+        ? { orderBy: TableActuGroupByArgs['orderBy'] }
+        : { orderBy?: TableActuGroupByArgs['orderBy'] },
       OrderFields extends ExcludeUnderscoreKeys<Keys<MaybeTupleToUnion<T['orderBy']>>>,
       ByFields extends MaybeTupleToUnion<T['by']>,
       ByValid extends Has<ByFields, OrderFields>,
@@ -6332,20 +6311,20 @@ export namespace Prisma {
             ? never
             : `Error: Field "${P}" in "orderBy" needs to be provided in "by"`
         }[OrderFields]
-    >(args: SubsetIntersection<T, NewsGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetNewsGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
+    >(args: SubsetIntersection<T, TableActuGroupByArgs, OrderByArg> & InputErrors): {} extends InputErrors ? GetTableActuGroupByPayload<T> : Prisma.PrismaPromise<InputErrors>
   /**
-   * Fields of the News model
+   * Fields of the TableActu model
    */
-  readonly fields: NewsFieldRefs;
+  readonly fields: TableActuFieldRefs;
   }
 
   /**
-   * The delegate class that acts as a "Promise-like" for News.
+   * The delegate class that acts as a "Promise-like" for TableActu.
    * Why is this prefixed with `Prisma__`?
    * Because we want to prevent naming conflicts as mentioned in
    * https://github.com/prisma/prisma-client-js/issues/707
    */
-  export interface Prisma__NewsClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
+  export interface Prisma__TableActuClient<T, Null = never, ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs, GlobalOmitOptions = {}> extends Prisma.PrismaPromise<T> {
     readonly [Symbol.toStringTag]: "PrismaPromise"
     /**
      * Attaches callbacks for the resolution and/or rejection of the Promise.
@@ -6373,380 +6352,379 @@ export namespace Prisma {
 
 
   /**
-   * Fields of the News model
+   * Fields of the TableActu model
    */
-  interface NewsFieldRefs {
-    readonly id: FieldRef<"News", 'Int'>
-    readonly createdAt: FieldRef<"News", 'DateTime'>
-    readonly updatedAt: FieldRef<"News", 'DateTime'>
-    readonly title: FieldRef<"News", 'String'>
-    readonly description: FieldRef<"News", 'String'>
-    readonly date: FieldRef<"News", 'DateTime'>
-    readonly category: FieldRef<"News", 'String'>
-    readonly imageUrl: FieldRef<"News", 'String'>
+  interface TableActuFieldRefs {
+    readonly id: FieldRef<"TableActu", 'Int'>
+    readonly createdAt: FieldRef<"TableActu", 'DateTime'>
+    readonly updatedAt: FieldRef<"TableActu", 'DateTime'>
+    readonly category: FieldRef<"TableActu", 'String'>
+    readonly title: FieldRef<"TableActu", 'String'>
+    readonly description: FieldRef<"TableActu", 'String'>
+    readonly date: FieldRef<"TableActu", 'DateTime'>
   }
     
 
   // Custom InputTypes
   /**
-   * News findUnique
+   * TableActu findUnique
    */
-  export type NewsFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuFindUniqueArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * Filter, which News to fetch.
+     * Filter, which TableActu to fetch.
      */
-    where: NewsWhereUniqueInput
+    where: TableActuWhereUniqueInput
   }
 
   /**
-   * News findUniqueOrThrow
+   * TableActu findUniqueOrThrow
    */
-  export type NewsFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuFindUniqueOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * Filter, which News to fetch.
+     * Filter, which TableActu to fetch.
      */
-    where: NewsWhereUniqueInput
+    where: TableActuWhereUniqueInput
   }
 
   /**
-   * News findFirst
+   * TableActu findFirst
    */
-  export type NewsFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuFindFirstArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * Filter, which News to fetch.
+     * Filter, which TableActu to fetch.
      */
-    where?: NewsWhereInput
+    where?: TableActuWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of News to fetch.
+     * Determine the order of TableActus to fetch.
      */
-    orderBy?: NewsOrderByWithRelationInput | NewsOrderByWithRelationInput[]
+    orderBy?: TableActuOrderByWithRelationInput | TableActuOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for News.
+     * Sets the position for searching for TableActus.
      */
-    cursor?: NewsWhereUniqueInput
+    cursor?: TableActuWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` News from the position of the cursor.
+     * Take `±n` TableActus from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` News.
+     * Skip the first `n` TableActus.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of News.
+     * Filter by unique combinations of TableActus.
      */
-    distinct?: NewsScalarFieldEnum | NewsScalarFieldEnum[]
+    distinct?: TableActuScalarFieldEnum | TableActuScalarFieldEnum[]
   }
 
   /**
-   * News findFirstOrThrow
+   * TableActu findFirstOrThrow
    */
-  export type NewsFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuFindFirstOrThrowArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * Filter, which News to fetch.
+     * Filter, which TableActu to fetch.
      */
-    where?: NewsWhereInput
+    where?: TableActuWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of News to fetch.
+     * Determine the order of TableActus to fetch.
      */
-    orderBy?: NewsOrderByWithRelationInput | NewsOrderByWithRelationInput[]
+    orderBy?: TableActuOrderByWithRelationInput | TableActuOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for searching for News.
+     * Sets the position for searching for TableActus.
      */
-    cursor?: NewsWhereUniqueInput
+    cursor?: TableActuWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` News from the position of the cursor.
+     * Take `±n` TableActus from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` News.
+     * Skip the first `n` TableActus.
      */
     skip?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/distinct Distinct Docs}
      * 
-     * Filter by unique combinations of News.
+     * Filter by unique combinations of TableActus.
      */
-    distinct?: NewsScalarFieldEnum | NewsScalarFieldEnum[]
+    distinct?: TableActuScalarFieldEnum | TableActuScalarFieldEnum[]
   }
 
   /**
-   * News findMany
+   * TableActu findMany
    */
-  export type NewsFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuFindManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * Filter, which News to fetch.
+     * Filter, which TableActus to fetch.
      */
-    where?: NewsWhereInput
+    where?: TableActuWhereInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/sorting Sorting Docs}
      * 
-     * Determine the order of News to fetch.
+     * Determine the order of TableActus to fetch.
      */
-    orderBy?: NewsOrderByWithRelationInput | NewsOrderByWithRelationInput[]
+    orderBy?: TableActuOrderByWithRelationInput | TableActuOrderByWithRelationInput[]
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination#cursor-based-pagination Cursor Docs}
      * 
-     * Sets the position for listing News.
+     * Sets the position for listing TableActus.
      */
-    cursor?: NewsWhereUniqueInput
+    cursor?: TableActuWhereUniqueInput
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Take `±n` News from the position of the cursor.
+     * Take `±n` TableActus from the position of the cursor.
      */
     take?: number
     /**
      * {@link https://www.prisma.io/docs/concepts/components/prisma-client/pagination Pagination Docs}
      * 
-     * Skip the first `n` News.
+     * Skip the first `n` TableActus.
      */
     skip?: number
-    distinct?: NewsScalarFieldEnum | NewsScalarFieldEnum[]
+    distinct?: TableActuScalarFieldEnum | TableActuScalarFieldEnum[]
   }
 
   /**
-   * News create
+   * TableActu create
    */
-  export type NewsCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuCreateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * The data needed to create a News.
+     * The data needed to create a TableActu.
      */
-    data: XOR<NewsCreateInput, NewsUncheckedCreateInput>
+    data: XOR<TableActuCreateInput, TableActuUncheckedCreateInput>
   }
 
   /**
-   * News createMany
+   * TableActu createMany
    */
-  export type NewsCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuCreateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to create many News.
+     * The data used to create many TableActus.
      */
-    data: NewsCreateManyInput | NewsCreateManyInput[]
+    data: TableActuCreateManyInput | TableActuCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * News createManyAndReturn
+   * TableActu createManyAndReturn
    */
-  export type NewsCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuCreateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelectCreateManyAndReturn<ExtArgs> | null
+    select?: TableActuSelectCreateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * The data used to create many News.
+     * The data used to create many TableActus.
      */
-    data: NewsCreateManyInput | NewsCreateManyInput[]
+    data: TableActuCreateManyInput | TableActuCreateManyInput[]
     skipDuplicates?: boolean
   }
 
   /**
-   * News update
+   * TableActu update
    */
-  export type NewsUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuUpdateArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * The data needed to update a News.
+     * The data needed to update a TableActu.
      */
-    data: XOR<NewsUpdateInput, NewsUncheckedUpdateInput>
+    data: XOR<TableActuUpdateInput, TableActuUncheckedUpdateInput>
     /**
-     * Choose, which News to update.
+     * Choose, which TableActu to update.
      */
-    where: NewsWhereUniqueInput
+    where: TableActuWhereUniqueInput
   }
 
   /**
-   * News updateMany
+   * TableActu updateMany
    */
-  export type NewsUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuUpdateManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * The data used to update News.
+     * The data used to update TableActus.
      */
-    data: XOR<NewsUpdateManyMutationInput, NewsUncheckedUpdateManyInput>
+    data: XOR<TableActuUpdateManyMutationInput, TableActuUncheckedUpdateManyInput>
     /**
-     * Filter which News to update
+     * Filter which TableActus to update
      */
-    where?: NewsWhereInput
+    where?: TableActuWhereInput
     /**
-     * Limit how many News to update.
+     * Limit how many TableActus to update.
      */
     limit?: number
   }
 
   /**
-   * News updateManyAndReturn
+   * TableActu updateManyAndReturn
    */
-  export type NewsUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuUpdateManyAndReturnArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelectUpdateManyAndReturn<ExtArgs> | null
+    select?: TableActuSelectUpdateManyAndReturn<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * The data used to update News.
+     * The data used to update TableActus.
      */
-    data: XOR<NewsUpdateManyMutationInput, NewsUncheckedUpdateManyInput>
+    data: XOR<TableActuUpdateManyMutationInput, TableActuUncheckedUpdateManyInput>
     /**
-     * Filter which News to update
+     * Filter which TableActus to update
      */
-    where?: NewsWhereInput
+    where?: TableActuWhereInput
     /**
-     * Limit how many News to update.
+     * Limit how many TableActus to update.
      */
     limit?: number
   }
 
   /**
-   * News upsert
+   * TableActu upsert
    */
-  export type NewsUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuUpsertArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * The filter to search for the News to update in case it exists.
+     * The filter to search for the TableActu to update in case it exists.
      */
-    where: NewsWhereUniqueInput
+    where: TableActuWhereUniqueInput
     /**
-     * In case the News found by the `where` argument doesn't exist, create a new News with this data.
+     * In case the TableActu found by the `where` argument doesn't exist, create a new TableActu with this data.
      */
-    create: XOR<NewsCreateInput, NewsUncheckedCreateInput>
+    create: XOR<TableActuCreateInput, TableActuUncheckedCreateInput>
     /**
-     * In case the News was found with the provided `where` argument, update it with this data.
+     * In case the TableActu was found with the provided `where` argument, update it with this data.
      */
-    update: XOR<NewsUpdateInput, NewsUncheckedUpdateInput>
+    update: XOR<TableActuUpdateInput, TableActuUncheckedUpdateInput>
   }
 
   /**
-   * News delete
+   * TableActu delete
    */
-  export type NewsDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuDeleteArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
     /**
-     * Filter which News to delete.
+     * Filter which TableActu to delete.
      */
-    where: NewsWhereUniqueInput
+    where: TableActuWhereUniqueInput
   }
 
   /**
-   * News deleteMany
+   * TableActu deleteMany
    */
-  export type NewsDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuDeleteManyArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Filter which News to delete
+     * Filter which TableActus to delete
      */
-    where?: NewsWhereInput
+    where?: TableActuWhereInput
     /**
-     * Limit how many News to delete.
+     * Limit how many TableActus to delete.
      */
     limit?: number
   }
 
   /**
-   * News without action
+   * TableActu without action
    */
-  export type NewsDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
+  export type TableActuDefaultArgs<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     /**
-     * Select specific fields to fetch from the News
+     * Select specific fields to fetch from the TableActu
      */
-    select?: NewsSelect<ExtArgs> | null
+    select?: TableActuSelect<ExtArgs> | null
     /**
-     * Omit specific fields from the News
+     * Omit specific fields from the TableActu
      */
-    omit?: NewsOmit<ExtArgs> | null
+    omit?: TableActuOmit<ExtArgs> | null
   }
 
 
@@ -6764,33 +6742,35 @@ export namespace Prisma {
   export type TransactionIsolationLevel = (typeof TransactionIsolationLevel)[keyof typeof TransactionIsolationLevel]
 
 
-  export const UserScalarFieldEnum: {
+  export const TableUserScalarFieldEnum: {
     id: 'id',
     username: 'username',
     password: 'password',
     email: 'email',
     firstname: 'firstname',
     lastname: 'lastname',
-    user_type: 'user_type'
+    role: 'role',
+    autorized: 'autorized'
   };
 
-  export type UserScalarFieldEnum = (typeof UserScalarFieldEnum)[keyof typeof UserScalarFieldEnum]
+  export type TableUserScalarFieldEnum = (typeof TableUserScalarFieldEnum)[keyof typeof TableUserScalarFieldEnum]
 
 
-  export const MunicipalServiceScalarFieldEnum: {
+  export const TableServiceScalarFieldEnum: {
     id: 'id',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
     name: 'name',
     type: 'type',
     status: 'status',
-    description: 'description'
+    description: 'description',
+    localisation: 'localisation'
   };
 
-  export type MunicipalServiceScalarFieldEnum = (typeof MunicipalServiceScalarFieldEnum)[keyof typeof MunicipalServiceScalarFieldEnum]
+  export type TableServiceScalarFieldEnum = (typeof TableServiceScalarFieldEnum)[keyof typeof TableServiceScalarFieldEnum]
 
 
-  export const ConnectedObjectScalarFieldEnum: {
+  export const TableObjectScalarFieldEnum: {
     id: 'id',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
@@ -6798,14 +6778,13 @@ export namespace Prisma {
     type: 'type',
     status: 'status',
     location: 'location',
-    lastValue: 'lastValue',
     lastUpdate: 'lastUpdate'
   };
 
-  export type ConnectedObjectScalarFieldEnum = (typeof ConnectedObjectScalarFieldEnum)[keyof typeof ConnectedObjectScalarFieldEnum]
+  export type TableObjectScalarFieldEnum = (typeof TableObjectScalarFieldEnum)[keyof typeof TableObjectScalarFieldEnum]
 
 
-  export const IncidentScalarFieldEnum: {
+  export const TableIncidentScalarFieldEnum: {
     id: 'id',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
@@ -6813,24 +6792,23 @@ export namespace Prisma {
     description: 'description',
     status: 'status',
     location: 'location',
-    userId: 'userId'
+    username: 'username'
   };
 
-  export type IncidentScalarFieldEnum = (typeof IncidentScalarFieldEnum)[keyof typeof IncidentScalarFieldEnum]
+  export type TableIncidentScalarFieldEnum = (typeof TableIncidentScalarFieldEnum)[keyof typeof TableIncidentScalarFieldEnum]
 
 
-  export const NewsScalarFieldEnum: {
+  export const TableActuScalarFieldEnum: {
     id: 'id',
     createdAt: 'createdAt',
     updatedAt: 'updatedAt',
+    category: 'category',
     title: 'title',
     description: 'description',
-    date: 'date',
-    category: 'category',
-    imageUrl: 'imageUrl'
+    date: 'date'
   };
 
-  export type NewsScalarFieldEnum = (typeof NewsScalarFieldEnum)[keyof typeof NewsScalarFieldEnum]
+  export type TableActuScalarFieldEnum = (typeof TableActuScalarFieldEnum)[keyof typeof TableActuScalarFieldEnum]
 
 
   export const SortOrder: {
@@ -6847,14 +6825,6 @@ export namespace Prisma {
   };
 
   export type QueryMode = (typeof QueryMode)[keyof typeof QueryMode]
-
-
-  export const NullsOrder: {
-    first: 'first',
-    last: 'last'
-  };
-
-  export type NullsOrder = (typeof NullsOrder)[keyof typeof NullsOrder]
 
 
   /**
@@ -6891,16 +6861,9 @@ export namespace Prisma {
 
 
   /**
-   * Reference to a field of type 'UserType'
+   * Reference to a field of type 'Boolean'
    */
-  export type EnumUserTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'UserType'>
-    
-
-
-  /**
-   * Reference to a field of type 'UserType[]'
-   */
-  export type ListEnumUserTypeFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'UserType[]'>
+  export type BooleanFieldRefInput<$PrismaModel> = FieldRefInputType<$PrismaModel, 'Boolean'>
     
 
 
@@ -6935,153 +6898,162 @@ export namespace Prisma {
    */
 
 
-  export type UserWhereInput = {
-    AND?: UserWhereInput | UserWhereInput[]
-    OR?: UserWhereInput[]
-    NOT?: UserWhereInput | UserWhereInput[]
-    id?: IntFilter<"User"> | number
-    username?: StringFilter<"User"> | string
-    password?: StringFilter<"User"> | string
-    email?: StringFilter<"User"> | string
-    firstname?: StringFilter<"User"> | string
-    lastname?: StringFilter<"User"> | string
-    user_type?: EnumUserTypeFilter<"User"> | $Enums.UserType
-    incidents?: IncidentListRelationFilter
+  export type TableUserWhereInput = {
+    AND?: TableUserWhereInput | TableUserWhereInput[]
+    OR?: TableUserWhereInput[]
+    NOT?: TableUserWhereInput | TableUserWhereInput[]
+    id?: IntFilter<"TableUser"> | number
+    username?: StringFilter<"TableUser"> | string
+    password?: StringFilter<"TableUser"> | string
+    email?: StringFilter<"TableUser"> | string
+    firstname?: StringFilter<"TableUser"> | string
+    lastname?: StringFilter<"TableUser"> | string
+    role?: StringFilter<"TableUser"> | string
+    autorized?: BoolFilter<"TableUser"> | boolean
+    incidentsByUsername?: TableIncidentListRelationFilter
   }
 
-  export type UserOrderByWithRelationInput = {
+  export type TableUserOrderByWithRelationInput = {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
     email?: SortOrder
     firstname?: SortOrder
     lastname?: SortOrder
-    user_type?: SortOrder
-    incidents?: IncidentOrderByRelationAggregateInput
+    role?: SortOrder
+    autorized?: SortOrder
+    incidentsByUsername?: TableIncidentOrderByRelationAggregateInput
   }
 
-  export type UserWhereUniqueInput = Prisma.AtLeast<{
+  export type TableUserWhereUniqueInput = Prisma.AtLeast<{
     id?: number
     username?: string
     email?: string
-    AND?: UserWhereInput | UserWhereInput[]
-    OR?: UserWhereInput[]
-    NOT?: UserWhereInput | UserWhereInput[]
-    password?: StringFilter<"User"> | string
-    firstname?: StringFilter<"User"> | string
-    lastname?: StringFilter<"User"> | string
-    user_type?: EnumUserTypeFilter<"User"> | $Enums.UserType
-    incidents?: IncidentListRelationFilter
+    AND?: TableUserWhereInput | TableUserWhereInput[]
+    OR?: TableUserWhereInput[]
+    NOT?: TableUserWhereInput | TableUserWhereInput[]
+    password?: StringFilter<"TableUser"> | string
+    firstname?: StringFilter<"TableUser"> | string
+    lastname?: StringFilter<"TableUser"> | string
+    role?: StringFilter<"TableUser"> | string
+    autorized?: BoolFilter<"TableUser"> | boolean
+    incidentsByUsername?: TableIncidentListRelationFilter
   }, "id" | "username" | "email">
 
-  export type UserOrderByWithAggregationInput = {
+  export type TableUserOrderByWithAggregationInput = {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
     email?: SortOrder
     firstname?: SortOrder
     lastname?: SortOrder
-    user_type?: SortOrder
-    _count?: UserCountOrderByAggregateInput
-    _avg?: UserAvgOrderByAggregateInput
-    _max?: UserMaxOrderByAggregateInput
-    _min?: UserMinOrderByAggregateInput
-    _sum?: UserSumOrderByAggregateInput
+    role?: SortOrder
+    autorized?: SortOrder
+    _count?: TableUserCountOrderByAggregateInput
+    _avg?: TableUserAvgOrderByAggregateInput
+    _max?: TableUserMaxOrderByAggregateInput
+    _min?: TableUserMinOrderByAggregateInput
+    _sum?: TableUserSumOrderByAggregateInput
   }
 
-  export type UserScalarWhereWithAggregatesInput = {
-    AND?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
-    OR?: UserScalarWhereWithAggregatesInput[]
-    NOT?: UserScalarWhereWithAggregatesInput | UserScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"User"> | number
-    username?: StringWithAggregatesFilter<"User"> | string
-    password?: StringWithAggregatesFilter<"User"> | string
-    email?: StringWithAggregatesFilter<"User"> | string
-    firstname?: StringWithAggregatesFilter<"User"> | string
-    lastname?: StringWithAggregatesFilter<"User"> | string
-    user_type?: EnumUserTypeWithAggregatesFilter<"User"> | $Enums.UserType
+  export type TableUserScalarWhereWithAggregatesInput = {
+    AND?: TableUserScalarWhereWithAggregatesInput | TableUserScalarWhereWithAggregatesInput[]
+    OR?: TableUserScalarWhereWithAggregatesInput[]
+    NOT?: TableUserScalarWhereWithAggregatesInput | TableUserScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"TableUser"> | number
+    username?: StringWithAggregatesFilter<"TableUser"> | string
+    password?: StringWithAggregatesFilter<"TableUser"> | string
+    email?: StringWithAggregatesFilter<"TableUser"> | string
+    firstname?: StringWithAggregatesFilter<"TableUser"> | string
+    lastname?: StringWithAggregatesFilter<"TableUser"> | string
+    role?: StringWithAggregatesFilter<"TableUser"> | string
+    autorized?: BoolWithAggregatesFilter<"TableUser"> | boolean
   }
 
-  export type MunicipalServiceWhereInput = {
-    AND?: MunicipalServiceWhereInput | MunicipalServiceWhereInput[]
-    OR?: MunicipalServiceWhereInput[]
-    NOT?: MunicipalServiceWhereInput | MunicipalServiceWhereInput[]
-    id?: IntFilter<"MunicipalService"> | number
-    createdAt?: DateTimeFilter<"MunicipalService"> | Date | string
-    updatedAt?: DateTimeFilter<"MunicipalService"> | Date | string
-    name?: StringFilter<"MunicipalService"> | string
-    type?: StringFilter<"MunicipalService"> | string
-    status?: StringFilter<"MunicipalService"> | string
-    description?: StringNullableFilter<"MunicipalService"> | string | null
+  export type TableServiceWhereInput = {
+    AND?: TableServiceWhereInput | TableServiceWhereInput[]
+    OR?: TableServiceWhereInput[]
+    NOT?: TableServiceWhereInput | TableServiceWhereInput[]
+    id?: IntFilter<"TableService"> | number
+    createdAt?: DateTimeFilter<"TableService"> | Date | string
+    updatedAt?: DateTimeFilter<"TableService"> | Date | string
+    name?: StringFilter<"TableService"> | string
+    type?: StringFilter<"TableService"> | string
+    status?: StringFilter<"TableService"> | string
+    description?: StringFilter<"TableService"> | string
+    localisation?: StringFilter<"TableService"> | string
   }
 
-  export type MunicipalServiceOrderByWithRelationInput = {
+  export type TableServiceOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     name?: SortOrder
     type?: SortOrder
     status?: SortOrder
-    description?: SortOrderInput | SortOrder
+    description?: SortOrder
+    localisation?: SortOrder
   }
 
-  export type MunicipalServiceWhereUniqueInput = Prisma.AtLeast<{
+  export type TableServiceWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: MunicipalServiceWhereInput | MunicipalServiceWhereInput[]
-    OR?: MunicipalServiceWhereInput[]
-    NOT?: MunicipalServiceWhereInput | MunicipalServiceWhereInput[]
-    createdAt?: DateTimeFilter<"MunicipalService"> | Date | string
-    updatedAt?: DateTimeFilter<"MunicipalService"> | Date | string
-    name?: StringFilter<"MunicipalService"> | string
-    type?: StringFilter<"MunicipalService"> | string
-    status?: StringFilter<"MunicipalService"> | string
-    description?: StringNullableFilter<"MunicipalService"> | string | null
+    AND?: TableServiceWhereInput | TableServiceWhereInput[]
+    OR?: TableServiceWhereInput[]
+    NOT?: TableServiceWhereInput | TableServiceWhereInput[]
+    createdAt?: DateTimeFilter<"TableService"> | Date | string
+    updatedAt?: DateTimeFilter<"TableService"> | Date | string
+    name?: StringFilter<"TableService"> | string
+    type?: StringFilter<"TableService"> | string
+    status?: StringFilter<"TableService"> | string
+    description?: StringFilter<"TableService"> | string
+    localisation?: StringFilter<"TableService"> | string
   }, "id">
 
-  export type MunicipalServiceOrderByWithAggregationInput = {
+  export type TableServiceOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     name?: SortOrder
     type?: SortOrder
     status?: SortOrder
-    description?: SortOrderInput | SortOrder
-    _count?: MunicipalServiceCountOrderByAggregateInput
-    _avg?: MunicipalServiceAvgOrderByAggregateInput
-    _max?: MunicipalServiceMaxOrderByAggregateInput
-    _min?: MunicipalServiceMinOrderByAggregateInput
-    _sum?: MunicipalServiceSumOrderByAggregateInput
+    description?: SortOrder
+    localisation?: SortOrder
+    _count?: TableServiceCountOrderByAggregateInput
+    _avg?: TableServiceAvgOrderByAggregateInput
+    _max?: TableServiceMaxOrderByAggregateInput
+    _min?: TableServiceMinOrderByAggregateInput
+    _sum?: TableServiceSumOrderByAggregateInput
   }
 
-  export type MunicipalServiceScalarWhereWithAggregatesInput = {
-    AND?: MunicipalServiceScalarWhereWithAggregatesInput | MunicipalServiceScalarWhereWithAggregatesInput[]
-    OR?: MunicipalServiceScalarWhereWithAggregatesInput[]
-    NOT?: MunicipalServiceScalarWhereWithAggregatesInput | MunicipalServiceScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"MunicipalService"> | number
-    createdAt?: DateTimeWithAggregatesFilter<"MunicipalService"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"MunicipalService"> | Date | string
-    name?: StringWithAggregatesFilter<"MunicipalService"> | string
-    type?: StringWithAggregatesFilter<"MunicipalService"> | string
-    status?: StringWithAggregatesFilter<"MunicipalService"> | string
-    description?: StringNullableWithAggregatesFilter<"MunicipalService"> | string | null
+  export type TableServiceScalarWhereWithAggregatesInput = {
+    AND?: TableServiceScalarWhereWithAggregatesInput | TableServiceScalarWhereWithAggregatesInput[]
+    OR?: TableServiceScalarWhereWithAggregatesInput[]
+    NOT?: TableServiceScalarWhereWithAggregatesInput | TableServiceScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"TableService"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"TableService"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"TableService"> | Date | string
+    name?: StringWithAggregatesFilter<"TableService"> | string
+    type?: StringWithAggregatesFilter<"TableService"> | string
+    status?: StringWithAggregatesFilter<"TableService"> | string
+    description?: StringWithAggregatesFilter<"TableService"> | string
+    localisation?: StringWithAggregatesFilter<"TableService"> | string
   }
 
-  export type ConnectedObjectWhereInput = {
-    AND?: ConnectedObjectWhereInput | ConnectedObjectWhereInput[]
-    OR?: ConnectedObjectWhereInput[]
-    NOT?: ConnectedObjectWhereInput | ConnectedObjectWhereInput[]
-    id?: IntFilter<"ConnectedObject"> | number
-    createdAt?: DateTimeFilter<"ConnectedObject"> | Date | string
-    updatedAt?: DateTimeFilter<"ConnectedObject"> | Date | string
-    name?: StringFilter<"ConnectedObject"> | string
-    type?: StringFilter<"ConnectedObject"> | string
-    status?: StringFilter<"ConnectedObject"> | string
-    location?: StringFilter<"ConnectedObject"> | string
-    lastValue?: StringNullableFilter<"ConnectedObject"> | string | null
-    lastUpdate?: DateTimeNullableFilter<"ConnectedObject"> | Date | string | null
+  export type TableObjectWhereInput = {
+    AND?: TableObjectWhereInput | TableObjectWhereInput[]
+    OR?: TableObjectWhereInput[]
+    NOT?: TableObjectWhereInput | TableObjectWhereInput[]
+    id?: IntFilter<"TableObject"> | number
+    createdAt?: DateTimeFilter<"TableObject"> | Date | string
+    updatedAt?: DateTimeFilter<"TableObject"> | Date | string
+    name?: StringFilter<"TableObject"> | string
+    type?: StringFilter<"TableObject"> | string
+    status?: StringFilter<"TableObject"> | string
+    location?: StringFilter<"TableObject"> | string
+    lastUpdate?: DateTimeFilter<"TableObject"> | Date | string
   }
 
-  export type ConnectedObjectOrderByWithRelationInput = {
+  export type TableObjectOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7089,26 +7061,24 @@ export namespace Prisma {
     type?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    lastValue?: SortOrderInput | SortOrder
-    lastUpdate?: SortOrderInput | SortOrder
+    lastUpdate?: SortOrder
   }
 
-  export type ConnectedObjectWhereUniqueInput = Prisma.AtLeast<{
+  export type TableObjectWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: ConnectedObjectWhereInput | ConnectedObjectWhereInput[]
-    OR?: ConnectedObjectWhereInput[]
-    NOT?: ConnectedObjectWhereInput | ConnectedObjectWhereInput[]
-    createdAt?: DateTimeFilter<"ConnectedObject"> | Date | string
-    updatedAt?: DateTimeFilter<"ConnectedObject"> | Date | string
-    name?: StringFilter<"ConnectedObject"> | string
-    type?: StringFilter<"ConnectedObject"> | string
-    status?: StringFilter<"ConnectedObject"> | string
-    location?: StringFilter<"ConnectedObject"> | string
-    lastValue?: StringNullableFilter<"ConnectedObject"> | string | null
-    lastUpdate?: DateTimeNullableFilter<"ConnectedObject"> | Date | string | null
+    AND?: TableObjectWhereInput | TableObjectWhereInput[]
+    OR?: TableObjectWhereInput[]
+    NOT?: TableObjectWhereInput | TableObjectWhereInput[]
+    createdAt?: DateTimeFilter<"TableObject"> | Date | string
+    updatedAt?: DateTimeFilter<"TableObject"> | Date | string
+    name?: StringFilter<"TableObject"> | string
+    type?: StringFilter<"TableObject"> | string
+    status?: StringFilter<"TableObject"> | string
+    location?: StringFilter<"TableObject"> | string
+    lastUpdate?: DateTimeFilter<"TableObject"> | Date | string
   }, "id">
 
-  export type ConnectedObjectOrderByWithAggregationInput = {
+  export type TableObjectOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7116,46 +7086,44 @@ export namespace Prisma {
     type?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    lastValue?: SortOrderInput | SortOrder
-    lastUpdate?: SortOrderInput | SortOrder
-    _count?: ConnectedObjectCountOrderByAggregateInput
-    _avg?: ConnectedObjectAvgOrderByAggregateInput
-    _max?: ConnectedObjectMaxOrderByAggregateInput
-    _min?: ConnectedObjectMinOrderByAggregateInput
-    _sum?: ConnectedObjectSumOrderByAggregateInput
+    lastUpdate?: SortOrder
+    _count?: TableObjectCountOrderByAggregateInput
+    _avg?: TableObjectAvgOrderByAggregateInput
+    _max?: TableObjectMaxOrderByAggregateInput
+    _min?: TableObjectMinOrderByAggregateInput
+    _sum?: TableObjectSumOrderByAggregateInput
   }
 
-  export type ConnectedObjectScalarWhereWithAggregatesInput = {
-    AND?: ConnectedObjectScalarWhereWithAggregatesInput | ConnectedObjectScalarWhereWithAggregatesInput[]
-    OR?: ConnectedObjectScalarWhereWithAggregatesInput[]
-    NOT?: ConnectedObjectScalarWhereWithAggregatesInput | ConnectedObjectScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"ConnectedObject"> | number
-    createdAt?: DateTimeWithAggregatesFilter<"ConnectedObject"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"ConnectedObject"> | Date | string
-    name?: StringWithAggregatesFilter<"ConnectedObject"> | string
-    type?: StringWithAggregatesFilter<"ConnectedObject"> | string
-    status?: StringWithAggregatesFilter<"ConnectedObject"> | string
-    location?: StringWithAggregatesFilter<"ConnectedObject"> | string
-    lastValue?: StringNullableWithAggregatesFilter<"ConnectedObject"> | string | null
-    lastUpdate?: DateTimeNullableWithAggregatesFilter<"ConnectedObject"> | Date | string | null
+  export type TableObjectScalarWhereWithAggregatesInput = {
+    AND?: TableObjectScalarWhereWithAggregatesInput | TableObjectScalarWhereWithAggregatesInput[]
+    OR?: TableObjectScalarWhereWithAggregatesInput[]
+    NOT?: TableObjectScalarWhereWithAggregatesInput | TableObjectScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"TableObject"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"TableObject"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"TableObject"> | Date | string
+    name?: StringWithAggregatesFilter<"TableObject"> | string
+    type?: StringWithAggregatesFilter<"TableObject"> | string
+    status?: StringWithAggregatesFilter<"TableObject"> | string
+    location?: StringWithAggregatesFilter<"TableObject"> | string
+    lastUpdate?: DateTimeWithAggregatesFilter<"TableObject"> | Date | string
   }
 
-  export type IncidentWhereInput = {
-    AND?: IncidentWhereInput | IncidentWhereInput[]
-    OR?: IncidentWhereInput[]
-    NOT?: IncidentWhereInput | IncidentWhereInput[]
-    id?: IntFilter<"Incident"> | number
-    createdAt?: DateTimeFilter<"Incident"> | Date | string
-    updatedAt?: DateTimeFilter<"Incident"> | Date | string
-    title?: StringFilter<"Incident"> | string
-    description?: StringFilter<"Incident"> | string
-    status?: StringFilter<"Incident"> | string
-    location?: StringFilter<"Incident"> | string
-    userId?: IntFilter<"Incident"> | number
-    reportedBy?: XOR<UserScalarRelationFilter, UserWhereInput>
+  export type TableIncidentWhereInput = {
+    AND?: TableIncidentWhereInput | TableIncidentWhereInput[]
+    OR?: TableIncidentWhereInput[]
+    NOT?: TableIncidentWhereInput | TableIncidentWhereInput[]
+    id?: IntFilter<"TableIncident"> | number
+    createdAt?: DateTimeFilter<"TableIncident"> | Date | string
+    updatedAt?: DateTimeFilter<"TableIncident"> | Date | string
+    title?: StringFilter<"TableIncident"> | string
+    description?: StringFilter<"TableIncident"> | string
+    status?: StringFilter<"TableIncident"> | string
+    location?: StringFilter<"TableIncident"> | string
+    username?: StringFilter<"TableIncident"> | string
+    reportedByUsername?: XOR<TableUserScalarRelationFilter, TableUserWhereInput>
   }
 
-  export type IncidentOrderByWithRelationInput = {
+  export type TableIncidentOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7163,26 +7131,26 @@ export namespace Prisma {
     description?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    userId?: SortOrder
-    reportedBy?: UserOrderByWithRelationInput
+    username?: SortOrder
+    reportedByUsername?: TableUserOrderByWithRelationInput
   }
 
-  export type IncidentWhereUniqueInput = Prisma.AtLeast<{
+  export type TableIncidentWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: IncidentWhereInput | IncidentWhereInput[]
-    OR?: IncidentWhereInput[]
-    NOT?: IncidentWhereInput | IncidentWhereInput[]
-    createdAt?: DateTimeFilter<"Incident"> | Date | string
-    updatedAt?: DateTimeFilter<"Incident"> | Date | string
-    title?: StringFilter<"Incident"> | string
-    description?: StringFilter<"Incident"> | string
-    status?: StringFilter<"Incident"> | string
-    location?: StringFilter<"Incident"> | string
-    userId?: IntFilter<"Incident"> | number
-    reportedBy?: XOR<UserScalarRelationFilter, UserWhereInput>
+    AND?: TableIncidentWhereInput | TableIncidentWhereInput[]
+    OR?: TableIncidentWhereInput[]
+    NOT?: TableIncidentWhereInput | TableIncidentWhereInput[]
+    createdAt?: DateTimeFilter<"TableIncident"> | Date | string
+    updatedAt?: DateTimeFilter<"TableIncident"> | Date | string
+    title?: StringFilter<"TableIncident"> | string
+    description?: StringFilter<"TableIncident"> | string
+    status?: StringFilter<"TableIncident"> | string
+    location?: StringFilter<"TableIncident"> | string
+    username?: StringFilter<"TableIncident"> | string
+    reportedByUsername?: XOR<TableUserScalarRelationFilter, TableUserWhereInput>
   }, "id">
 
-  export type IncidentOrderByWithAggregationInput = {
+  export type TableIncidentOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7190,247 +7158,255 @@ export namespace Prisma {
     description?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    userId?: SortOrder
-    _count?: IncidentCountOrderByAggregateInput
-    _avg?: IncidentAvgOrderByAggregateInput
-    _max?: IncidentMaxOrderByAggregateInput
-    _min?: IncidentMinOrderByAggregateInput
-    _sum?: IncidentSumOrderByAggregateInput
+    username?: SortOrder
+    _count?: TableIncidentCountOrderByAggregateInput
+    _avg?: TableIncidentAvgOrderByAggregateInput
+    _max?: TableIncidentMaxOrderByAggregateInput
+    _min?: TableIncidentMinOrderByAggregateInput
+    _sum?: TableIncidentSumOrderByAggregateInput
   }
 
-  export type IncidentScalarWhereWithAggregatesInput = {
-    AND?: IncidentScalarWhereWithAggregatesInput | IncidentScalarWhereWithAggregatesInput[]
-    OR?: IncidentScalarWhereWithAggregatesInput[]
-    NOT?: IncidentScalarWhereWithAggregatesInput | IncidentScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"Incident"> | number
-    createdAt?: DateTimeWithAggregatesFilter<"Incident"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"Incident"> | Date | string
-    title?: StringWithAggregatesFilter<"Incident"> | string
-    description?: StringWithAggregatesFilter<"Incident"> | string
-    status?: StringWithAggregatesFilter<"Incident"> | string
-    location?: StringWithAggregatesFilter<"Incident"> | string
-    userId?: IntWithAggregatesFilter<"Incident"> | number
+  export type TableIncidentScalarWhereWithAggregatesInput = {
+    AND?: TableIncidentScalarWhereWithAggregatesInput | TableIncidentScalarWhereWithAggregatesInput[]
+    OR?: TableIncidentScalarWhereWithAggregatesInput[]
+    NOT?: TableIncidentScalarWhereWithAggregatesInput | TableIncidentScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"TableIncident"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"TableIncident"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"TableIncident"> | Date | string
+    title?: StringWithAggregatesFilter<"TableIncident"> | string
+    description?: StringWithAggregatesFilter<"TableIncident"> | string
+    status?: StringWithAggregatesFilter<"TableIncident"> | string
+    location?: StringWithAggregatesFilter<"TableIncident"> | string
+    username?: StringWithAggregatesFilter<"TableIncident"> | string
   }
 
-  export type NewsWhereInput = {
-    AND?: NewsWhereInput | NewsWhereInput[]
-    OR?: NewsWhereInput[]
-    NOT?: NewsWhereInput | NewsWhereInput[]
-    id?: IntFilter<"News"> | number
-    createdAt?: DateTimeFilter<"News"> | Date | string
-    updatedAt?: DateTimeFilter<"News"> | Date | string
-    title?: StringFilter<"News"> | string
-    description?: StringFilter<"News"> | string
-    date?: DateTimeFilter<"News"> | Date | string
-    category?: StringFilter<"News"> | string
-    imageUrl?: StringNullableFilter<"News"> | string | null
+  export type TableActuWhereInput = {
+    AND?: TableActuWhereInput | TableActuWhereInput[]
+    OR?: TableActuWhereInput[]
+    NOT?: TableActuWhereInput | TableActuWhereInput[]
+    id?: IntFilter<"TableActu"> | number
+    createdAt?: DateTimeFilter<"TableActu"> | Date | string
+    updatedAt?: DateTimeFilter<"TableActu"> | Date | string
+    category?: StringFilter<"TableActu"> | string
+    title?: StringFilter<"TableActu"> | string
+    description?: StringFilter<"TableActu"> | string
+    date?: DateTimeFilter<"TableActu"> | Date | string
   }
 
-  export type NewsOrderByWithRelationInput = {
+  export type TableActuOrderByWithRelationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    category?: SortOrder
     title?: SortOrder
     description?: SortOrder
     date?: SortOrder
-    category?: SortOrder
-    imageUrl?: SortOrderInput | SortOrder
   }
 
-  export type NewsWhereUniqueInput = Prisma.AtLeast<{
+  export type TableActuWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    AND?: NewsWhereInput | NewsWhereInput[]
-    OR?: NewsWhereInput[]
-    NOT?: NewsWhereInput | NewsWhereInput[]
-    createdAt?: DateTimeFilter<"News"> | Date | string
-    updatedAt?: DateTimeFilter<"News"> | Date | string
-    title?: StringFilter<"News"> | string
-    description?: StringFilter<"News"> | string
-    date?: DateTimeFilter<"News"> | Date | string
-    category?: StringFilter<"News"> | string
-    imageUrl?: StringNullableFilter<"News"> | string | null
+    AND?: TableActuWhereInput | TableActuWhereInput[]
+    OR?: TableActuWhereInput[]
+    NOT?: TableActuWhereInput | TableActuWhereInput[]
+    createdAt?: DateTimeFilter<"TableActu"> | Date | string
+    updatedAt?: DateTimeFilter<"TableActu"> | Date | string
+    category?: StringFilter<"TableActu"> | string
+    title?: StringFilter<"TableActu"> | string
+    description?: StringFilter<"TableActu"> | string
+    date?: DateTimeFilter<"TableActu"> | Date | string
   }, "id">
 
-  export type NewsOrderByWithAggregationInput = {
+  export type TableActuOrderByWithAggregationInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    category?: SortOrder
     title?: SortOrder
     description?: SortOrder
     date?: SortOrder
-    category?: SortOrder
-    imageUrl?: SortOrderInput | SortOrder
-    _count?: NewsCountOrderByAggregateInput
-    _avg?: NewsAvgOrderByAggregateInput
-    _max?: NewsMaxOrderByAggregateInput
-    _min?: NewsMinOrderByAggregateInput
-    _sum?: NewsSumOrderByAggregateInput
+    _count?: TableActuCountOrderByAggregateInput
+    _avg?: TableActuAvgOrderByAggregateInput
+    _max?: TableActuMaxOrderByAggregateInput
+    _min?: TableActuMinOrderByAggregateInput
+    _sum?: TableActuSumOrderByAggregateInput
   }
 
-  export type NewsScalarWhereWithAggregatesInput = {
-    AND?: NewsScalarWhereWithAggregatesInput | NewsScalarWhereWithAggregatesInput[]
-    OR?: NewsScalarWhereWithAggregatesInput[]
-    NOT?: NewsScalarWhereWithAggregatesInput | NewsScalarWhereWithAggregatesInput[]
-    id?: IntWithAggregatesFilter<"News"> | number
-    createdAt?: DateTimeWithAggregatesFilter<"News"> | Date | string
-    updatedAt?: DateTimeWithAggregatesFilter<"News"> | Date | string
-    title?: StringWithAggregatesFilter<"News"> | string
-    description?: StringWithAggregatesFilter<"News"> | string
-    date?: DateTimeWithAggregatesFilter<"News"> | Date | string
-    category?: StringWithAggregatesFilter<"News"> | string
-    imageUrl?: StringNullableWithAggregatesFilter<"News"> | string | null
+  export type TableActuScalarWhereWithAggregatesInput = {
+    AND?: TableActuScalarWhereWithAggregatesInput | TableActuScalarWhereWithAggregatesInput[]
+    OR?: TableActuScalarWhereWithAggregatesInput[]
+    NOT?: TableActuScalarWhereWithAggregatesInput | TableActuScalarWhereWithAggregatesInput[]
+    id?: IntWithAggregatesFilter<"TableActu"> | number
+    createdAt?: DateTimeWithAggregatesFilter<"TableActu"> | Date | string
+    updatedAt?: DateTimeWithAggregatesFilter<"TableActu"> | Date | string
+    category?: StringWithAggregatesFilter<"TableActu"> | string
+    title?: StringWithAggregatesFilter<"TableActu"> | string
+    description?: StringWithAggregatesFilter<"TableActu"> | string
+    date?: DateTimeWithAggregatesFilter<"TableActu"> | Date | string
   }
 
-  export type UserCreateInput = {
+  export type TableUserCreateInput = {
     username: string
     password: string
     email: string
     firstname: string
     lastname: string
-    user_type?: $Enums.UserType
-    incidents?: IncidentCreateNestedManyWithoutReportedByInput
+    role?: string
+    autorized?: boolean
+    incidentsByUsername?: TableIncidentCreateNestedManyWithoutReportedByUsernameInput
   }
 
-  export type UserUncheckedCreateInput = {
-    id?: number
-    username: string
-    password: string
-    email: string
-    firstname: string
-    lastname: string
-    user_type?: $Enums.UserType
-    incidents?: IncidentUncheckedCreateNestedManyWithoutReportedByInput
-  }
-
-  export type UserUpdateInput = {
-    username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    firstname?: StringFieldUpdateOperationsInput | string
-    lastname?: StringFieldUpdateOperationsInput | string
-    user_type?: EnumUserTypeFieldUpdateOperationsInput | $Enums.UserType
-    incidents?: IncidentUpdateManyWithoutReportedByNestedInput
-  }
-
-  export type UserUncheckedUpdateInput = {
-    id?: IntFieldUpdateOperationsInput | number
-    username?: StringFieldUpdateOperationsInput | string
-    password?: StringFieldUpdateOperationsInput | string
-    email?: StringFieldUpdateOperationsInput | string
-    firstname?: StringFieldUpdateOperationsInput | string
-    lastname?: StringFieldUpdateOperationsInput | string
-    user_type?: EnumUserTypeFieldUpdateOperationsInput | $Enums.UserType
-    incidents?: IncidentUncheckedUpdateManyWithoutReportedByNestedInput
-  }
-
-  export type UserCreateManyInput = {
+  export type TableUserUncheckedCreateInput = {
     id?: number
     username: string
     password: string
     email: string
     firstname: string
     lastname: string
-    user_type?: $Enums.UserType
+    role?: string
+    autorized?: boolean
+    incidentsByUsername?: TableIncidentUncheckedCreateNestedManyWithoutReportedByUsernameInput
   }
 
-  export type UserUpdateManyMutationInput = {
+  export type TableUserUpdateInput = {
     username?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     firstname?: StringFieldUpdateOperationsInput | string
     lastname?: StringFieldUpdateOperationsInput | string
-    user_type?: EnumUserTypeFieldUpdateOperationsInput | $Enums.UserType
+    role?: StringFieldUpdateOperationsInput | string
+    autorized?: BoolFieldUpdateOperationsInput | boolean
+    incidentsByUsername?: TableIncidentUpdateManyWithoutReportedByUsernameNestedInput
   }
 
-  export type UserUncheckedUpdateManyInput = {
+  export type TableUserUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     firstname?: StringFieldUpdateOperationsInput | string
     lastname?: StringFieldUpdateOperationsInput | string
-    user_type?: EnumUserTypeFieldUpdateOperationsInput | $Enums.UserType
+    role?: StringFieldUpdateOperationsInput | string
+    autorized?: BoolFieldUpdateOperationsInput | boolean
+    incidentsByUsername?: TableIncidentUncheckedUpdateManyWithoutReportedByUsernameNestedInput
   }
 
-  export type MunicipalServiceCreateInput = {
+  export type TableUserCreateManyInput = {
+    id?: number
+    username: string
+    password: string
+    email: string
+    firstname: string
+    lastname: string
+    role?: string
+    autorized?: boolean
+  }
+
+  export type TableUserUpdateManyMutationInput = {
+    username?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    firstname?: StringFieldUpdateOperationsInput | string
+    lastname?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    autorized?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type TableUserUncheckedUpdateManyInput = {
+    id?: IntFieldUpdateOperationsInput | number
+    username?: StringFieldUpdateOperationsInput | string
+    password?: StringFieldUpdateOperationsInput | string
+    email?: StringFieldUpdateOperationsInput | string
+    firstname?: StringFieldUpdateOperationsInput | string
+    lastname?: StringFieldUpdateOperationsInput | string
+    role?: StringFieldUpdateOperationsInput | string
+    autorized?: BoolFieldUpdateOperationsInput | boolean
+  }
+
+  export type TableServiceCreateInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
     name: string
     type: string
     status: string
-    description?: string | null
+    description: string
+    localisation: string
   }
 
-  export type MunicipalServiceUncheckedCreateInput = {
+  export type TableServiceUncheckedCreateInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
     name: string
     type: string
     status: string
-    description?: string | null
+    description: string
+    localisation: string
   }
 
-  export type MunicipalServiceUpdateInput = {
+  export type TableServiceUpdateInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     name?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    localisation?: StringFieldUpdateOperationsInput | string
   }
 
-  export type MunicipalServiceUncheckedUpdateInput = {
+  export type TableServiceUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     name?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    localisation?: StringFieldUpdateOperationsInput | string
   }
 
-  export type MunicipalServiceCreateManyInput = {
+  export type TableServiceCreateManyInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
     name: string
     type: string
     status: string
-    description?: string | null
+    description: string
+    localisation: string
   }
 
-  export type MunicipalServiceUpdateManyMutationInput = {
+  export type TableServiceUpdateManyMutationInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     name?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    localisation?: StringFieldUpdateOperationsInput | string
   }
 
-  export type MunicipalServiceUncheckedUpdateManyInput = {
+  export type TableServiceUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     name?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
-    description?: NullableStringFieldUpdateOperationsInput | string | null
+    description?: StringFieldUpdateOperationsInput | string
+    localisation?: StringFieldUpdateOperationsInput | string
   }
 
-  export type ConnectedObjectCreateInput = {
+  export type TableObjectCreateInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
     name: string
     type: string
     status: string
     location: string
-    lastValue?: string | null
-    lastUpdate?: Date | string | null
+    lastUpdate: Date | string
   }
 
-  export type ConnectedObjectUncheckedCreateInput = {
+  export type TableObjectUncheckedCreateInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -7438,22 +7414,20 @@ export namespace Prisma {
     type: string
     status: string
     location: string
-    lastValue?: string | null
-    lastUpdate?: Date | string | null
+    lastUpdate: Date | string
   }
 
-  export type ConnectedObjectUpdateInput = {
+  export type TableObjectUpdateInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     name?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    lastValue?: NullableStringFieldUpdateOperationsInput | string | null
-    lastUpdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastUpdate?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ConnectedObjectUncheckedUpdateInput = {
+  export type TableObjectUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7461,11 +7435,10 @@ export namespace Prisma {
     type?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    lastValue?: NullableStringFieldUpdateOperationsInput | string | null
-    lastUpdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastUpdate?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ConnectedObjectCreateManyInput = {
+  export type TableObjectCreateManyInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -7473,22 +7446,20 @@ export namespace Prisma {
     type: string
     status: string
     location: string
-    lastValue?: string | null
-    lastUpdate?: Date | string | null
+    lastUpdate: Date | string
   }
 
-  export type ConnectedObjectUpdateManyMutationInput = {
+  export type TableObjectUpdateManyMutationInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     name?: StringFieldUpdateOperationsInput | string
     type?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    lastValue?: NullableStringFieldUpdateOperationsInput | string | null
-    lastUpdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastUpdate?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type ConnectedObjectUncheckedUpdateManyInput = {
+  export type TableObjectUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7496,21 +7467,20 @@ export namespace Prisma {
     type?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    lastValue?: NullableStringFieldUpdateOperationsInput | string | null
-    lastUpdate?: NullableDateTimeFieldUpdateOperationsInput | Date | string | null
+    lastUpdate?: DateTimeFieldUpdateOperationsInput | Date | string
   }
 
-  export type IncidentCreateInput = {
+  export type TableIncidentCreateInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
     title: string
     description: string
     status: string
     location: string
-    reportedBy: UserCreateNestedOneWithoutIncidentsInput
+    reportedByUsername: TableUserCreateNestedOneWithoutIncidentsByUsernameInput
   }
 
-  export type IncidentUncheckedCreateInput = {
+  export type TableIncidentUncheckedCreateInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -7518,20 +7488,20 @@ export namespace Prisma {
     description: string
     status: string
     location: string
-    userId: number
+    username: string
   }
 
-  export type IncidentUpdateInput = {
+  export type TableIncidentUpdateInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    reportedBy?: UserUpdateOneRequiredWithoutIncidentsNestedInput
+    reportedByUsername?: TableUserUpdateOneRequiredWithoutIncidentsByUsernameNestedInput
   }
 
-  export type IncidentUncheckedUpdateInput = {
+  export type TableIncidentUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7539,10 +7509,10 @@ export namespace Prisma {
     description?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    userId?: IntFieldUpdateOperationsInput | number
+    username?: StringFieldUpdateOperationsInput | string
   }
 
-  export type IncidentCreateManyInput = {
+  export type TableIncidentCreateManyInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -7550,10 +7520,10 @@ export namespace Prisma {
     description: string
     status: string
     location: string
-    userId: number
+    username: string
   }
 
-  export type IncidentUpdateManyMutationInput = {
+  export type TableIncidentUpdateManyMutationInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     title?: StringFieldUpdateOperationsInput | string
@@ -7562,7 +7532,7 @@ export namespace Prisma {
     location?: StringFieldUpdateOperationsInput | string
   }
 
-  export type IncidentUncheckedUpdateManyInput = {
+  export type TableIncidentUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -7570,81 +7540,74 @@ export namespace Prisma {
     description?: StringFieldUpdateOperationsInput | string
     status?: StringFieldUpdateOperationsInput | string
     location?: StringFieldUpdateOperationsInput | string
-    userId?: IntFieldUpdateOperationsInput | number
+    username?: StringFieldUpdateOperationsInput | string
   }
 
-  export type NewsCreateInput = {
+  export type TableActuCreateInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
+    category: string
     title: string
     description: string
     date: Date | string
-    category: string
-    imageUrl?: string | null
   }
 
-  export type NewsUncheckedCreateInput = {
+  export type TableActuUncheckedCreateInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
+    category: string
     title: string
     description: string
     date: Date | string
-    category: string
-    imageUrl?: string | null
   }
 
-  export type NewsUpdateInput = {
+  export type TableActuUpdateInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    category?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
-    category?: StringFieldUpdateOperationsInput | string
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type NewsUncheckedUpdateInput = {
+  export type TableActuUncheckedUpdateInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    category?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
-    category?: StringFieldUpdateOperationsInput | string
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type NewsCreateManyInput = {
+  export type TableActuCreateManyInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
+    category: string
     title: string
     description: string
     date: Date | string
-    category: string
-    imageUrl?: string | null
   }
 
-  export type NewsUpdateManyMutationInput = {
+  export type TableActuUpdateManyMutationInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    category?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
-    category?: StringFieldUpdateOperationsInput | string
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
-  export type NewsUncheckedUpdateManyInput = {
+  export type TableActuUncheckedUpdateManyInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
+    category?: StringFieldUpdateOperationsInput | string
     title?: StringFieldUpdateOperationsInput | string
     description?: StringFieldUpdateOperationsInput | string
     date?: DateTimeFieldUpdateOperationsInput | Date | string
-    category?: StringFieldUpdateOperationsInput | string
-    imageUrl?: NullableStringFieldUpdateOperationsInput | string | null
   }
 
   export type IntFilter<$PrismaModel = never> = {
@@ -7673,58 +7636,59 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type EnumUserTypeFilter<$PrismaModel = never> = {
-    equals?: $Enums.UserType | EnumUserTypeFieldRefInput<$PrismaModel>
-    in?: $Enums.UserType[] | ListEnumUserTypeFieldRefInput<$PrismaModel>
-    notIn?: $Enums.UserType[] | ListEnumUserTypeFieldRefInput<$PrismaModel>
-    not?: NestedEnumUserTypeFilter<$PrismaModel> | $Enums.UserType
+  export type BoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
-  export type IncidentListRelationFilter = {
-    every?: IncidentWhereInput
-    some?: IncidentWhereInput
-    none?: IncidentWhereInput
+  export type TableIncidentListRelationFilter = {
+    every?: TableIncidentWhereInput
+    some?: TableIncidentWhereInput
+    none?: TableIncidentWhereInput
   }
 
-  export type IncidentOrderByRelationAggregateInput = {
+  export type TableIncidentOrderByRelationAggregateInput = {
     _count?: SortOrder
   }
 
-  export type UserCountOrderByAggregateInput = {
+  export type TableUserCountOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
     email?: SortOrder
     firstname?: SortOrder
     lastname?: SortOrder
-    user_type?: SortOrder
+    role?: SortOrder
+    autorized?: SortOrder
   }
 
-  export type UserAvgOrderByAggregateInput = {
+  export type TableUserAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type UserMaxOrderByAggregateInput = {
-    id?: SortOrder
-    username?: SortOrder
-    password?: SortOrder
-    email?: SortOrder
-    firstname?: SortOrder
-    lastname?: SortOrder
-    user_type?: SortOrder
-  }
-
-  export type UserMinOrderByAggregateInput = {
+  export type TableUserMaxOrderByAggregateInput = {
     id?: SortOrder
     username?: SortOrder
     password?: SortOrder
     email?: SortOrder
     firstname?: SortOrder
     lastname?: SortOrder
-    user_type?: SortOrder
+    role?: SortOrder
+    autorized?: SortOrder
   }
 
-  export type UserSumOrderByAggregateInput = {
+  export type TableUserMinOrderByAggregateInput = {
+    id?: SortOrder
+    username?: SortOrder
+    password?: SortOrder
+    email?: SortOrder
+    firstname?: SortOrder
+    lastname?: SortOrder
+    role?: SortOrder
+    autorized?: SortOrder
+  }
+
+  export type TableUserSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -7762,14 +7726,12 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type EnumUserTypeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.UserType | EnumUserTypeFieldRefInput<$PrismaModel>
-    in?: $Enums.UserType[] | ListEnumUserTypeFieldRefInput<$PrismaModel>
-    notIn?: $Enums.UserType[] | ListEnumUserTypeFieldRefInput<$PrismaModel>
-    not?: NestedEnumUserTypeWithAggregatesFilter<$PrismaModel> | $Enums.UserType
+  export type BoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumUserTypeFilter<$PrismaModel>
-    _max?: NestedEnumUserTypeFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type DateTimeFilter<$PrismaModel = never> = {
@@ -7783,27 +7745,7 @@ export namespace Prisma {
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
   }
 
-  export type StringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
-  }
-
-  export type SortOrderInput = {
-    sort: SortOrder
-    nulls?: NullsOrder
-  }
-
-  export type MunicipalServiceCountOrderByAggregateInput = {
+  export type TableServiceCountOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7811,23 +7753,14 @@ export namespace Prisma {
     type?: SortOrder
     status?: SortOrder
     description?: SortOrder
+    localisation?: SortOrder
   }
 
-  export type MunicipalServiceAvgOrderByAggregateInput = {
+  export type TableServiceAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type MunicipalServiceMaxOrderByAggregateInput = {
-    id?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    name?: SortOrder
-    type?: SortOrder
-    status?: SortOrder
-    description?: SortOrder
-  }
-
-  export type MunicipalServiceMinOrderByAggregateInput = {
+  export type TableServiceMaxOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7835,9 +7768,21 @@ export namespace Prisma {
     type?: SortOrder
     status?: SortOrder
     description?: SortOrder
+    localisation?: SortOrder
   }
 
-  export type MunicipalServiceSumOrderByAggregateInput = {
+  export type TableServiceMinOrderByAggregateInput = {
+    id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    name?: SortOrder
+    type?: SortOrder
+    status?: SortOrder
+    description?: SortOrder
+    localisation?: SortOrder
+  }
+
+  export type TableServiceSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
@@ -7855,36 +7800,7 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type StringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    mode?: QueryMode
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
-  }
-
-  export type DateTimeNullableFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
-  }
-
-  export type ConnectedObjectCountOrderByAggregateInput = {
+  export type TableObjectCountOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7892,15 +7808,14 @@ export namespace Prisma {
     type?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    lastValue?: SortOrder
     lastUpdate?: SortOrder
   }
 
-  export type ConnectedObjectAvgOrderByAggregateInput = {
+  export type TableObjectAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type ConnectedObjectMaxOrderByAggregateInput = {
+  export type TableObjectMaxOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7908,11 +7823,10 @@ export namespace Prisma {
     type?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    lastValue?: SortOrder
     lastUpdate?: SortOrder
   }
 
-  export type ConnectedObjectMinOrderByAggregateInput = {
+  export type TableObjectMinOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7920,34 +7834,19 @@ export namespace Prisma {
     type?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    lastValue?: SortOrder
     lastUpdate?: SortOrder
   }
 
-  export type ConnectedObjectSumOrderByAggregateInput = {
+  export type TableObjectSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type DateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedDateTimeNullableFilter<$PrismaModel>
-    _max?: NestedDateTimeNullableFilter<$PrismaModel>
+  export type TableUserScalarRelationFilter = {
+    is?: TableUserWhereInput
+    isNot?: TableUserWhereInput
   }
 
-  export type UserScalarRelationFilter = {
-    is?: UserWhereInput
-    isNot?: UserWhereInput
-  }
-
-  export type IncidentCountOrderByAggregateInput = {
+  export type TableIncidentCountOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7955,26 +7854,14 @@ export namespace Prisma {
     description?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    userId?: SortOrder
+    username?: SortOrder
   }
 
-  export type IncidentAvgOrderByAggregateInput = {
+  export type TableIncidentAvgOrderByAggregateInput = {
     id?: SortOrder
-    userId?: SortOrder
   }
 
-  export type IncidentMaxOrderByAggregateInput = {
-    id?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
-    status?: SortOrder
-    location?: SortOrder
-    userId?: SortOrder
-  }
-
-  export type IncidentMinOrderByAggregateInput = {
+  export type TableIncidentMaxOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
@@ -7982,89 +7869,96 @@ export namespace Prisma {
     description?: SortOrder
     status?: SortOrder
     location?: SortOrder
-    userId?: SortOrder
+    username?: SortOrder
   }
 
-  export type IncidentSumOrderByAggregateInput = {
-    id?: SortOrder
-    userId?: SortOrder
-  }
-
-  export type NewsCountOrderByAggregateInput = {
+  export type TableIncidentMinOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
     title?: SortOrder
     description?: SortOrder
-    date?: SortOrder
-    category?: SortOrder
-    imageUrl?: SortOrder
+    status?: SortOrder
+    location?: SortOrder
+    username?: SortOrder
   }
 
-  export type NewsAvgOrderByAggregateInput = {
+  export type TableIncidentSumOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type NewsMaxOrderByAggregateInput = {
-    id?: SortOrder
-    createdAt?: SortOrder
-    updatedAt?: SortOrder
-    title?: SortOrder
-    description?: SortOrder
-    date?: SortOrder
-    category?: SortOrder
-    imageUrl?: SortOrder
-  }
-
-  export type NewsMinOrderByAggregateInput = {
+  export type TableActuCountOrderByAggregateInput = {
     id?: SortOrder
     createdAt?: SortOrder
     updatedAt?: SortOrder
+    category?: SortOrder
     title?: SortOrder
     description?: SortOrder
     date?: SortOrder
-    category?: SortOrder
-    imageUrl?: SortOrder
   }
 
-  export type NewsSumOrderByAggregateInput = {
+  export type TableActuAvgOrderByAggregateInput = {
     id?: SortOrder
   }
 
-  export type IncidentCreateNestedManyWithoutReportedByInput = {
-    create?: XOR<IncidentCreateWithoutReportedByInput, IncidentUncheckedCreateWithoutReportedByInput> | IncidentCreateWithoutReportedByInput[] | IncidentUncheckedCreateWithoutReportedByInput[]
-    connectOrCreate?: IncidentCreateOrConnectWithoutReportedByInput | IncidentCreateOrConnectWithoutReportedByInput[]
-    createMany?: IncidentCreateManyReportedByInputEnvelope
-    connect?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
+  export type TableActuMaxOrderByAggregateInput = {
+    id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    category?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
   }
 
-  export type IncidentUncheckedCreateNestedManyWithoutReportedByInput = {
-    create?: XOR<IncidentCreateWithoutReportedByInput, IncidentUncheckedCreateWithoutReportedByInput> | IncidentCreateWithoutReportedByInput[] | IncidentUncheckedCreateWithoutReportedByInput[]
-    connectOrCreate?: IncidentCreateOrConnectWithoutReportedByInput | IncidentCreateOrConnectWithoutReportedByInput[]
-    createMany?: IncidentCreateManyReportedByInputEnvelope
-    connect?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
+  export type TableActuMinOrderByAggregateInput = {
+    id?: SortOrder
+    createdAt?: SortOrder
+    updatedAt?: SortOrder
+    category?: SortOrder
+    title?: SortOrder
+    description?: SortOrder
+    date?: SortOrder
+  }
+
+  export type TableActuSumOrderByAggregateInput = {
+    id?: SortOrder
+  }
+
+  export type TableIncidentCreateNestedManyWithoutReportedByUsernameInput = {
+    create?: XOR<TableIncidentCreateWithoutReportedByUsernameInput, TableIncidentUncheckedCreateWithoutReportedByUsernameInput> | TableIncidentCreateWithoutReportedByUsernameInput[] | TableIncidentUncheckedCreateWithoutReportedByUsernameInput[]
+    connectOrCreate?: TableIncidentCreateOrConnectWithoutReportedByUsernameInput | TableIncidentCreateOrConnectWithoutReportedByUsernameInput[]
+    createMany?: TableIncidentCreateManyReportedByUsernameInputEnvelope
+    connect?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+  }
+
+  export type TableIncidentUncheckedCreateNestedManyWithoutReportedByUsernameInput = {
+    create?: XOR<TableIncidentCreateWithoutReportedByUsernameInput, TableIncidentUncheckedCreateWithoutReportedByUsernameInput> | TableIncidentCreateWithoutReportedByUsernameInput[] | TableIncidentUncheckedCreateWithoutReportedByUsernameInput[]
+    connectOrCreate?: TableIncidentCreateOrConnectWithoutReportedByUsernameInput | TableIncidentCreateOrConnectWithoutReportedByUsernameInput[]
+    createMany?: TableIncidentCreateManyReportedByUsernameInputEnvelope
+    connect?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
   }
 
   export type StringFieldUpdateOperationsInput = {
     set?: string
   }
 
-  export type EnumUserTypeFieldUpdateOperationsInput = {
-    set?: $Enums.UserType
+  export type BoolFieldUpdateOperationsInput = {
+    set?: boolean
   }
 
-  export type IncidentUpdateManyWithoutReportedByNestedInput = {
-    create?: XOR<IncidentCreateWithoutReportedByInput, IncidentUncheckedCreateWithoutReportedByInput> | IncidentCreateWithoutReportedByInput[] | IncidentUncheckedCreateWithoutReportedByInput[]
-    connectOrCreate?: IncidentCreateOrConnectWithoutReportedByInput | IncidentCreateOrConnectWithoutReportedByInput[]
-    upsert?: IncidentUpsertWithWhereUniqueWithoutReportedByInput | IncidentUpsertWithWhereUniqueWithoutReportedByInput[]
-    createMany?: IncidentCreateManyReportedByInputEnvelope
-    set?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
-    disconnect?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
-    delete?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
-    connect?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
-    update?: IncidentUpdateWithWhereUniqueWithoutReportedByInput | IncidentUpdateWithWhereUniqueWithoutReportedByInput[]
-    updateMany?: IncidentUpdateManyWithWhereWithoutReportedByInput | IncidentUpdateManyWithWhereWithoutReportedByInput[]
-    deleteMany?: IncidentScalarWhereInput | IncidentScalarWhereInput[]
+  export type TableIncidentUpdateManyWithoutReportedByUsernameNestedInput = {
+    create?: XOR<TableIncidentCreateWithoutReportedByUsernameInput, TableIncidentUncheckedCreateWithoutReportedByUsernameInput> | TableIncidentCreateWithoutReportedByUsernameInput[] | TableIncidentUncheckedCreateWithoutReportedByUsernameInput[]
+    connectOrCreate?: TableIncidentCreateOrConnectWithoutReportedByUsernameInput | TableIncidentCreateOrConnectWithoutReportedByUsernameInput[]
+    upsert?: TableIncidentUpsertWithWhereUniqueWithoutReportedByUsernameInput | TableIncidentUpsertWithWhereUniqueWithoutReportedByUsernameInput[]
+    createMany?: TableIncidentCreateManyReportedByUsernameInputEnvelope
+    set?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+    disconnect?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+    delete?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+    connect?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+    update?: TableIncidentUpdateWithWhereUniqueWithoutReportedByUsernameInput | TableIncidentUpdateWithWhereUniqueWithoutReportedByUsernameInput[]
+    updateMany?: TableIncidentUpdateManyWithWhereWithoutReportedByUsernameInput | TableIncidentUpdateManyWithWhereWithoutReportedByUsernameInput[]
+    deleteMany?: TableIncidentScalarWhereInput | TableIncidentScalarWhereInput[]
   }
 
   export type IntFieldUpdateOperationsInput = {
@@ -8075,44 +7969,36 @@ export namespace Prisma {
     divide?: number
   }
 
-  export type IncidentUncheckedUpdateManyWithoutReportedByNestedInput = {
-    create?: XOR<IncidentCreateWithoutReportedByInput, IncidentUncheckedCreateWithoutReportedByInput> | IncidentCreateWithoutReportedByInput[] | IncidentUncheckedCreateWithoutReportedByInput[]
-    connectOrCreate?: IncidentCreateOrConnectWithoutReportedByInput | IncidentCreateOrConnectWithoutReportedByInput[]
-    upsert?: IncidentUpsertWithWhereUniqueWithoutReportedByInput | IncidentUpsertWithWhereUniqueWithoutReportedByInput[]
-    createMany?: IncidentCreateManyReportedByInputEnvelope
-    set?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
-    disconnect?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
-    delete?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
-    connect?: IncidentWhereUniqueInput | IncidentWhereUniqueInput[]
-    update?: IncidentUpdateWithWhereUniqueWithoutReportedByInput | IncidentUpdateWithWhereUniqueWithoutReportedByInput[]
-    updateMany?: IncidentUpdateManyWithWhereWithoutReportedByInput | IncidentUpdateManyWithWhereWithoutReportedByInput[]
-    deleteMany?: IncidentScalarWhereInput | IncidentScalarWhereInput[]
+  export type TableIncidentUncheckedUpdateManyWithoutReportedByUsernameNestedInput = {
+    create?: XOR<TableIncidentCreateWithoutReportedByUsernameInput, TableIncidentUncheckedCreateWithoutReportedByUsernameInput> | TableIncidentCreateWithoutReportedByUsernameInput[] | TableIncidentUncheckedCreateWithoutReportedByUsernameInput[]
+    connectOrCreate?: TableIncidentCreateOrConnectWithoutReportedByUsernameInput | TableIncidentCreateOrConnectWithoutReportedByUsernameInput[]
+    upsert?: TableIncidentUpsertWithWhereUniqueWithoutReportedByUsernameInput | TableIncidentUpsertWithWhereUniqueWithoutReportedByUsernameInput[]
+    createMany?: TableIncidentCreateManyReportedByUsernameInputEnvelope
+    set?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+    disconnect?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+    delete?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+    connect?: TableIncidentWhereUniqueInput | TableIncidentWhereUniqueInput[]
+    update?: TableIncidentUpdateWithWhereUniqueWithoutReportedByUsernameInput | TableIncidentUpdateWithWhereUniqueWithoutReportedByUsernameInput[]
+    updateMany?: TableIncidentUpdateManyWithWhereWithoutReportedByUsernameInput | TableIncidentUpdateManyWithWhereWithoutReportedByUsernameInput[]
+    deleteMany?: TableIncidentScalarWhereInput | TableIncidentScalarWhereInput[]
   }
 
   export type DateTimeFieldUpdateOperationsInput = {
     set?: Date | string
   }
 
-  export type NullableStringFieldUpdateOperationsInput = {
-    set?: string | null
+  export type TableUserCreateNestedOneWithoutIncidentsByUsernameInput = {
+    create?: XOR<TableUserCreateWithoutIncidentsByUsernameInput, TableUserUncheckedCreateWithoutIncidentsByUsernameInput>
+    connectOrCreate?: TableUserCreateOrConnectWithoutIncidentsByUsernameInput
+    connect?: TableUserWhereUniqueInput
   }
 
-  export type NullableDateTimeFieldUpdateOperationsInput = {
-    set?: Date | string | null
-  }
-
-  export type UserCreateNestedOneWithoutIncidentsInput = {
-    create?: XOR<UserCreateWithoutIncidentsInput, UserUncheckedCreateWithoutIncidentsInput>
-    connectOrCreate?: UserCreateOrConnectWithoutIncidentsInput
-    connect?: UserWhereUniqueInput
-  }
-
-  export type UserUpdateOneRequiredWithoutIncidentsNestedInput = {
-    create?: XOR<UserCreateWithoutIncidentsInput, UserUncheckedCreateWithoutIncidentsInput>
-    connectOrCreate?: UserCreateOrConnectWithoutIncidentsInput
-    upsert?: UserUpsertWithoutIncidentsInput
-    connect?: UserWhereUniqueInput
-    update?: XOR<XOR<UserUpdateToOneWithWhereWithoutIncidentsInput, UserUpdateWithoutIncidentsInput>, UserUncheckedUpdateWithoutIncidentsInput>
+  export type TableUserUpdateOneRequiredWithoutIncidentsByUsernameNestedInput = {
+    create?: XOR<TableUserCreateWithoutIncidentsByUsernameInput, TableUserUncheckedCreateWithoutIncidentsByUsernameInput>
+    connectOrCreate?: TableUserCreateOrConnectWithoutIncidentsByUsernameInput
+    upsert?: TableUserUpsertWithoutIncidentsByUsernameInput
+    connect?: TableUserWhereUniqueInput
+    update?: XOR<XOR<TableUserUpdateToOneWithWhereWithoutIncidentsByUsernameInput, TableUserUpdateWithoutIncidentsByUsernameInput>, TableUserUncheckedUpdateWithoutIncidentsByUsernameInput>
   }
 
   export type NestedIntFilter<$PrismaModel = never> = {
@@ -8140,11 +8026,9 @@ export namespace Prisma {
     not?: NestedStringFilter<$PrismaModel> | string
   }
 
-  export type NestedEnumUserTypeFilter<$PrismaModel = never> = {
-    equals?: $Enums.UserType | EnumUserTypeFieldRefInput<$PrismaModel>
-    in?: $Enums.UserType[] | ListEnumUserTypeFieldRefInput<$PrismaModel>
-    notIn?: $Enums.UserType[] | ListEnumUserTypeFieldRefInput<$PrismaModel>
-    not?: NestedEnumUserTypeFilter<$PrismaModel> | $Enums.UserType
+  export type NestedBoolFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolFilter<$PrismaModel> | boolean
   }
 
   export type NestedIntWithAggregatesFilter<$PrismaModel = never> = {
@@ -8191,14 +8075,12 @@ export namespace Prisma {
     _max?: NestedStringFilter<$PrismaModel>
   }
 
-  export type NestedEnumUserTypeWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: $Enums.UserType | EnumUserTypeFieldRefInput<$PrismaModel>
-    in?: $Enums.UserType[] | ListEnumUserTypeFieldRefInput<$PrismaModel>
-    notIn?: $Enums.UserType[] | ListEnumUserTypeFieldRefInput<$PrismaModel>
-    not?: NestedEnumUserTypeWithAggregatesFilter<$PrismaModel> | $Enums.UserType
+  export type NestedBoolWithAggregatesFilter<$PrismaModel = never> = {
+    equals?: boolean | BooleanFieldRefInput<$PrismaModel>
+    not?: NestedBoolWithAggregatesFilter<$PrismaModel> | boolean
     _count?: NestedIntFilter<$PrismaModel>
-    _min?: NestedEnumUserTypeFilter<$PrismaModel>
-    _max?: NestedEnumUserTypeFilter<$PrismaModel>
+    _min?: NestedBoolFilter<$PrismaModel>
+    _max?: NestedBoolFilter<$PrismaModel>
   }
 
   export type NestedDateTimeFilter<$PrismaModel = never> = {
@@ -8210,20 +8092,6 @@ export namespace Prisma {
     gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
     not?: NestedDateTimeFilter<$PrismaModel> | Date | string
-  }
-
-  export type NestedStringNullableFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableFilter<$PrismaModel> | string | null
   }
 
   export type NestedDateTimeWithAggregatesFilter<$PrismaModel = never> = {
@@ -8240,60 +8108,7 @@ export namespace Prisma {
     _max?: NestedDateTimeFilter<$PrismaModel>
   }
 
-  export type NestedStringNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: string | StringFieldRefInput<$PrismaModel> | null
-    in?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    notIn?: string[] | ListStringFieldRefInput<$PrismaModel> | null
-    lt?: string | StringFieldRefInput<$PrismaModel>
-    lte?: string | StringFieldRefInput<$PrismaModel>
-    gt?: string | StringFieldRefInput<$PrismaModel>
-    gte?: string | StringFieldRefInput<$PrismaModel>
-    contains?: string | StringFieldRefInput<$PrismaModel>
-    startsWith?: string | StringFieldRefInput<$PrismaModel>
-    endsWith?: string | StringFieldRefInput<$PrismaModel>
-    not?: NestedStringNullableWithAggregatesFilter<$PrismaModel> | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedStringNullableFilter<$PrismaModel>
-    _max?: NestedStringNullableFilter<$PrismaModel>
-  }
-
-  export type NestedIntNullableFilter<$PrismaModel = never> = {
-    equals?: number | IntFieldRefInput<$PrismaModel> | null
-    in?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    notIn?: number[] | ListIntFieldRefInput<$PrismaModel> | null
-    lt?: number | IntFieldRefInput<$PrismaModel>
-    lte?: number | IntFieldRefInput<$PrismaModel>
-    gt?: number | IntFieldRefInput<$PrismaModel>
-    gte?: number | IntFieldRefInput<$PrismaModel>
-    not?: NestedIntNullableFilter<$PrismaModel> | number | null
-  }
-
-  export type NestedDateTimeNullableFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableFilter<$PrismaModel> | Date | string | null
-  }
-
-  export type NestedDateTimeNullableWithAggregatesFilter<$PrismaModel = never> = {
-    equals?: Date | string | DateTimeFieldRefInput<$PrismaModel> | null
-    in?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    notIn?: Date[] | string[] | ListDateTimeFieldRefInput<$PrismaModel> | null
-    lt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    lte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gt?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    gte?: Date | string | DateTimeFieldRefInput<$PrismaModel>
-    not?: NestedDateTimeNullableWithAggregatesFilter<$PrismaModel> | Date | string | null
-    _count?: NestedIntNullableFilter<$PrismaModel>
-    _min?: NestedDateTimeNullableFilter<$PrismaModel>
-    _max?: NestedDateTimeNullableFilter<$PrismaModel>
-  }
-
-  export type IncidentCreateWithoutReportedByInput = {
+  export type TableIncidentCreateWithoutReportedByUsernameInput = {
     createdAt?: Date | string
     updatedAt?: Date | string
     title: string
@@ -8302,7 +8117,7 @@ export namespace Prisma {
     location: string
   }
 
-  export type IncidentUncheckedCreateWithoutReportedByInput = {
+  export type TableIncidentUncheckedCreateWithoutReportedByUsernameInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -8312,101 +8127,105 @@ export namespace Prisma {
     location: string
   }
 
-  export type IncidentCreateOrConnectWithoutReportedByInput = {
-    where: IncidentWhereUniqueInput
-    create: XOR<IncidentCreateWithoutReportedByInput, IncidentUncheckedCreateWithoutReportedByInput>
+  export type TableIncidentCreateOrConnectWithoutReportedByUsernameInput = {
+    where: TableIncidentWhereUniqueInput
+    create: XOR<TableIncidentCreateWithoutReportedByUsernameInput, TableIncidentUncheckedCreateWithoutReportedByUsernameInput>
   }
 
-  export type IncidentCreateManyReportedByInputEnvelope = {
-    data: IncidentCreateManyReportedByInput | IncidentCreateManyReportedByInput[]
+  export type TableIncidentCreateManyReportedByUsernameInputEnvelope = {
+    data: TableIncidentCreateManyReportedByUsernameInput | TableIncidentCreateManyReportedByUsernameInput[]
     skipDuplicates?: boolean
   }
 
-  export type IncidentUpsertWithWhereUniqueWithoutReportedByInput = {
-    where: IncidentWhereUniqueInput
-    update: XOR<IncidentUpdateWithoutReportedByInput, IncidentUncheckedUpdateWithoutReportedByInput>
-    create: XOR<IncidentCreateWithoutReportedByInput, IncidentUncheckedCreateWithoutReportedByInput>
+  export type TableIncidentUpsertWithWhereUniqueWithoutReportedByUsernameInput = {
+    where: TableIncidentWhereUniqueInput
+    update: XOR<TableIncidentUpdateWithoutReportedByUsernameInput, TableIncidentUncheckedUpdateWithoutReportedByUsernameInput>
+    create: XOR<TableIncidentCreateWithoutReportedByUsernameInput, TableIncidentUncheckedCreateWithoutReportedByUsernameInput>
   }
 
-  export type IncidentUpdateWithWhereUniqueWithoutReportedByInput = {
-    where: IncidentWhereUniqueInput
-    data: XOR<IncidentUpdateWithoutReportedByInput, IncidentUncheckedUpdateWithoutReportedByInput>
+  export type TableIncidentUpdateWithWhereUniqueWithoutReportedByUsernameInput = {
+    where: TableIncidentWhereUniqueInput
+    data: XOR<TableIncidentUpdateWithoutReportedByUsernameInput, TableIncidentUncheckedUpdateWithoutReportedByUsernameInput>
   }
 
-  export type IncidentUpdateManyWithWhereWithoutReportedByInput = {
-    where: IncidentScalarWhereInput
-    data: XOR<IncidentUpdateManyMutationInput, IncidentUncheckedUpdateManyWithoutReportedByInput>
+  export type TableIncidentUpdateManyWithWhereWithoutReportedByUsernameInput = {
+    where: TableIncidentScalarWhereInput
+    data: XOR<TableIncidentUpdateManyMutationInput, TableIncidentUncheckedUpdateManyWithoutReportedByUsernameInput>
   }
 
-  export type IncidentScalarWhereInput = {
-    AND?: IncidentScalarWhereInput | IncidentScalarWhereInput[]
-    OR?: IncidentScalarWhereInput[]
-    NOT?: IncidentScalarWhereInput | IncidentScalarWhereInput[]
-    id?: IntFilter<"Incident"> | number
-    createdAt?: DateTimeFilter<"Incident"> | Date | string
-    updatedAt?: DateTimeFilter<"Incident"> | Date | string
-    title?: StringFilter<"Incident"> | string
-    description?: StringFilter<"Incident"> | string
-    status?: StringFilter<"Incident"> | string
-    location?: StringFilter<"Incident"> | string
-    userId?: IntFilter<"Incident"> | number
+  export type TableIncidentScalarWhereInput = {
+    AND?: TableIncidentScalarWhereInput | TableIncidentScalarWhereInput[]
+    OR?: TableIncidentScalarWhereInput[]
+    NOT?: TableIncidentScalarWhereInput | TableIncidentScalarWhereInput[]
+    id?: IntFilter<"TableIncident"> | number
+    createdAt?: DateTimeFilter<"TableIncident"> | Date | string
+    updatedAt?: DateTimeFilter<"TableIncident"> | Date | string
+    title?: StringFilter<"TableIncident"> | string
+    description?: StringFilter<"TableIncident"> | string
+    status?: StringFilter<"TableIncident"> | string
+    location?: StringFilter<"TableIncident"> | string
+    username?: StringFilter<"TableIncident"> | string
   }
 
-  export type UserCreateWithoutIncidentsInput = {
+  export type TableUserCreateWithoutIncidentsByUsernameInput = {
     username: string
     password: string
     email: string
     firstname: string
     lastname: string
-    user_type?: $Enums.UserType
+    role?: string
+    autorized?: boolean
   }
 
-  export type UserUncheckedCreateWithoutIncidentsInput = {
+  export type TableUserUncheckedCreateWithoutIncidentsByUsernameInput = {
     id?: number
     username: string
     password: string
     email: string
     firstname: string
     lastname: string
-    user_type?: $Enums.UserType
+    role?: string
+    autorized?: boolean
   }
 
-  export type UserCreateOrConnectWithoutIncidentsInput = {
-    where: UserWhereUniqueInput
-    create: XOR<UserCreateWithoutIncidentsInput, UserUncheckedCreateWithoutIncidentsInput>
+  export type TableUserCreateOrConnectWithoutIncidentsByUsernameInput = {
+    where: TableUserWhereUniqueInput
+    create: XOR<TableUserCreateWithoutIncidentsByUsernameInput, TableUserUncheckedCreateWithoutIncidentsByUsernameInput>
   }
 
-  export type UserUpsertWithoutIncidentsInput = {
-    update: XOR<UserUpdateWithoutIncidentsInput, UserUncheckedUpdateWithoutIncidentsInput>
-    create: XOR<UserCreateWithoutIncidentsInput, UserUncheckedCreateWithoutIncidentsInput>
-    where?: UserWhereInput
+  export type TableUserUpsertWithoutIncidentsByUsernameInput = {
+    update: XOR<TableUserUpdateWithoutIncidentsByUsernameInput, TableUserUncheckedUpdateWithoutIncidentsByUsernameInput>
+    create: XOR<TableUserCreateWithoutIncidentsByUsernameInput, TableUserUncheckedCreateWithoutIncidentsByUsernameInput>
+    where?: TableUserWhereInput
   }
 
-  export type UserUpdateToOneWithWhereWithoutIncidentsInput = {
-    where?: UserWhereInput
-    data: XOR<UserUpdateWithoutIncidentsInput, UserUncheckedUpdateWithoutIncidentsInput>
+  export type TableUserUpdateToOneWithWhereWithoutIncidentsByUsernameInput = {
+    where?: TableUserWhereInput
+    data: XOR<TableUserUpdateWithoutIncidentsByUsernameInput, TableUserUncheckedUpdateWithoutIncidentsByUsernameInput>
   }
 
-  export type UserUpdateWithoutIncidentsInput = {
+  export type TableUserUpdateWithoutIncidentsByUsernameInput = {
     username?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     firstname?: StringFieldUpdateOperationsInput | string
     lastname?: StringFieldUpdateOperationsInput | string
-    user_type?: EnumUserTypeFieldUpdateOperationsInput | $Enums.UserType
+    role?: StringFieldUpdateOperationsInput | string
+    autorized?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type UserUncheckedUpdateWithoutIncidentsInput = {
+  export type TableUserUncheckedUpdateWithoutIncidentsByUsernameInput = {
     id?: IntFieldUpdateOperationsInput | number
     username?: StringFieldUpdateOperationsInput | string
     password?: StringFieldUpdateOperationsInput | string
     email?: StringFieldUpdateOperationsInput | string
     firstname?: StringFieldUpdateOperationsInput | string
     lastname?: StringFieldUpdateOperationsInput | string
-    user_type?: EnumUserTypeFieldUpdateOperationsInput | $Enums.UserType
+    role?: StringFieldUpdateOperationsInput | string
+    autorized?: BoolFieldUpdateOperationsInput | boolean
   }
 
-  export type IncidentCreateManyReportedByInput = {
+  export type TableIncidentCreateManyReportedByUsernameInput = {
     id?: number
     createdAt?: Date | string
     updatedAt?: Date | string
@@ -8416,7 +8235,7 @@ export namespace Prisma {
     location: string
   }
 
-  export type IncidentUpdateWithoutReportedByInput = {
+  export type TableIncidentUpdateWithoutReportedByUsernameInput = {
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
     title?: StringFieldUpdateOperationsInput | string
@@ -8425,7 +8244,7 @@ export namespace Prisma {
     location?: StringFieldUpdateOperationsInput | string
   }
 
-  export type IncidentUncheckedUpdateWithoutReportedByInput = {
+  export type TableIncidentUncheckedUpdateWithoutReportedByUsernameInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string
@@ -8435,7 +8254,7 @@ export namespace Prisma {
     location?: StringFieldUpdateOperationsInput | string
   }
 
-  export type IncidentUncheckedUpdateManyWithoutReportedByInput = {
+  export type TableIncidentUncheckedUpdateManyWithoutReportedByUsernameInput = {
     id?: IntFieldUpdateOperationsInput | number
     createdAt?: DateTimeFieldUpdateOperationsInput | Date | string
     updatedAt?: DateTimeFieldUpdateOperationsInput | Date | string

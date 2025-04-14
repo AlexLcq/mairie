@@ -28,6 +28,7 @@ export default function Header() {
         { name: "Services", path: "/services" },
         { name: "Incidents", path: "/incidents" },
         { name: "Actualités", path: "/actualites" },
+        { name : "IoT", path: "/iot" },
     ]
 
     return (
@@ -122,8 +123,8 @@ export default function Header() {
                                         <div className="flex h-8 w-8 items-center justify-center rounded-full bg-blue-100 text-blue-800">
                                             <User className="h-4 w-4" />
                                         </div>
-                                        <span className="hidden sm:inline-block font-medium">{user.username.toUpperCase()}</span>
-                                        <p>[{user.user_type}]</p>
+                                        <span className="hidden sm:inline-block font-medium">{user?.username?.toUpperCase()}</span>
+                                        <p>[{user.role}]</p>
                                         <ChevronDown className="h-4 w-4 opacity-50" />
                                     </Button>
                                 </DropdownMenuTrigger>
@@ -135,7 +136,7 @@ export default function Header() {
                                     <DropdownMenuSeparator />
                                     <ProtectedComponent habilitation={"ADMIN"}>
                                         <DropdownMenuItem asChild>
-                                            <Link href="/admin" className="cursor-pointer">
+                                            <Link href="/user" className="cursor-pointer">
                                                 Gestion des utilisateurs
                                             </Link>
                                         </DropdownMenuItem>

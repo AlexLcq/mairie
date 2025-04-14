@@ -4,7 +4,7 @@ import type React from "react"
 import { useState } from "react"
 import axios from "axios"
 import { useRouter } from "next/navigation"
-import type { RegisterType } from "@/lib/type"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -12,15 +12,16 @@ import { Label } from "@/components/ui/label"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription } from "@/components/ui/alert"
 import { Loader2 } from "lucide-react"
+import {RegisterType} from "@/type/UserType";
 
 export default function RegisterPage() {
     const [registerData, setRegisterData] = useState<RegisterType>({
         username: "",
-        password: "",
-        confirmPassword: "",
         email: "",
         firstname: "",
         lastname: "",
+        password: "",
+        comfirmPassword: "",
     })
     const [errors, setErrors] = useState<string | null>(null)
     const [loading, setLoading] = useState(false)
@@ -32,14 +33,14 @@ export default function RegisterPage() {
         setLoading(true)
         setErrors(null)
 
-        if (registerData.password !== registerData.confirmPassword) {
+        if (registerData.password !== registerData.comfirmPassword) {
             setErrors("Les mots de passe ne correspondent pas")
             setLoading(false)
             return
         }
 
         axios
-            .post("/api/register", registerData, {
+            .post("/api/user/register", registerData, {
                 headers: {
                     "Content-Type": "application/json",
                 },
@@ -53,6 +54,7 @@ export default function RegisterPage() {
                 } else {
                     setErrors("Une erreur est survenue")
                 }
+                console.log(error)
             })
             .finally(() => {
                 setLoading(false)
@@ -121,7 +123,7 @@ export default function RegisterPage() {
                         </div>
 
                         <div className="space-y-2">
-                            <Label htmlFor="username">Nom d'utilisateur</Label>
+                            <Label htmlFor="username">Nom d&#39;utilisateur</Label>
                             <Input
                                 id="username"
                                 name="username"
@@ -151,9 +153,9 @@ export default function RegisterPage() {
                                 <Label htmlFor="confirmPassword">Confirmer le mot de passe</Label>
                                 <Input
                                     id="confirmPassword"
-                                    name="confirmPassword"
+                                    name="comfirmPassword"
                                     type="password"
-                                    value={registerData.confirmPassword}
+                                    value={registerData.comfirmPassword}
                                     onChange={handleChange}
                                     required
                                     placeholder="Confirmez votre mot de passe"
